@@ -37,7 +37,7 @@ import XCTest
 /// - `1 <= cookies[i] <= 105`
 /// - `2 <= k <= cookies.length`
 
-class DistributeCookiesTests: XCTestCase {
+final class DistributeCookiesTests: XCTestCase {
     
     func testExample1() {
         let solution = DistributeCookies()
