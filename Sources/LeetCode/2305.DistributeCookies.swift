@@ -49,10 +49,11 @@ class DistributeCookies {
             var cookies = cookies
             let count = cookies.remove(at: bag)
             for child in 0..<distributedCookies.endIndex {
-                var distributedCookies = distributedCookies
-                distributedCookies[child] += count
+                let childGets = distributedCookies[child] + count
                 // It makes sense to continue only if unfairness has not yet been exceeded.
-                if distributedCookies.max() ?? Int.max < unfairness {
+                if childGets < unfairness {
+                    var distributedCookies = distributedCookies
+                    distributedCookies[child] += count
                     unfairness = min(unfairness, distributeRemaining(cookies, distributedCookies: distributedCookies))
                 }
             }

@@ -52,5 +52,6 @@ class DistributeCookiesTests: XCTestCase {
     func testExample() {
         let solution = DistributeCookies()
         XCTAssertEqual(solution.distributeCookies([15,18,19,5,6,13,15,20], 3), 38)
+        XCTAssertEqual(solution.distributeCookies([13,3], 2), 13)
     }
 }
