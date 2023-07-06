@@ -34,24 +34,21 @@ import XCTest
 /// - `1 <= nums.length <= 10^5`
 /// - `nums[i]` is either `0` or `1`.
 final class LongestSubarrayTests: XCTestCase {
+    let solution = LongestSubarray()
     
     func testExample1() {
-        let solution = LongestSubarray()
         XCTAssertEqual(solution.longestSubarray([1,1,0,1]), 3)
     }
     
     func testExample2() {
-        let solution = LongestSubarray()
         XCTAssertEqual(solution.longestSubarray([0,1,1,1,0,1,1,0,1]), 5)
     }
 
     func testExample3() {
-        let solution = LongestSubarray()
         XCTAssertEqual(solution.longestSubarray([1,1,1]), 2)
     }
     
     func testExample() {
-        let solution = LongestSubarray()
         XCTAssertEqual(solution.longestSubarray([0,0,0,1,1,1,0,1,1,0,0,0,0,1,0,0,0,0,0,0]), 5)
         XCTAssertEqual(solution.longestSubarray([1,1,0,0,1,1,1,0,1]), 4)
     }

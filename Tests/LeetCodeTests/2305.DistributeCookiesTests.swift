@@ -38,19 +38,17 @@ import XCTest
 /// - `2 <= k <= cookies.length`
 
 final class DistributeCookiesTests: XCTestCase {
+    let solution = DistributeCookies()
     
     func testExample1() {
-        let solution = DistributeCookies()
         XCTAssertEqual(solution.distributeCookies([8,15,10,20,8], 2), 31)
     }
     
     func testExample2() {
-        let solution = DistributeCookies()
         XCTAssertEqual(solution.distributeCookies([6,1,3,2,2,4,1,2], 3), 7)
     }
     
     func testExample() {
-        let solution = DistributeCookies()
         XCTAssertEqual(solution.distributeCookies([15,18,19,5,6,13,15,20], 3), 38)
         XCTAssertEqual(solution.distributeCookies([13,3], 2), 13)
     }

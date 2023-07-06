@@ -25,19 +25,17 @@ import XCTest
 /// - `-231 <= nums[i] <= 231 - 1`
 /// - Each element in `nums` appears exactly three times except for one element which appears once.
 final class SingleNumberIITests: XCTestCase {
+    let solution = SingleNumberII()
     
     func testExample1() {
-        let solution = SingleNumberII()
         XCTAssertEqual(solution.singleNumber([2,2,3,2]), 3)
     }
     
     func testExample2() {
-        let solution = SingleNumberII()
         XCTAssertEqual(solution.singleNumber([0,1,0,1,0,1,99]), 99)
     }
 
     func testExample() {
-        let solution = SingleNumberII()
         XCTAssertEqual(solution.singleNumber([2,2,-3,2]), -3)
     }
 }
