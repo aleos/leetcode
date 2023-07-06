@@ -19,45 +19,29 @@ class DistributeCookies {
     ///   - k: The number of children to distribute all the bags of cookies to.
     /// - Returns: The **minimum** unfairness of all distributions.
     func distributeCookies(_ cookies: [Int], _ k: Int) -> Int {
-        return distribute(cookies, distributedCookies: Array<Int>(repeating: 0, count: k))
-    }
-    
-    private func distribute(_ cookies: [Int], distributedCookies: [Int], next child: Int = 0) -> Int {
-        guard child != distributedCookies.count else {
-            // Everybody has a bag of cookies. Lets distribute the remaining bags
-            return distributeRemaining(cookies, distributedCookies: distributedCookies)
-        }
-        var unfairness = Int.max
-        // The first distribution. All the children should get at least one bag of cookies. Select a bag for the other child. He doesn't have cookies yet.
-        for bag in 0..<cookies.endIndex {
-            var cookies = cookies
-            let count = cookies.remove(at: bag)
-            var distributedCookies = distributedCookies
-            distributedCookies[child] += count
-            // Give a bag to the next child
-            unfairness = min(unfairness, distribute(cookies, distributedCookies: distributedCookies, next: child + 1))
-        }
-        return unfairness
-    }
-    
-    private func distributeRemaining(_ cookies: [Int], distributedCookies: [Int]) -> Int {
-        guard !cookies.isEmpty else {
-            return distributedCookies.max() ?? 0
-        }
-        var unfairness = Int.max
-        for bag in 0..<cookies.endIndex {
-            var cookies = cookies
-            let count = cookies.remove(at: bag)
-            for child in 0..<distributedCookies.endIndex {
-                let childGets = distributedCookies[child] + count
+        
+        func distribute(bag: Int, distributedCookies: [Int], kidsWithoutCookies: Int) -> Int {
+            guard cookies.count - bag >= kidsWithoutCookies else { return .max }
+            guard bag != cookies.count else {
+                return distributedCookies.max() ?? .max
+            }
+            var maxUnfairness: Int = .max
+            var kidsWithoutCookies = kidsWithoutCookies
+            for child in 0..<k {
+                let childGets = distributedCookies[child] + cookies[bag]
                 // It makes sense to continue only if unfairness has not yet been exceeded.
-                if childGets < unfairness {
+                if childGets < maxUnfairness {
+                    if distributedCookies[child] == 0 {
+                        kidsWithoutCookies -= 1
+                    }
                     var distributedCookies = distributedCookies
-                    distributedCookies[child] += count
-                    unfairness = min(unfairness, distributeRemaining(cookies, distributedCookies: distributedCookies))
+                    distributedCookies[child] += cookies[bag]
+                    maxUnfairness = min(maxUnfairness, distribute(bag: bag + 1, distributedCookies: distributedCookies, kidsWithoutCookies: kidsWithoutCookies))
                 }
             }
+            return maxUnfairness
         }
-        return unfairness
+        
+        return distribute(bag: 0, distributedCookies: [Int](repeating: 0, count: cookies.count), kidsWithoutCookies: k)
     }
 }
