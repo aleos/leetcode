@@ -26,8 +26,8 @@ class DistributeCookies {
                 return distributedCookies.max() ?? .max
             }
             var maxUnfairness: Int = .max
-            var kidsWithoutCookies = kidsWithoutCookies
             for child in 0..<k {
+                var kidsWithoutCookies = kidsWithoutCookies
                 let childGets = distributedCookies[child] + cookies[bag]
                 // It makes sense to continue only if unfairness has not yet been exceeded.
                 if childGets < maxUnfairness {
