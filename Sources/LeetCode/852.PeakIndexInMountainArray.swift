@@ -22,21 +22,18 @@ class PeakIndexInMountainArray {
     /// - Parameter arr: An array `arr`is  a **mountain**.
     /// - Returns: The index `i` such that `arr[0] < arr[1] < ... < arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`.
     func peakIndexInMountainArray(_ arr: [Int]) -> Int {
+        var left = 0
+        var right = arr.count - 1
+        var mid: Int
         
-        func searchThePeak(left: Int, right: Int) -> Int {
-            let middle = left + (right - left) / 2
-
-            if middle == 0 || arr[middle - 1] < arr[middle] {
-                if middle == arr.count - 1 || arr[middle] > arr[middle + 1] {
-                    return middle
-                } else {
-                    return searchThePeak(left: middle + 1, right: right)
-                }
+        while left < right {
+            mid = (left + right) / 2
+            if arr[mid] < arr[mid + 1] {
+                left = mid + 1
             } else {
-                return searchThePeak(left: left, right: middle - 1)
+                right = mid
             }
         }
-        
-        return searchThePeak(left: 0, right: arr.count - 1)
+        return left
     }
 }
