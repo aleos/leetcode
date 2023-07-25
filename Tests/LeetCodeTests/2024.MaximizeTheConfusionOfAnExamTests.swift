@@ -1,5 +1,5 @@
 //
-//  2024.MaxConsecutiveAnswers.swift
+//  2024.MaximizeTheConfusionOfAnExamTests.swift
 //  
 //
 //  Created by Alexander Ostrovsky on 7/7/2023.
@@ -38,8 +38,8 @@ import XCTest
 /// - `1 <= n <= 5 * 104`
 /// - `answerKey[i] is either 'T' or 'F'`
 /// - `1 <= k <= n`
-final class MaxConsecutiveAnswersTests: XCTestCase {
-    let solution = MaxConsecutiveAnswers()
+final class MaximizeTheConfusionOfAnExamTests: XCTestCase {
+    let solution = MaximizeTheConfusionOfAnExam()
     
     func testExample1() {
         XCTAssertEqual(solution.maxConsecutiveAnswers("TTFF", 2), 4)

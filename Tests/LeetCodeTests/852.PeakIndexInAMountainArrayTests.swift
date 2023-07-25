@@ -1,5 +1,5 @@
 //
-//  852.PeakIndexInMountainArrayTests.swift
+//  852.PeakIndexInAMountainArrayTests.swift
 //  
 //
 //  Created by Alexander Ostrovsky on 25/7/2023.
@@ -31,8 +31,8 @@ import XCTest
 /// - `3 <= arr.length <= 105`
 /// - `0 <= arr[i] <= 106`
 /// - `arr` is guaranteed to be a mountain array.
-final class PeakIndexInMountainArrayTests: XCTestCase {
-    let solution = PeakIndexInMountainArray()
+final class PeakIndexInAMountainArrayTests: XCTestCase {
+    let solution = PeakIndexInAMountainArray()
     
     func testExample1() {
         XCTAssertEqual(solution.peakIndexInMountainArray([0,1,0]), 1)

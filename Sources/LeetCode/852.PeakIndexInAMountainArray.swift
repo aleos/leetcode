@@ -1,5 +1,5 @@
 //
-//  852.PeakIndexInMountainArray.swift
+//  852.PeakIndexInAMountainArray.swift
 //  
 //
 //  Created by Alexander Ostrovsky on 25/7/2023.
@@ -17,7 +17,7 @@
 ///     - `arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`
 ///
 /// - Complexity: You must solve it in `O(log(arr.length))` time complexity.
-class PeakIndexInMountainArray {
+class PeakIndexInAMountainArray {
     
     /// - Parameter arr: An array `arr`is  a **mountain**.
     /// - Returns: The index `i` such that `arr[0] < arr[1] < ... < arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`.

@@ -1,5 +1,5 @@
 //
-//  2305.DistributeCookies.swift
+//  2305.FairDistributionOfCookies.swift
 //  
 //
 //  Created by Alexander Ostrovsky on 6/7/2023.
@@ -12,7 +12,7 @@
 /// The **unfairness** of a distribution is defined as the **maximum total** cookies obtained by a single child in the distribution.
 ///
 /// Return the **minimum** unfairness of all distributions.
-class DistributeCookies {
+class FairDistributionOfCookies {
     
     /// - Parameters:
     ///   - cookies: Integer array cookies, where cookies[i] denotes the number of cookies in the ith bag.

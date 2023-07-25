@@ -1,5 +1,5 @@
 //
-//  209.MinSubArrayLenTests.swift
+//  209.MinimumSizeSubarraySumTests.swift
 //  
 //
 //  Created by Alexander Ostrovsky on 6/7/2023.
@@ -31,8 +31,8 @@ import XCTest
 /// - `1 <= target <= 109`
 /// - `1 <= nums.length <= 105`
 /// - `1 <= nums[i] <= 104`
-final class MinSubArrayLenTests: XCTestCase {
-    let solution = MinSubArrayLen()
+final class MinimumSizeSubarraySumTests: XCTestCase {
+    let solution = MinimumSizeSubarraySum()
     
     func testExample1() {
         XCTAssertEqual(solution.minSubArrayLen(7, [2,3,1,2,4,3]), 2)
@@ -45,5 +45,4 @@ final class MinSubArrayLenTests: XCTestCase {
     func testExample3() {
         XCTAssertEqual(solution.minSubArrayLen(11, [1,1,1,1,1,1,1,1]), 0)
     }
-    
 }

@@ -1,5 +1,5 @@
 //
-//  2024.MaxConsecutiveAnswers.swift
+//  2024.MaximizeTheConfusionOfAnExam.swift
 //  
 //
 //  Created by Alexander Ostrovsky on 7/7/2023.
@@ -14,7 +14,7 @@
 /// - Change the answer key for any question to `'T'` or `'F'` (i.e., set `answerKey[i]` to `'T'` or `'F'`).
 ///
 /// Return the maximum number of consecutive `'T'`s or `'F'`s in the answer key after performing the operation at most `k` times.
-class MaxConsecutiveAnswers {
+class MaximizeTheConfusionOfAnExam {
     /// - Parameters:
     ///   - answerKey: A string, where `answerKey[i]` is the original answer to the `ith` question.
     ///   - k: The maximum number of times you may perform the following operation:

@@ -1,5 +1,5 @@
 //
-//  1723.MinimumTimeRequired.swift
+//  1723.FindMinimumTimetoFinishAllJobs.swift
 //  
 //
 //  Created by Alexander Ostrovsky on 6/7/2023.
@@ -12,7 +12,7 @@
 /// There are `k` workers that you can assign jobs to. Each job should be assigned to exactly one worker. The working time of a worker is the sum of  the time it takes to complete all jobs assigned to them. Your goal is to devise an optimal assignment such that the maximum working time of  any worker is minimized.
 ///
 /// Return the **minimum** possible **maximum working time** of any assignment.
-class MinimumTimeRequired {
+class FindMinimumTimetoFinishAllJobs {
     
     /// - Parameters:
     ///   - jobs: An integer array, where `jobs[i]` is the amount of time it takes to complete the `ith` job.

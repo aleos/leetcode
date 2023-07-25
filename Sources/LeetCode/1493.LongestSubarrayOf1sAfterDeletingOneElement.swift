@@ -1,5 +1,5 @@
 //
-//  1493.LongestSubarray.swift
+//  1493.LongestSubarrayOf1sAfterDeletingOneElement.swift
 //  
 //
 //  Created by Alexander Ostrovsky on 5/7/2023.
@@ -10,7 +10,7 @@
 /// Given a binary array `nums`, you should delete one element from it.
 ///
 /// Return the size of the longest non-empty subarray containing only `1`'s in the resulting array. Return `0` if there is no such subarray.
-class LongestSubarray {
+class LongestSubarrayOf1sAfterDeletingOneElement {
     func longestSubarray(_ nums: [Int]) -> Int {
         var lastStart1Index: Int?
         var last0Index: Int?

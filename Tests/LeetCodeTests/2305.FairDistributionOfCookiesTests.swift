@@ -1,5 +1,5 @@
 //
-//  2305.DistributeCookiesTests.swift
+//  2305.FairDistributionOfCookiesTests.swift
 //  
 //
 //  Created by Alexander Ostrovsky on 6/7/2023.
@@ -36,8 +36,8 @@ import XCTest
 /// - `2 <= cookies.length <= 8`
 /// - `1 <= cookies[i] <= 105`
 /// - `2 <= k <= cookies.length`
-final class DistributeCookiesTests: XCTestCase {
-    let solution = DistributeCookies()
+final class FairDistributionOfCookiesTests: XCTestCase {
+    let solution = FairDistributionOfCookies()
     
     func testExample1() {
         XCTAssertEqual(solution.distributeCookies([8,15,10,20,8], 2), 31)

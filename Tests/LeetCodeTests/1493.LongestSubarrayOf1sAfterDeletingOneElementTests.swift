@@ -1,5 +1,5 @@
 //
-//  1493.LongestSubarrayTests.swift
+//  1493.LongestSubarrayOf1sAfterDeletingOneElementTests.swift
 //  
 //
 //  Created by Alexander Ostrovsky on 5/7/2023.
@@ -33,8 +33,8 @@ import XCTest
 ///
 /// - `1 <= nums.length <= 10^5`
 /// - `nums[i]` is either `0` or `1`.
-final class LongestSubarrayTests: XCTestCase {
-    let solution = LongestSubarray()
+final class LongestSubarrayOf1sAfterDeletingOneElementTests: XCTestCase {
+    let solution = LongestSubarrayOf1sAfterDeletingOneElement()
     
     func testExample1() {
         XCTAssertEqual(solution.longestSubarray([1,1,0,1]), 3)

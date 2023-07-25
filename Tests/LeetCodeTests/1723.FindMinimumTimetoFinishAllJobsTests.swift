@@ -1,5 +1,5 @@
 //
-//  1723.MinimumTimeRequiredTests.swift
+//  1723.FindMinimumTimetoFinishAllJobsTests.swift
 //  
 //
 //  Created by Alexander Ostrovsky on 6/7/2023.
@@ -29,8 +29,8 @@ import XCTest
 ///
 /// - `1 <= k <= jobs.length <= 12`
 /// - `1 <= jobs[i] <= 107`
-final class MinimumTimeRequiredTests: XCTestCase {
-    let solution = MinimumTimeRequired()
+final class FindMinimumTimetoFinishAllJobsTests: XCTestCase {
+    let solution = FindMinimumTimetoFinishAllJobs()
     
     func testExample1() {
         XCTAssertEqual(solution.minimumTimeRequired([3,2,3], 3), 3)
