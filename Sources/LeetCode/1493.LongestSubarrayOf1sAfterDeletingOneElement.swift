@@ -5,12 +5,17 @@
 //  Created by Alexander Ostrovsky on 5/7/2023.
 //
 
+import Foundation
+
 /// [1493. Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/)
-///
-/// Given a binary array `nums`, you should delete one element from it.
-///
-/// Return the size of the longest non-empty subarray containing only `1`'s in the resulting array. Return `0` if there is no such subarray.
 class LongestSubarrayOf1sAfterDeletingOneElement {
+    
+    /// Given a binary array `nums`, you should delete one element from it.
+    ///
+    /// Return the size of the longest non-empty subarray containing only `1`'s in the resulting array. Return `0` if there is no such subarray.
+    /// 
+    /// - Parameter nums: A binary array.
+    /// - Returns: The size of the longest non-empty subarray containing only `1`'s in the resulting array. `0` if there is no such subarray.
     func longestSubarray(_ nums: [Int]) -> Int {
         var lastStart1Index: Int?
         var last0Index: Int?

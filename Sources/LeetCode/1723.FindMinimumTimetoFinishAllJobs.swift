@@ -5,15 +5,17 @@
 //  Created by Alexander Ostrovsky on 6/7/2023.
 //
 
-/// [1723. Find Minimum Time to Finish All Jobs](https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/description/)
-///
-/// You are given an integer array `jobs`, where `jobs[i]` is the amount of time it takes to complete the `ith` job.
-///
-/// There are `k` workers that you can assign jobs to. Each job should be assigned to exactly one worker. The working time of a worker is the sum of  the time it takes to complete all jobs assigned to them. Your goal is to devise an optimal assignment such that the maximum working time of  any worker is minimized.
-///
-/// Return the **minimum** possible **maximum working time** of any assignment.
+import Foundation
+
+/// [1723. Find Minimum Time to Finish All Jobs](https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/)
 class FindMinimumTimetoFinishAllJobs {
     
+    /// You are given an integer array `jobs`, where `jobs[i]` is the amount of time it takes to complete the `ith` job.
+    ///
+    /// There are `k` workers that you can assign jobs to. Each job should be assigned to exactly one worker. The working time of a worker is the sum of the time it takes to complete all jobs assigned to them. Your goal is to devise an optimal assignment such that the maximum working time of  any worker is minimized.
+    ///
+    /// Return the minimum possible maximum working time of any assignment.
+    ///
     /// - Parameters:
     ///   - jobs: An integer array, where `jobs[i]` is the amount of time it takes to complete the `ith` job.
     ///   - k: There are `k` workers that you can assign jobs to.

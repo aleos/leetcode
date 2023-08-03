@@ -6,6 +6,7 @@
 //
 
 import XCTest
+
 @testable import LeetCode
 
 /// [137. Single Number II](https://leetcode.com/problems/single-number-ii/)
@@ -25,6 +26,7 @@ import XCTest
 /// - `-231 <= nums[i] <= 231 - 1`
 /// - Each element in `nums` appears exactly three times except for one element which appears once.
 final class SingleNumberIITests: XCTestCase {
+    
     let solution = SingleNumberII()
     
     func testExample1() {

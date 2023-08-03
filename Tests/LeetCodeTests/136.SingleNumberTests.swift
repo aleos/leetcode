@@ -6,6 +6,7 @@
 //
 
 import XCTest
+
 @testable import LeetCode
 
 /// [136. Single Number](https://leetcode.com/problems/single-number/)
@@ -31,6 +32,7 @@ import XCTest
 /// - `-3 * 104 <= nums[i] <= 3 * 104`
 /// - Each element in the array appears twice except for one element which appears only once.
 final class SingleNumberTests: XCTestCase {
+    
     let solution = SingleNumber()
     
     func testExample1() throws {

@@ -6,6 +6,7 @@
 //
 
 import XCTest
+
 @testable import LeetCode
 
 /// [77. Combinations](https://leetcode.com/problems/combinations/)
@@ -29,6 +30,7 @@ import XCTest
 /// - `1 <= n <= 20`
 /// - `1 <= k <= n`
 final class CombinationsTests: XCTestCase {
+    
     let solution = Combinations()
     
     func testExample1() throws {

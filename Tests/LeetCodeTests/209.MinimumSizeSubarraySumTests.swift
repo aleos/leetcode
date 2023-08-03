@@ -6,6 +6,7 @@
 //
 
 import XCTest
+
 @testable import LeetCode
 
 /// [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
@@ -32,6 +33,7 @@ import XCTest
 /// - `1 <= nums.length <= 105`
 /// - `1 <= nums[i] <= 104`
 final class MinimumSizeSubarraySumTests: XCTestCase {
+    
     let solution = MinimumSizeSubarraySum()
     
     func testExample1() {

@@ -6,6 +6,7 @@
 //
 
 import XCTest
+
 @testable import LeetCode
 
 /// [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
@@ -26,11 +27,12 @@ import XCTest
 ///     Output: ["a","b","c"]
 ///
 ///
-/// Constraints:
+/// **Constraints**:
 ///
 /// - `0 <= digits.length <= 4`
-/// - `digits[i] is a digit in the range ['2', '9'].`
+/// - `digits[i]` is a digit in the range `['2', '9']`.
 final class LetterCombinationsOfAPhoneNumberTests: XCTestCase {
+    
     let solution = LetterCombinationsOfAPhoneNumber()
     
     func testExample1() throws {

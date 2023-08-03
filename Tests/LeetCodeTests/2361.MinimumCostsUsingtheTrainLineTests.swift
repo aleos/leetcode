@@ -6,6 +6,7 @@
 //
 
 import XCTest
+
 @testable import LeetCode
 
 /// [2361. Minimum Costs Using the Train Line](https://leetcode.com/problems/minimum-costs-using-the-train-line/)
@@ -39,6 +40,7 @@ import XCTest
 /// - `1 <= n <= 105`
 /// - `1 <= regular[i], express[i], expressCost <= 105`
 final class MinimumCostsUsingTheTrainLineTests: XCTestCase {
+    
     let solution = MinimumCostsUsingTheTrainLine()
     
     func testExample1() {

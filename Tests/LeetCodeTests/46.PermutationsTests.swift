@@ -6,6 +6,7 @@
 //
 
 import XCTest
+
 @testable import LeetCode
 
 /// [46. Permutations](https://leetcode.com/problems/permutations/)
@@ -30,8 +31,9 @@ import XCTest
 ///
 /// - `1 <= nums.length <= 6`
 /// - `-10 <= nums[i] <= 10`
-/// - `All the integers of nums are unique.`
+/// - All the integers of `nums` are unique
 final class PermutationsTests: XCTestCase {
+    
     let solution = Permutations()
     
     func testExample1() throws {

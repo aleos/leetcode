@@ -8,15 +8,16 @@
 import Foundation
 
 /// [77. Combinations](https://leetcode.com/problems/combinations/)
-///
-/// Given two integers `n` and `k`, return all possible combinations of `k` numbers chosen from the range `[1, n]`.
-///
-/// You may return the answer in any order.
 class Combinations {
+    
+    /// Given two integers n and k, return all possible combinations of k numbers chosen from the range [1, n].
+    ///
+    /// You may return the answer in any order.
+    ///
     /// - Parameters:
     ///   - n: A range [1, n].
     ///   - k: Number of numbers.
-    /// - Returns: all possible combinations of k numbers chosen from the range [1, n]
+    /// - Returns: All possible combinations of `k` numbers chosen from the range `[1, n]`. You may return the answer in any order.
     func combine(_ n: Int, _ k: Int) -> [[Int]] {
         func combine(from: Int, to: Int, count: Int) -> [[Int]] {
             guard count != 1 else { return Array((from...to).map({ [$0] })) }

@@ -9,7 +9,9 @@ import Foundation
 
 /// [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
 class MaxConsecutiveOnes {
+    
     /// Given a binary array `nums`, return the maximum number of consecutive `1`'s in the array.
+    /// 
     /// - Parameter nums: A binary array.
     /// - Returns: The maximum number of consecutive `1`'s in the array.
     func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {

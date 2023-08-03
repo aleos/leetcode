@@ -6,6 +6,7 @@
 //
 
 import XCTest
+
 @testable import LeetCode
 
 /// [2305. Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/)
@@ -37,6 +38,7 @@ import XCTest
 /// - `1 <= cookies[i] <= 105`
 /// - `2 <= k <= cookies.length`
 final class FairDistributionOfCookiesTests: XCTestCase {
+    
     let solution = FairDistributionOfCookies()
     
     func testExample1() {

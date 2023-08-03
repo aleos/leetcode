@@ -8,9 +8,10 @@
 import Foundation
 
 /// [46. Permutations](https://leetcode.com/problems/permutations/)
-///
-/// Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
 class Permutations {
+    
+    /// Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+    ///
     /// - Parameters:
     ///   - nums: Distinct integers.
     /// - Returns: All the possible permutations.

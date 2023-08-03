@@ -6,6 +6,7 @@
 //
 
 import XCTest
+
 @testable import LeetCode
 
 /// [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
@@ -27,6 +28,7 @@ import XCTest
 /// - `1 <= nums.length <= 105`
 /// - `nums[i]` is either `0` or `1`.
 final class MaxConsecutiveOnesTests: XCTestCase {
+    
     let solution = MaxConsecutiveOnes()
     
     func testExample1() {
