@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lcsol</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/// &lt;#Paste the problem description here.#&gt;
+/// 
+/// **Difficulty:** &lt;#Easy/Medium/Hard#&gt;
+/// 
+/// **Topics:** &lt;#Topics#&gt;
+///
+/// - SeeAlso: [&lt;#NNNN#&gt;. &lt;#Problem Name#&gt;](https://leetcode.com/problems/&lt;#problem-slug#&gt;/)
+public enum &lt;#...#&gt; {
+    /// - Complexity:
+    ///   **Time**: O(*&lt;#...#&gt;*), where *&lt;#n#&gt;* is &lt;#...#&gt; ,\
+    ///   **Space**: O(*&lt;#...#&gt;*), where *&lt;#n#&gt;* is &lt;#...#&gt;.
+
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7A2EB4A8-F2CA-4FBE-A8D1-8530573CDA50</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>LeetCode Solution</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lctest</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Testing
+@testable import LeetCode
+
+/// ## Constraints
+/// - &lt;#Constraint 1#&gt;
+/// - &lt;#Constraint 2#&gt;
+@Suite("&lt;#NNNN#&gt;. &lt;#Problem Name#&gt;")
+struct P&lt;#NNNN#&gt;Tests {
+
+    /// **Example 1**
+    /// - Input: `&lt;#Input#&gt;`
+    /// - Output: `&lt;#Output#&gt;`
+    /// - Explanation: &lt;#Explanation#&gt;
+    @Test("Example 1: &lt;#Scenario#&gt;")
+    func example1() {
+        #expect(P&lt;#NNNN#&gt;.&lt;#function#&gt;(&lt;#Input#&gt;) == &lt;#Output#&gt;)
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C18AC7BE-FD91-46D7-A69D-152175838B33</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>LeetCode Test Suite</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
