@@ -1,19 +1,28 @@
 # ``LeetCode``
 
-A library of algorithm solutions in Swift, sourced from LeetCode problems.
+A personal library of algorithm solutions implemented in Swift 6.
 
 ## Overview
 
-Each solution lives in a numbered enum (`P0001`, `P0002`, …) that namespaces its functions.
-Problems include full metadata — difficulty, topics, constraints, and a link back to
-LeetCode — right in the DocString, so everything is browsable in Xcode Quick Help.
+This library serves as a reference for various LeetCode problems, focusing on professional Swift implementation and clear documentation. Each solution is developed using a Test-Driven Development (TDD) workflow with the **Swift Testing** framework.
 
-Built with Swift Testing and a TDD workflow: tests first, implementation second.
+## Organisation
 
-## Problems by difficulty
+To ensure the documentation is sorted chronologically while keeping source files easy to navigate, the following conventions are used:
 
-### Easy
+- **Namespaces (Enums)**: Prefixed with a four-digit zero-padded number (e.g., `P0017`) for correct sorting in the DocC browser.
+- **Source Files**: Named using the standard problem number and title (e.g., `17.LetterCombinations.swift`) for natural sorting in the file system.
 
+## Documentation Structure
+
+Documentation is split to provide information where it is most relevant:
+
+- **Implementation**: Contains the problem link, difficulty, topics, high-level description, and complexity analysis.
+- **Test Suite**: Contains boundary constraints and specific example data (Inputs/Outputs) for individual test cases.
+
+## Topics
+
+### Easy Problems
 - ``P0026``
 - ``P0027``
 - ``P0088``
@@ -25,8 +34,7 @@ Built with Swift Testing and a TDD workflow: tests first, implementation second.
 - ``P1089``
 - ``P1295``
 
-### Medium
-
+### Medium Problems
 - ``P0017``
 - ``P0033``
 - ``P0046``
@@ -45,8 +53,7 @@ Built with Swift Testing and a TDD workflow: tests first, implementation second.
 - ``P2305``
 - ``P2616``
 
-### Hard
-
+### Hard Problems
 - ``P0239``
 - ``P0920``
 - ``P1723``
