@@ -5,8 +5,6 @@
 //  Created by Alexander Ostrovsky on 6/7/2023.
 //
 
-import Foundation
-
 /// Find Minimum Time to Finish All Jobs
 ///
 /// You are given an integer array `jobs`, where `jobs[i]` is the amount of time it takes to complete the `ith` job.

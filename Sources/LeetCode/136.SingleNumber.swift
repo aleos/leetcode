@@ -5,8 +5,6 @@
 //  Created by Alexander Ostrovsky on 4/7/2023.
 //
 
-import Foundation
-
 /// Single Number
 ///
 /// Given a non-empty array of integers `nums`, every element appears twice except for one. Find that single one.

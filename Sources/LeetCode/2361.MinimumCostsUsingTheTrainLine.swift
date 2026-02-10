@@ -5,8 +5,6 @@
 //  Created by Alexander Ostrovsky on 1/8/2023.
 //
 
-import Foundation
-
 /// Minimum Costs Using the Train Line
 ///
 /// A train line going through a city has two routes, the regular route and the express route. Both routes go through the same `n + 1` stops labeled from `0` to `n`. Initially, you start on the regular route at stop `0`.

@@ -5,8 +5,6 @@
 //  Created by Alexander Ostrovsky on 6/8/2023.
 //
 
-import Foundation
-
 /// Number of Music Playlists
 ///
 /// Your music player contains `n` different songs. You want to listen to `goal` songs (not necessarily different) during your trip.

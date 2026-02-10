@@ -5,8 +5,6 @@
 //  Created by Alexander Ostrovsky on 5/7/2023.
 //
 
-import Foundation
-
 /// Longest Subarray of 1's After Deleting One Element
 ///
 /// Given a binary array `nums`, you should delete one element from it.

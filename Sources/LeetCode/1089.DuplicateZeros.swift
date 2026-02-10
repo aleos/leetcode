@@ -5,8 +5,6 @@
 //  Created by Alexander Ostrovsky on 3/8/2023.
 //
 
-import Foundation
-
 /// Duplicate Zeros
 ///
 /// Given a fixed-length integer array `arr`, duplicate each occurrence of zero, shifting the remaining elements to the right.

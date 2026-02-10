@@ -5,8 +5,6 @@
 //  Created by Alexander Ostrovsky on 3/8/2023.
 //
 
-import Foundation
-
 /// Merge Sorted Array
 ///
 /// You are given two integer arrays `nums1` and `nums2`, sorted in non-decreasing order, and two integers `m` and `n`, representing the number of elements in `nums1` and `nums2` respectively.

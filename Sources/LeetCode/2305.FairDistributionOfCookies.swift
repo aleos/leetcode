@@ -5,8 +5,6 @@
 //  Created by Alexander Ostrovsky on 6/7/2023.
 //
 
-import Foundation
-
 /// Fair Distribution of Cookies
 ///
 /// You are given an integer array `cookies`, where `cookies[i]` denotes the number of cookies in the `ith` bag. You are also given an integer `k` that denotes the number of children to distribute all the bags of cookies to. All the cookies in the same bag must go to the same child and cannot be split up.
