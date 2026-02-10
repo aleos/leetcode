@@ -1,6 +1,6 @@
 //
 //  2361.MinimumCostsUsingTheTrainLine.swift
-//
+//  LeetCode
 //
 //  Created by Alexander Ostrovsky on 1/8/2023.
 //

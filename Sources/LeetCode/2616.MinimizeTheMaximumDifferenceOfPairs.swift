@@ -1,6 +1,6 @@
 //
 //  2616.MinimizeTheMaximumDifferenceOfPairs.swift
-//
+//  LeetCode
 //
 //  Created by Alexander Ostrovsky on 9/8/2023.
 //

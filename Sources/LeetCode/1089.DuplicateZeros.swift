@@ -1,6 +1,6 @@
 //
 //  1089.DuplicateZeros.swift
-//
+//  LeetCode
 //
 //  Created by Alexander Ostrovsky on 3/8/2023.
 //

@@ -1,6 +1,6 @@
 //
 //  2024.MaximizeTheConfusionOfAnExam.swift
-//
+//  LeetCode
 //
 //  Created by Alexander Ostrovsky on 7/7/2023.
 //

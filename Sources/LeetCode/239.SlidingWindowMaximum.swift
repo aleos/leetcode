@@ -1,6 +1,6 @@
 //
 //  239.SlidingWindowMaximum.swift
-//
+//  LeetCode
 //
 //  Created by Alexander Ostrovsky on 16/8/2023.
 //

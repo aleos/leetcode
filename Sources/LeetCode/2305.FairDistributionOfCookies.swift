@@ -1,6 +1,6 @@
 //
 //  2305.FairDistributionOfCookies.swift
-//
+//  LeetCode
 //
 //  Created by Alexander Ostrovsky on 6/7/2023.
 //

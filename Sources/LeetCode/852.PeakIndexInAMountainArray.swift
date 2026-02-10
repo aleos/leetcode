@@ -1,6 +1,6 @@
 //
 //  852.PeakIndexInAMountainArray.swift
-//
+//  LeetCode
 //
 //  Created by Alexander Ostrovsky on 25/7/2023.
 //

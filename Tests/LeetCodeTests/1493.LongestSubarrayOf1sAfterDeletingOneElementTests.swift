@@ -1,6 +1,6 @@
 //
 //  1493.LongestSubarrayOf1sAfterDeletingOneElementTests.swift
-//  
+//  LeetCode
 //
 //  Created by Alexander Ostrovsky on 5/7/2023.
 //

@@ -1,6 +1,6 @@
 //
 //  767.ReorganizeStringTests.swift
-//  
+//  LeetCode
 //
 //  Created by Alexander Ostrovsky on 23/8/2023.
 //

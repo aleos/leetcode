@@ -1,6 +1,6 @@
 //
 //  1723.FindMinimumTimetoFinishAllJobs.swift
-//
+//  LeetCode
 //
 //  Created by Alexander Ostrovsky on 6/7/2023.
 //

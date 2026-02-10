@@ -1,6 +1,6 @@
 //
 //  459.RepeatedSubstringPattern.swift
-//  
+//  LeetCode
 //
 //  Created by Alexander Ostrovsky on 21/8/2023.
 //
