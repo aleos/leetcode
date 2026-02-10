@@ -30,8 +30,8 @@ public enum P0920 {
     ///   - k: A song can only be played again only if `k` other songs have been played.
     /// - Returns: The number of possible playlists that you can create. Since the answer can be very large, return it modulo `10^9 + 7`.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(*n* × *goal*), where *n* is the number of songs and *goal* is the playlist length,\
+    ///   **Space**: O(*n* × *goal*), where *n* is the number of songs and *goal* is the playlist length.
     public static func numMusicPlaylists(_ n: Int, _ goal: Int, _ k: Int) -> Int {
         let mod = Int(1e9 + 7)
         

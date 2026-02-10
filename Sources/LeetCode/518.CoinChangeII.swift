@@ -29,8 +29,8 @@ public enum P0518 {
     ///   - coins: An integer array of coins of different denominations.
     /// - Returns: The number of combinations that make up that amount. If that amount of money cannot be made up by any combination of the coins, return `0`.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(*n* × *amount*), where *n* is the number of coin types and *amount* is the target amount,\
+    ///   **Space**: O(*amount*), where *amount* is the target amount.
     public static func change(_ amount: Int, _ coins: [Int]) -> Int {
         if coins.count == 0 && amount == 0 { return 1 }
         if amount == 0 {

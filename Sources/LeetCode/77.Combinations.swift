@@ -25,8 +25,8 @@ public enum P0077 {
     ///   - k: Number of numbers.
     /// - Returns: All possible combinations of `k` numbers chosen from the range `[1, n]`. You may return the answer in any order.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(C(*n*, *k*) × *k*), where C(*n*, *k*) is the binomial coefficient,\
+    ///   **Space**: O(*k*), where *k* is the recursion depth.
     public static func combine(_ n: Int, _ k: Int) -> [[Int]] {
         func combine(from: Int, to: Int, count: Int) -> [[Int]] {
             guard count != 1 else { return Array((from...to).map({ [$0] })) }

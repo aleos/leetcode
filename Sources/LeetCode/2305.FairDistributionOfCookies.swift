@@ -27,8 +27,8 @@ public enum P2305 {
     ///   - k: The number of children to distribute all the bags of cookies to.
     /// - Returns: The **minimum** unfairness of all distributions.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(*k^n*), where *n* is the number of cookie bags and *k* is the number of children,\
+    ///   **Space**: O(*n*), where *n* is the recursion depth.
     public static func distributeCookies(_ cookies: [Int], _ k: Int) -> Int {
         
         func distribute(bag: Int, distributedCookies: [Int], kidsWithoutCookies: Int) -> Int {

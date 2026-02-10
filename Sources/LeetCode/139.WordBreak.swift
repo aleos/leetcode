@@ -25,8 +25,8 @@ public enum P0139 {
     ///   - wordDict: A dictionary of strings.
     /// - Returns: `true` if `s` can be segmented into a space-separated sequence of one or more dictionary words.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(*n*² × *m*), where *n* is the length of string s and *m* is the average word length,\
+    ///   **Space**: O(*n* + *w*), where *n* is the length of string s and *w* is the size of the word dictionary.
     public static func wordBreak(_ s: String, _ wordDict: [String]) -> Bool {
         guard !s.isEmpty else { return true }
         

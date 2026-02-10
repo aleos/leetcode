@@ -27,8 +27,8 @@ public enum P1723 {
     ///   - k: There are `k` workers that you can assign jobs to.
     /// - Returns: The **minimum** possible **maximum working time** of any assignment.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(*k^n*), where *n* is the number of jobs and *k* is the number of workers,\
+    ///   **Space**: O(*n*), where *n* is the number of workers.
     public static func minimumTimeRequired(_ jobs: [Int], _ k: Int) -> Int {
         
         func assign(job: Int, distributedJobs: [Int], freeWorkers: Int) -> Int {

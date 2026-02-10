@@ -22,8 +22,8 @@ public enum P1089 {
     
     /// - Parameter arr: A fixed-length integer array.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(1)
+    ///   **Time**: O(*n*), where *n* is the length of the array,\
+    ///   **Space**: O(*1*).
     public static func duplicateZeros(_ arr: inout [Int]) {
         var i = 0
         var j = 0

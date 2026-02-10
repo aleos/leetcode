@@ -22,9 +22,9 @@ public enum P0209 {
     ///   - target: A positive integer.
     ///   - nums: An array of positive integers.
     /// - Returns: The minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, returns `0` instead.
-    ///     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    /// - Complexity:
+    ///   **Time**: O(*n*), where *n* is the length of the array,\
+    ///   **Space**: O(*1*).
     public static func minSubArrayLen(_ target: Int, _ nums: [Int]) -> Int {
         var start = 0
         var currentSum = 0

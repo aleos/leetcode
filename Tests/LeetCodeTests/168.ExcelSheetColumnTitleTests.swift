@@ -11,17 +11,6 @@ import Testing
 
 /// [168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
 ///
-/// For example:
-///
-///     A -> 1
-///     B -> 2
-///     C -> 3
-///     ...
-///     Z -> 26
-///     AA -> 27
-///     AB -> 28
-///     ...
-///
 /// **Constraints**:
 ///
 /// - `1 <= columnNumber <= 2^31 - 1`

@@ -27,8 +27,8 @@ public enum P2616 {
     ///   - p: An integer.
     /// - Returns: The minimum maximum difference among all `p` pairs.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(*n* log *n* + *n* log *D*), where *n* is the array length and *D* is the range of values,\
+    ///   **Space**: O(log *n*), where *n* is the array length.
     public static func minimizeMax(_ nums: [Int], _ p: Int) -> Int {
         guard !nums.isEmpty else { return 0 }
         

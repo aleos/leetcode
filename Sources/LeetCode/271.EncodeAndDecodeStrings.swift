@@ -50,6 +50,11 @@ import Foundation
 public enum P0271 {
     
     /// Separator is `\,`
+    /// - Parameter strs: An array of strings to encode.
+    /// - Returns: An encoded string representation.
+    /// - Complexity:
+    ///   **Time**: O(*n* × *m*), where *n* is the number of strings and *m* is the average string length,\
+    ///   **Space**: O(*1*).
     public static func encode(_ strs: [String]) -> String {
         strs
             .map({ $0.replacingOccurrences(of: #"\"#, with: #"\\"#) })
@@ -57,6 +62,11 @@ public enum P0271 {
     }
     
     /// Separator is `\,`
+    /// - Parameter s: An encoded string.
+    /// - Returns: An array of decoded strings.
+    /// - Complexity:
+    ///   **Time**: O(*n*), where *n* is the length of the encoded string,\
+    ///   **Space**: O(*n*), where *n* is the length of the encoded string.
     public static func decode(_ s: String) -> [String] {
         var result: [String] = []
         

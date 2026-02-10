@@ -23,8 +23,8 @@ public enum P0136 {
     /// - Parameter nums: A non-empty array of integers. Every element appears twice except for one.
     /// - Returns: Find the single one.
     /// - Complexity:
-    ///   **Time**: O(*n*), where *n* is a non-empty array of integers,\
-    ///   **Space**: O(1)
+    ///   **Time**: O(*n*), where *n* is the length of the array,\
+    ///   **Space**: O(*1*).
     public static func singleNumber(_ nums: [Int]) -> Int {
         var single = 0
         for num in nums {

@@ -23,8 +23,8 @@ public enum P0767 {
     /// - Parameter s: A string.
     /// - Returns: Any possible rearrangement of `s` or return `""` if not possible.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(*n*), where *n* is the length of the string,\
+    ///   **Space**: O(*1*).
     public static func reorganizeString(_ s: String) -> String {
         let length = s.count
         let frequences = Array(s.reduce(into: [:]) { f, c in f[c, default: 0] += 1 })

@@ -27,12 +27,11 @@ import Foundation
 /// - SeeAlso: [852. Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
 public enum P0852 {
     
-    /// - Complexity: `O(log(arr.length))`
     /// - Parameter arr: An array `arr`is  a **mountain**.
     /// - Returns: The index `i` such that `arr[0] < arr[1] < ... < arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`.
     /// - Complexity:
-    ///   **Time**: O(log*n*), where *n* is `arr.length` ,\
-    ///   **Space**: O(1).
+    ///   **Time**: O(log *n*), where *n* is the length of the array,\
+    ///   **Space**: O(*1*).
     public static func peakIndexInMountainArray(_ arr: [Int]) -> Int {
         var left = 0
         var right = arr.count - 1

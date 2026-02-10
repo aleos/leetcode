@@ -21,8 +21,8 @@ public enum P1295 {
     /// - Parameter nums: An array of integers.
     /// - Returns: How many of integers contain an even number of digits.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(*n* × *d*), where *n* is the number of integers and *d* is the average number of digits,\
+    ///   **Space**: O(*1*).
     public static func findNumbers(_ nums: [Int]) -> Int {
         nums.reduce(0) { partialResult, num in
             isEven(digits(in: num)) ? partialResult + 1 : partialResult

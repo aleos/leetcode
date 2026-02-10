@@ -21,8 +21,8 @@ public enum P0459 {
     /// - Parameter s: A string.
     /// - Returns: `true` if it can be constructed by taking a substring of it and appending multiple copies of the substring together.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(*n*), where *n* is the length of the string,\
+    ///   **Space**: O(*n*), where *n* is the length of the string.
     public static func repeatedSubstringPattern(_ s: String) -> Bool {
         let ss = s + s
         return ss[ss.index(after: ss.startIndex)..<ss.index(before: ss.endIndex)].contains(s)

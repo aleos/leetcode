@@ -30,8 +30,8 @@ public enum P2024 {
     ///     - Change the answer key for any question to `'T'` or `'F'` (i.e., set `answerKey[i]` to `'T'` or `'F'`).
     /// - Returns: The maximum number of consecutive `'T'`s or `'F'`s in the answer key after performing the operation at most `k` times.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(*n*), where *n* is the length of the answer key,\
+    ///   **Space**: O(*n*), where *n* is the length of the answer key.
     public static func maxConsecutiveAnswers(_ answerKey: String, _ k: Int) -> Int {
         let answers = Array(answerKey)
         

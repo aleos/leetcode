@@ -11,6 +11,17 @@ import Foundation
 ///
 /// Given an integer `columnNumber`, return its corresponding column title as it appears in an Excel sheet.
 ///
+/// For example:
+///
+///     A -> 1
+///     B -> 2
+///     C -> 3
+///     ...
+///     Z -> 26
+///     AA -> 27
+///     AB -> 28
+///     ...
+///
 /// **Difficulty:** Easy
 ///
 /// **Topics:** Math, String
@@ -21,8 +32,8 @@ public enum P0168 {
     /// - Parameter columnNumber: An integer.
     /// - Returns: Corresponding column title as it appears in an Excel sheet.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(log₂₆(*n*)), where *n* is the column number,\
+    ///   **Space**: O(*1*).
     public static func convertToTitle(_ columnNumber: Int) -> String {
         var columnNumber = UInt32(columnNumber)
         let alphabetCount: UInt32 = 26

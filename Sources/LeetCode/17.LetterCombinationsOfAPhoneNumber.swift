@@ -13,6 +13,8 @@ import Foundation
 ///
 /// A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
 ///
+/// ![mapping](https://assets.leetcode.com/uploads/2022/03/15/1200px-telephone-keypad2svg.png)
+///
 /// **Difficulty:** Medium
 ///
 /// **Topics:** Hash Table, String, Backtracking
@@ -24,8 +26,8 @@ public enum P0017 {
     /// - Parameter digits: 2: abc, 3: def, 4: ghi, 5: jkl, 6: mno, 7: pqrs, 8: tuv, 9: wxyz
     /// - Returns: All possible letter combinations that the number could represent in any order.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(*4^n*), where *n* is the length of the input digits string,\
+    ///   **Space**: O(*1*).
     public static func letterCombinations(_ digits: String) -> [String] {
         var combinations: [String] = []
         if let lastDigit = digits.first {

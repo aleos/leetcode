@@ -24,8 +24,6 @@ import Foundation
 /// - SeeAlso: [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
 public enum P0074 {
     
-    /// - Complexity: O(log(m * n))
-    ///
     /// - Parameters:
     ///   - matrix: An `m x n` integer matrix with the following two properties:
     ///     - Each row is sorted in non-decreasing order.
@@ -33,8 +31,8 @@ public enum P0074 {
     ///   - target: An integer.
     /// - Returns: `true` if `target` is in `matrix` or `false` otherwise.
     /// - Complexity:
-    ///   **Time**: O(log*m* * *n*), where *m* and *n* is a size of the input matrix ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(log(*m* × *n*)), where *m* and *n* are the dimensions of the input matrix,\
+    ///   **Space**: O(*1*).
     public static func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
         
         /// Adapter to use flat indexes instead of 2D.

@@ -25,8 +25,8 @@ public enum P0239 {
     ///   - k: A size of a sliding window.
     /// - Returns: The max sliding window.
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
-    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    ///   **Time**: O(*n*), where *n* is the length of the array,\
+    ///   **Space**: O(*k*), where *k* is the window size.
     public static func maxSlidingWindow(_ nums: [Int], _ k: Int) -> [Int] {
         var windowMaxIndexes: [Int] = []
         var maxes: [Int] = []
