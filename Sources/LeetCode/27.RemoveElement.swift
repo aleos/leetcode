@@ -22,6 +22,9 @@ public enum P0027 {
     ///   - nums: An integer array.
     ///   - val: An integer.
     /// - Returns: The number of elements in `nums` which are not equal to `val`.
+    /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
     public static func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
         var rightIndex = nums.count - 1
         var leftIndex = 0

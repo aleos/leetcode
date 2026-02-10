@@ -24,12 +24,13 @@ import Foundation
 /// - SeeAlso: [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 public enum P0033 {
     
-    /// - Complexity: O(log n)
-    ///
     /// - Parameters:
     ///   - nums: An integer array sorted in ascending order (with distinct values).
     ///   - target: An integer.
     /// - Returns: An index of `target` if it is in `nums`, or `-1` if it is not in `nums`.
+    /// - Complexity:
+    ///   **Time**: O(log*n*), where *n* is length of the input array ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
     public static func search(_ nums: [Int], _ target: Int) -> Int {
         var l = 0, r = nums.count - 1
         

@@ -23,6 +23,9 @@ import Foundation
 public enum P0026 {
     /// - Parameter nums: An integer array sorted in non-decreasing order.
     /// - Returns: The number of unique elements in `nums`.
+    /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
     public static func removeDuplicates(_ nums: inout [Int]) -> Int {
         guard !nums.isEmpty else { return 0 }
         var i = 1

@@ -28,6 +28,9 @@ public enum P0081 {
     ///   - nums: An integer array sorted in non-decreasing order (not necessarily with distinct values).
     ///   - target: An integer.
     /// - Returns: `true` if target is in `nums`, or `false` if it is not in `nums`.
+    /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
     public static func search(_ nums: [Int], _ target: Int) -> Bool {
         var l = 0, r = nums.count - 1
         

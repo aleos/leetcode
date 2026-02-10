@@ -23,6 +23,9 @@ public enum P0017 {
     
     /// - Parameter digits: 2: abc, 3: def, 4: ghi, 5: jkl, 6: mno, 7: pqrs, 8: tuv, 9: wxyz
     /// - Returns: All possible letter combinations that the number could represent in any order.
+    /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
     public static func letterCombinations(_ digits: String) -> [String] {
         var combinations: [String] = []
         if let lastDigit = digits.first {

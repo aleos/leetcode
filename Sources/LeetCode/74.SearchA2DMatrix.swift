@@ -32,6 +32,9 @@ public enum P0074 {
     ///     - The first integer of each row is greater than the last integer of the previous row.
     ///   - target: An integer.
     /// - Returns: `true` if `target` is in `matrix` or `false` otherwise.
+    /// - Complexity:
+    ///   **Time**: O(log*m* * *n*), where *m* and *n* is a size of the input matrix ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
     public static func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
         
         /// Adapter to use flat indexes instead of 2D.

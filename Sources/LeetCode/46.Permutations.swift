@@ -21,6 +21,9 @@ public enum P0046 {
     /// - Parameters:
     ///   - nums: Distinct integers.
     /// - Returns: All the possible permutations.
+    /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
     public static func permute(_ nums: [Int]) -> [[Int]] {
         guard nums.count > 1 else { return [nums] }
         guard nums.count != 2 else { return [nums, [nums[1], nums[0]]] }
