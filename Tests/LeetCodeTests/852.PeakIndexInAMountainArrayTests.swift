@@ -34,21 +34,19 @@ import XCTest
 /// - `arr` is guaranteed to be a mountain array.
 final class PeakIndexInAMountainArrayTests: XCTestCase {
     
-    let solution = PeakIndexInAMountainArray()
-    
     func testExample1() {
-        XCTAssertEqual(solution.peakIndexInMountainArray([0,1,0]), 1)
+        XCTAssertEqual(P0852.peakIndexInMountainArray([0,1,0]), 1)
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.peakIndexInMountainArray([0,2,1,0]), 1)
+        XCTAssertEqual(P0852.peakIndexInMountainArray([0,2,1,0]), 1)
     }
     
     func testExample3() {
-        XCTAssertEqual(solution.peakIndexInMountainArray([0,10,5,2]), 1)
+        XCTAssertEqual(P0852.peakIndexInMountainArray([0,10,5,2]), 1)
     }
     
     func testExample() {
-        XCTAssertEqual(solution.peakIndexInMountainArray([3,5,3,2,0]), 1)
+        XCTAssertEqual(P0852.peakIndexInMountainArray([3,5,3,2,0]), 1)
     }
 }

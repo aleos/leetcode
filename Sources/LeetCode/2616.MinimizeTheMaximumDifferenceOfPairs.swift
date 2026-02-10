@@ -1,26 +1,35 @@
 //
 //  2616.MinimizeTheMaximumDifferenceOfPairs.swift
-//  
+//
 //
 //  Created by Alexander Ostrovsky on 9/8/2023.
 //
 
 import Foundation
 
-/// [2616. Minimize the Maximum Difference of Pairs](https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/)
-class MinimizeTheMaximumDifferenceOfPairs {
+/// Minimize the Maximum Difference of Pairs
+///
+/// You are given a 0-indexed integer array `nums` and an integer `p`. Find `p` pairs of indices of `nums` such that the maximum difference amongst all the pairs is minimized. Also, ensure no index appears more than once amongst the `p` pairs.
+///
+/// Note that for a pair of elements at the index `i` and `j`, the difference of this pair is `|nums[i] - nums[j]|`, where `|x|` represents the absolute value of `x`.
+///
+/// Return the minimum maximum difference among all `p` pairs. We define the maximum of an empty set to be zero.
+///
+/// **Difficulty:** Medium
+///
+/// **Topics:** Staff, Array, Binary Search, Dynamic Programming, Greedy, Sorting, Weekly Contest 340
+///
+/// - SeeAlso: [2616. Minimize the Maximum Difference of Pairs](https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/)
+public enum P2616 {
     
-    /// You are given a 0-indexed integer array `nums` and an integer `p`. Find `p` pairs of indices of `nums` such that the maximum difference amongst all the pairs is minimized. Also, ensure no index appears more than once amongst the `p` pairs.
-    ///
-    /// Note that for a pair of elements at the index `i` and `j`, the difference of this pair is `|nums[i] - nums[j]|`, where `|x|` represents the absolute value of `x`.
-    ///
-    /// Return the minimum maximum difference among all `p` pairs. We define the maximum of an empty set to be zero.
-    ///
     /// - Parameters:
     ///   - nums: A 0-indexed integer array.
     ///   - p: An integer.
     /// - Returns: The minimum maximum difference among all `p` pairs.
-    func minimizeMax(_ nums: [Int], _ p: Int) -> Int {
+    /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    public static func minimizeMax(_ nums: [Int], _ p: Int) -> Int {
         guard !nums.isEmpty else { return 0 }
         
         let nums = nums.sorted()

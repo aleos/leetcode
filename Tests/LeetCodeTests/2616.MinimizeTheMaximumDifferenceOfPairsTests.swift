@@ -32,13 +32,11 @@ import XCTest
 /// - `0 <= p <= (nums.length)/2`
 final class MinimizeTheMaximumDifferenceOfPairsTests: XCTestCase {
     
-    let solution = MinimizeTheMaximumDifferenceOfPairs()
-    
     func testExample1() {
-        XCTAssertEqual(solution.minimizeMax([10,1,2,7,1,3], 2), 1)
+        XCTAssertEqual(P2616.minimizeMax([10,1,2,7,1,3], 2), 1)
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.minimizeMax([4,2,1,2], 1), 0)
+        XCTAssertEqual(P2616.minimizeMax([4,2,1,2], 1), 0)
     }
 }

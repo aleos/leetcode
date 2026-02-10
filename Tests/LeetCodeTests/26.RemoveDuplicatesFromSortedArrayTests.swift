@@ -33,17 +33,15 @@ import XCTest
 /// - `nums` is sorted in non-decreasing order.
 final class RemoveDuplicatesFromSortedArrayTests: XCTestCase {
     
-    let solution = RemoveDuplicatesFromSortedArray()
-    
     func testExample1() throws {
         var nums = [1,1,2]
-        XCTAssertEqual(solution.removeDuplicates(&nums), 2)
+        XCTAssertEqual(P0026.removeDuplicates(&nums), 2)
         XCTAssertEqual(nums[..<2], [1,2])
     }
     
     func testExample2() throws {
         var nums = [0,0,1,1,1,2,2,3,3,4]
-        XCTAssertEqual(solution.removeDuplicates(&nums), 5)
+        XCTAssertEqual(P0026.removeDuplicates(&nums), 5)
         XCTAssertEqual(nums[..<5], [0,1,2,3,4])
     }
 }

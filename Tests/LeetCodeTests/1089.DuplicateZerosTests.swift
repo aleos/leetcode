@@ -30,17 +30,15 @@ import XCTest
 /// - `0 <= arr[i] <= 9`
 final class DuplicateZerosTests: XCTestCase {
     
-    let solution = DuplicateZeros()
-    
     func testExample1() {
         var arr = [1,0,2,3,0,4,5,0]
-        solution.duplicateZeros(&arr)
+        P1089.duplicateZeros(&arr)
         XCTAssertEqual(arr, [1,0,0,2,3,0,0,4])
     }
     
     func testExample2() {
         var arr = [1,2,3]
-        solution.duplicateZeros(&arr)
+        P1089.duplicateZeros(&arr)
         XCTAssertEqual(arr, [1,2,3])
     }
 }

@@ -43,17 +43,15 @@ import XCTest
 /// - `1 <= k <= n`
 final class MaximizeTheConfusionOfAnExamTests: XCTestCase {
     
-    let solution = MaximizeTheConfusionOfAnExam()
-    
     func testExample1() {
-        XCTAssertEqual(solution.maxConsecutiveAnswers("TTFF", 2), 4)
+        XCTAssertEqual(P2024.maxConsecutiveAnswers("TTFF", 2), 4)
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.maxConsecutiveAnswers("TFFT", 1), 3)
+        XCTAssertEqual(P2024.maxConsecutiveAnswers("TFFT", 1), 3)
     }
     
     func testExample3() {
-        XCTAssertEqual(solution.maxConsecutiveAnswers("TTFTTFTT", 1), 5)
+        XCTAssertEqual(P2024.maxConsecutiveAnswers("TTFTTFTT", 1), 5)
     }
 }

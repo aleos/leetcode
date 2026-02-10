@@ -30,13 +30,11 @@ import XCTest
 /// - `-104 <= matrix[i][j], target <= 104`
 final class SearchA2DMatrixTests: XCTestCase {
     
-    let solution = SearchA2DMatrix()
-    
     func testExample1() throws {
-        XCTAssertEqual(solution.searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]], 3), true)
+        XCTAssertEqual(P0074.searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]], 3), true)
     }
     
     func testExample2() throws {
-        XCTAssertEqual(solution.searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]], 13), false)
+        XCTAssertEqual(P0074.searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]], 13), false)
     }
 }

@@ -36,22 +36,20 @@ import XCTest
 /// - `nums[i]` is either `0` or `1`.
 final class LongestSubarrayOf1sAfterDeletingOneElementTests: XCTestCase {
     
-    let solution = LongestSubarrayOf1sAfterDeletingOneElement()
-    
     func testExample1() {
-        XCTAssertEqual(solution.longestSubarray([1,1,0,1]), 3)
+        XCTAssertEqual(P1493.longestSubarray([1,1,0,1]), 3)
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.longestSubarray([0,1,1,1,0,1,1,0,1]), 5)
+        XCTAssertEqual(P1493.longestSubarray([0,1,1,1,0,1,1,0,1]), 5)
     }
 
     func testExample3() {
-        XCTAssertEqual(solution.longestSubarray([1,1,1]), 2)
+        XCTAssertEqual(P1493.longestSubarray([1,1,1]), 2)
     }
     
     func testExample() {
-        XCTAssertEqual(solution.longestSubarray([0,0,0,1,1,1,0,1,1,0,0,0,0,1,0,0,0,0,0,0]), 5)
-        XCTAssertEqual(solution.longestSubarray([1,1,0,0,1,1,1,0,1]), 4)
+        XCTAssertEqual(P1493.longestSubarray([0,0,0,1,1,1,0,1,1,0,0,0,0,1,0,0,0,0,0,0]), 5)
+        XCTAssertEqual(P1493.longestSubarray([1,1,0,0,1,1,1,0,1]), 4)
     }
 }

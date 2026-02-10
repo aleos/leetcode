@@ -35,17 +35,15 @@ import XCTest
 /// - `s` consists of lowercase English letters.
 final class RepeatedSubstringPatternTests: XCTestCase {
     
-    let solution = RepeatedSubstringPattern()
-    
     func testExample1() {
-        XCTAssertEqual(solution.repeatedSubstringPattern("abab"), true)
+        XCTAssertEqual(P0459.repeatedSubstringPattern("abab"), true)
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.repeatedSubstringPattern("aba"), false)
+        XCTAssertEqual(P0459.repeatedSubstringPattern("aba"), false)
     }
     
     func testExample3() {
-        XCTAssertEqual(solution.repeatedSubstringPattern("abcabcabcabc"), true)
+        XCTAssertEqual(P0459.repeatedSubstringPattern("abcabcabcabc"), true)
     }
 }

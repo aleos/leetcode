@@ -33,17 +33,15 @@ import XCTest
 /// - `digits[i]` is a digit in the range `['2', '9']`.
 final class LetterCombinationsOfAPhoneNumberTests: XCTestCase {
     
-    let solution = LetterCombinationsOfAPhoneNumber()
-    
     func testExample1() throws {
-        XCTAssertEqual(solution.letterCombinations("23"), ["ad","ae","af","bd","be","bf","cd","ce","cf"])
+        XCTAssertEqual(P0017.letterCombinations("23"), ["ad","ae","af","bd","be","bf","cd","ce","cf"])
     }
     
     func testExample2() throws {
-        XCTAssertEqual(solution.letterCombinations(""), [])
+        XCTAssertEqual(P0017.letterCombinations(""), [])
     }
 
     func testExample3() throws {
-        XCTAssertEqual(solution.letterCombinations("2"), ["a","b","c"])
+        XCTAssertEqual(P0017.letterCombinations("2"), ["a","b","c"])
     }
 }

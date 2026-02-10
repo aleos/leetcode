@@ -7,18 +7,24 @@
 
 import Foundation
 
-/// [77. Combinations](https://leetcode.com/problems/combinations/)
-class Combinations {
+/// Combinations
+///
+/// Given two integers n and k, return all possible combinations of k numbers chosen from the range [1, n].
+///
+/// You may return the answer in any order.
+///
+/// **Difficulty:** Medium
+///
+/// **Topics:** Backtracking, Combinatorics
+///
+/// - SeeAlso: [77. Combinations](https://leetcode.com/problems/combinations/)
+public enum P0077 {
     
-    /// Given two integers n and k, return all possible combinations of k numbers chosen from the range [1, n].
-    ///
-    /// You may return the answer in any order.
-    ///
     /// - Parameters:
     ///   - n: A range [1, n].
     ///   - k: Number of numbers.
     /// - Returns: All possible combinations of `k` numbers chosen from the range `[1, n]`. You may return the answer in any order.
-    func combine(_ n: Int, _ k: Int) -> [[Int]] {
+    public static func combine(_ n: Int, _ k: Int) -> [[Int]] {
         func combine(from: Int, to: Int, count: Int) -> [[Int]] {
             guard count != 1 else { return Array((from...to).map({ [$0] })) }
             var combinations = [[Int]]()
@@ -33,3 +39,4 @@ class Combinations {
         return combine(from: 1, to: n, count: k)
     }
 }
+

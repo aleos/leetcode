@@ -44,17 +44,15 @@ import XCTest
 /// - `1 <= columnNumber <= 2^31 - 1`
 final class ExcelSheetColumnTitleTests: XCTestCase {
     
-    let solution = ExcelSheetColumnTitle()
-    
     func testExample1() {
-        XCTAssertEqual(solution.convertToTitle(1), "A")
+        XCTAssertEqual(P0168.convertToTitle(1), "A")
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.convertToTitle(28), "AB")
+        XCTAssertEqual(P0168.convertToTitle(28), "AB")
     }
 
     func testExample3() {
-        XCTAssertEqual(solution.convertToTitle(701), "ZY")
+        XCTAssertEqual(P0168.convertToTitle(701), "ZY")
     }
 }

@@ -38,13 +38,11 @@ import XCTest
 /// - `1 <= k <= nums.length`
 final class SlidingWindowMaximumTests: XCTestCase {
     
-    let solution = SlidingWindowMaximum()
-    
     func testExample1() {
-        XCTAssertEqual(solution.maxSlidingWindow([1,3,-1,-3,5,3,6,7], 3), [3,3,5,5,6,7])
+        XCTAssertEqual(P0239.maxSlidingWindow([1,3,-1,-3,5,3,6,7], 3), [3,3,5,5,6,7])
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.maxSlidingWindow([1], 1), [1])
+        XCTAssertEqual(P0239.maxSlidingWindow([1], 1), [1])
     }
 }

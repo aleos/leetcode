@@ -1,21 +1,30 @@
 //
 //  1089.DuplicateZeros.swift
-//  
+//
 //
 //  Created by Alexander Ostrovsky on 3/8/2023.
 //
 
 import Foundation
 
-/// [1089. Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)
-class DuplicateZeros {
+/// Duplicate Zeros
+///
+/// Given a fixed-length integer array `arr`, duplicate each occurrence of zero, shifting the remaining elements to the right.
+///
+/// Note that elements beyond the length of the original array are not written. Do the above modifications to the input array in place and do not return anything.
+///
+/// **Difficulty:** Easy
+///
+/// **Topics:** Senior, Array, Two Pointers, Weekly Contest 141
+///
+/// - SeeAlso: [1089. Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)
+public enum P1089 {
     
-    /// Given a fixed-length integer array `arr`, duplicate each occurrence of zero, shifting the remaining elements to the right.
-    ///
-    /// Note that elements beyond the length of the original array are not written. Do the above modifications to the input array in place and do not return anything.
-    ///
     /// - Parameter arr: A fixed-length integer array.
-    func duplicateZeros(_ arr: inout [Int]) {
+    /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(1)
+    public static func duplicateZeros(_ arr: inout [Int]) {
         var i = 0
         var j = 0
         if arr[i] == 0 {

@@ -39,18 +39,16 @@ import XCTest
 /// - `2 <= k <= cookies.length`
 final class FairDistributionOfCookiesTests: XCTestCase {
     
-    let solution = FairDistributionOfCookies()
-    
     func testExample1() {
-        XCTAssertEqual(solution.distributeCookies([8,15,10,20,8], 2), 31)
+        XCTAssertEqual(P2305.distributeCookies([8,15,10,20,8], 2), 31)
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.distributeCookies([6,1,3,2,2,4,1,2], 3), 7)
+        XCTAssertEqual(P2305.distributeCookies([6,1,3,2,2,4,1,2], 3), 7)
     }
     
     func testExample() {
-        XCTAssertEqual(solution.distributeCookies([15,18,19,5,6,13,15,20], 3), 38)
-        XCTAssertEqual(solution.distributeCookies([13,3], 2), 13)
+        XCTAssertEqual(P2305.distributeCookies([15,18,19,5,6,13,15,20], 3), 38)
+        XCTAssertEqual(P2305.distributeCookies([13,3], 2), 13)
     }
 }

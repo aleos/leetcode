@@ -1,20 +1,29 @@
 //
 //  485.MaxConsecutiveOnes.swift
-//  
+//
 //
 //  Created by Alexander Ostrovsky on 3/8/2023.
 //
 
 import Foundation
 
-/// [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
-class MaxConsecutiveOnes {
+/// Max Consecutive Ones
+///
+/// Given a binary array `nums`, return the maximum number of consecutive `1`'s in the array.
+///
+/// **Difficulty:** Easy
+///
+/// **Topics:** Mid Level, Array
+///
+/// - SeeAlso: [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
+public enum P0485 {
     
-    /// Given a binary array `nums`, return the maximum number of consecutive `1`'s in the array.
-    /// 
     /// - Parameter nums: A binary array.
     /// - Returns: The maximum number of consecutive `1`'s in the array.
-    func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
+    /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    public static func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
         var maximumNumberOfConsecutive1s = 0
         var currentNumberOfConsecutive1s = 0
         for num in nums {
@@ -27,5 +36,4 @@ class MaxConsecutiveOnes {
         }
         return max(maximumNumberOfConsecutive1s, currentNumberOfConsecutive1s)
     }
-
 }

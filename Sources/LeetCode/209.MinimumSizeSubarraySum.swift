@@ -7,16 +7,25 @@
 
 import Foundation
 
-/// [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
-class MinimumSizeSubarraySum {
+/// Minimum Size Subarray Sum
+///
+/// Given an array of positive integers `nums` and a positive integer `target`, return the minimal length of a subarray whose sum is greater than or equal to `target`. If there is no such subarray, return `0` instead.
+///
+/// **Difficulty:** Medium
+///
+/// **Topics:** Array, Binary Search, Sliding Window, Prefix Sum
+///
+/// - SeeAlso: [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
+public enum P0209 {
     
-    /// Given an array of positive integers `nums` and a positive integer `target`, return the minimal length of a subarray whose sum is greater than or equal to `target`. If there is no such subarray, return `0` instead.
-    /// 
     /// - Parameters:
     ///   - target: A positive integer.
     ///   - nums: An array of positive integers.
     /// - Returns: The minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, returns `0` instead.
-    func minSubArrayLen(_ target: Int, _ nums: [Int]) -> Int {
+    ///     /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    public static func minSubArrayLen(_ target: Int, _ nums: [Int]) -> Int {
         var start = 0
         var currentSum = 0
         var minLength: Int = .max

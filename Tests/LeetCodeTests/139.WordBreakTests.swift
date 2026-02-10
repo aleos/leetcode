@@ -39,22 +39,20 @@ import XCTest
 /// - All the strings of `wordDict` are unique.
 final class WordBreakTests: XCTestCase {
     
-    let solution = WordBreak()
-    
     func testExample1() {
-        XCTAssertEqual(solution.wordBreak("leetcode", ["leet","code"]), true)
+        XCTAssertEqual(P0139.wordBreak("leetcode", ["leet","code"]), true)
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.wordBreak("applepenapple", ["apple","pen"]), true)
+        XCTAssertEqual(P0139.wordBreak("applepenapple", ["apple","pen"]), true)
     }
 
     func testExample3() {
-        XCTAssertEqual(solution.wordBreak("catsandog", ["cats","dog","sand","and","cat"]), false)
+        XCTAssertEqual(P0139.wordBreak("catsandog", ["cats","dog","sand","and","cat"]), false)
     }
     
     func testExample() {
-        XCTAssertEqual(solution.wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", ["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"]), false)
+        XCTAssertEqual(P0139.wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", ["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"]), false)
     }
 
 }

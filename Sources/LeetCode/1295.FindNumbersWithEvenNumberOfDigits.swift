@@ -7,20 +7,29 @@
 
 import Foundation
 
-/// [1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)
-class FindNumbersWithEvenNumberOfDigits {
+/// Find Numbers with Even Number of Digits
+///
+/// Given an array nums of integers, return how many of them contain an even number of digits.
+///
+/// **Difficulty:** Easy
+///
+/// **Topics:** Mid Level, Array, Math, Weekly Contest 168
+///
+/// - SeeAlso: [1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)
+public enum P1295 {
     
-    /// Given an array nums of integers, return how many of them contain an even number of digits.
-    ///
     /// - Parameter nums: An array of integers.
     /// - Returns: How many of integers contain an even number of digits.
-    func findNumbers(_ nums: [Int]) -> Int {
+    /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    public static func findNumbers(_ nums: [Int]) -> Int {
         nums.reduce(0) { partialResult, num in
             isEven(digits(in: num)) ? partialResult + 1 : partialResult
         }
     }
     
-    private func digits(in num: Int) -> Int {
+    private static func digits(in num: Int) -> Int {
         var num = num
         var digitsNumber = 0
         repeat {
@@ -30,5 +39,5 @@ class FindNumbersWithEvenNumberOfDigits {
         return digitsNumber
     }
     
-    private func isEven(_ num: Int) -> Bool { num % 2 == 0 }
+    private static func isEven(_ num: Int) -> Bool { num % 2 == 0 }
 }

@@ -43,23 +43,21 @@ import XCTest
 /// - `-109 <= nums1[i], nums2[j] <= 109`
 final class MergeSortedArrayTests: XCTestCase {
     
-    let solution = MergeSortedArray()
-    
     func testExample1() throws {
         var nums1 = [1,2,3,0,0,0]
-        solution.merge(&nums1, 3, [2,5,6], 3)
+        P0088.merge(&nums1, 3, [2,5,6], 3)
         XCTAssertEqual(nums1, [1,2,2,3,5,6])
     }
     
     func testExample2() throws {
         var nums1 = [1]
-        solution.merge(&nums1, 1, [], 0)
+        P0088.merge(&nums1, 1, [], 0)
         XCTAssertEqual(nums1, [1])
     }
     
     func testExample3() throws {
         var nums1 = [0]
-        solution.merge(&nums1, 0, [1], 1)
+        P0088.merge(&nums1, 0, [1], 1)
         XCTAssertEqual(nums1, [1])
     }
 }

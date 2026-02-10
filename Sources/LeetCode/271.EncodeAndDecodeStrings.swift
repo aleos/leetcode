@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// [271. Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
+/// Encode and Decode Strings
 ///
 /// Design an algorithm to encode a list of strings to a string. The encoded string is then sent over the network and is decoded back to the original list of strings.
 ///
@@ -41,17 +41,23 @@ import Foundation
 ///
 ///
 /// Follow up: Could you write a generalized algorithm to work on any possible set of characters?
-class EncodeAndDecodeStrings {
+///
+/// **Difficulty:** Medium
+///
+/// **Topics:** Array, String, Design
+///
+/// - SeeAlso: [271. Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
+public enum P0271 {
     
     /// Separator is `\,`
-    func encode(_ strs: [String]) -> String {
+    public static func encode(_ strs: [String]) -> String {
         strs
             .map({ $0.replacingOccurrences(of: #"\"#, with: #"\\"#) })
             .joined(separator: #"\,"#)
     }
     
     /// Separator is `\,`
-    func decode(_ s: String) -> [String] {
+    public static func decode(_ s: String) -> [String] {
         var result: [String] = []
         
         var previous = s.startIndex

@@ -31,13 +31,12 @@ import XCTest
 /// - `1 <= k <= n`
 final class CombinationsTests: XCTestCase {
     
-    let solution = Combinations()
-    
     func testExample1() throws {
-        XCTAssertEqual(solution.combine(4, 2), [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]])
+        XCTAssertEqual(P0077.combine(4, 2), [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]])
     }
     
     func testExample2() throws {
-        XCTAssertEqual(solution.combine(1, 1), [[1]])
+        XCTAssertEqual(P0077.combine(1, 1), [[1]])
     }
 }
+

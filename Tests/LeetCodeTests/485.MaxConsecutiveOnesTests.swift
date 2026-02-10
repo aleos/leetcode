@@ -29,13 +29,11 @@ import XCTest
 /// - `nums[i]` is either `0` or `1`.
 final class MaxConsecutiveOnesTests: XCTestCase {
     
-    let solution = MaxConsecutiveOnes()
-    
     func testExample1() {
-        XCTAssertEqual(solution.findMaxConsecutiveOnes([1,1,0,1,1,1]), 3)
+        XCTAssertEqual(P0485.findMaxConsecutiveOnes([1,1,0,1,1,1]), 3)
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.findMaxConsecutiveOnes([1,0,1,1,0,1]), 2)
+        XCTAssertEqual(P0485.findMaxConsecutiveOnes([1,0,1,1,0,1]), 2)
     }
 }

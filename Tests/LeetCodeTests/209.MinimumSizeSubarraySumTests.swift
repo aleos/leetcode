@@ -34,17 +34,15 @@ import XCTest
 /// - `1 <= nums[i] <= 104`
 final class MinimumSizeSubarraySumTests: XCTestCase {
     
-    let solution = MinimumSizeSubarraySum()
-    
     func testExample1() {
-        XCTAssertEqual(solution.minSubArrayLen(7, [2,3,1,2,4,3]), 2)
+        XCTAssertEqual(P0209.minSubArrayLen(7, [2,3,1,2,4,3]), 2)
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.minSubArrayLen(4, [1,4,4]), 1)
+        XCTAssertEqual(P0209.minSubArrayLen(4, [1,4,4]), 1)
     }
     
     func testExample3() {
-        XCTAssertEqual(solution.minSubArrayLen(11, [1,1,1,1,1,1,1,1]), 0)
+        XCTAssertEqual(P0209.minSubArrayLen(11, [1,1,1,1,1,1,1,1]), 0)
     }
 }

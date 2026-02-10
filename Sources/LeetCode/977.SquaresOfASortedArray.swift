@@ -1,22 +1,29 @@
 //
 //  977.SquaresOfASortedArray.swift
-//  
+//
 //
 //  Created by Alexander Ostrovsky on 3/8/2023.
 //
 
 import Foundation
 
-/// [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
-class SquaresOfASortedArray {
+/// Squares of a Sorted Array
+///
+/// Given an integer array `nums` sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+///
+/// **Difficulty:** Easy
+///
+/// **Topics:** Junior, Array, Two Pointers, Sorting, Weekly Contest 120
+///
+/// - SeeAlso: [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
+public enum P0977 {
     
-    /// Given an integer array `nums` sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
-    ///
-    /// - Complexity: `O(n)`
-    ///
     /// - Parameter nums: An integer array sorted in non-decreasing order.
     /// - Returns: An array of the squares of each number sorted in non-decreasing order.
-    func sortedSquares(_ nums: [Int]) -> [Int] {
+    /// - Complexity:
+    ///   **Time**: O(*n*), where *n* is a length of the input array,\
+    ///   **Space**: O(*n*), where *n* is a length of the input array
+    public static func sortedSquares(_ nums: [Int]) -> [Int] {
         var result = [Int](repeating: 0, count: nums.count)
         var left = 0
         var right = nums.count - 1

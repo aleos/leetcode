@@ -7,14 +7,23 @@
 
 import Foundation
 
-/// [168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
-class ExcelSheetColumnTitle {
+/// Excel Sheet Column Title
+///
+/// Given an integer `columnNumber`, return its corresponding column title as it appears in an Excel sheet.
+///
+/// **Difficulty:** Easy
+///
+/// **Topics:** Math, String
+///
+/// - SeeAlso: [168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
+public enum P0168 {
     
-    /// Given an integer `columnNumber`, return its corresponding column title as it appears in an Excel sheet.
-    ///
     /// - Parameter columnNumber: An integer.
     /// - Returns: Corresponding column title as it appears in an Excel sheet.
-    func convertToTitle(_ columnNumber: Int) -> String {
+    /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    public static func convertToTitle(_ columnNumber: Int) -> String {
         var columnNumber = UInt32(columnNumber)
         let alphabetCount: UInt32 = 26
         var title = ""
@@ -28,7 +37,7 @@ class ExcelSheetColumnTitle {
     
     /// - Parameter number: A letter number starting from 1.
     /// - Returns: A letter corresponding to the number
-    private func letter(_ shift: UInt32) -> String {
+    private static func letter(_ shift: UInt32) -> String {
         String(UnicodeScalar(65 + shift)!)
     }
 }

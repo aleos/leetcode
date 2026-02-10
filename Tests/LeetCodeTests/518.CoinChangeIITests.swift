@@ -41,17 +41,15 @@ import XCTest
 /// - `0 <= amount <= 5000`
 final class CoinChangeIITests: XCTestCase {
     
-    let solution = CoinChangeII()
-    
     func testExample1() {
-        XCTAssertEqual(solution.change(5, [1,2,5]), 4)
+        XCTAssertEqual(P0518.change(5, [1,2,5]), 4)
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.change(3, [2]), 0)
+        XCTAssertEqual(P0518.change(3, [2]), 0)
     }
     
     func testExample3() {
-        XCTAssertEqual(solution.change(10, [10]), 1)
+        XCTAssertEqual(P0518.change(10, [10]), 1)
     }
 }

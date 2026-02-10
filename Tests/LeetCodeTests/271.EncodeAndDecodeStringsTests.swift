@@ -38,13 +38,11 @@ import XCTest
 /// - `strs[i]` contains any possible characters out of `256` valid ASCII characters.
 final class EncodeAndDecodeStringsTests: XCTestCase {
     
-    let solution = EncodeAndDecodeStrings()
-    
     func testExample1() {
-        XCTAssertEqual(solution.decode(solution.encode(["Hello","World"])), ["Hello","World"])
+        XCTAssertEqual(P0271.decode(P0271.encode(["Hello","World"])), ["Hello","World"])
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.decode(solution.encode([""])), [""])
+        XCTAssertEqual(P0271.decode(P0271.encode([""])), [""])
     }
 }

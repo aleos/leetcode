@@ -7,16 +7,22 @@
 
 import Foundation
 
-/// [27. Remove Element](https://leetcode.com/problems/remove-element/)
-class RemoveElement {
+/// Remove Element
+///
+/// Given an integer array `nums` and an integer `val`, remove all occurrences of `val` in `nums` in-place. The order of the elements may be changed. Then return the number of elements in `nums` which are not equal to `val`.
+///
+/// **Difficulty:** Easy
+///
+/// **Topics:** Array, Two Pointers
+///
+/// - SeeAlso: [27. Remove Element](https://leetcode.com/problems/remove-element/)
+public enum P0027 {
     
-    /// Given an integer array `nums` and an integer `val`, remove all occurrences of `val` in `nums` in-place. The order of the elements may be changed. Then return the number of elements in `nums` which are not equal to `val`.
-    ///
     /// - Parameters:
     ///   - nums: An integer array.
     ///   - val: An integer.
     /// - Returns: The number of elements in `nums` which are not equal to `val`.
-    func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
+    public static func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
         var rightIndex = nums.count - 1
         var leftIndex = 0
         while leftIndex <= rightIndex {
@@ -30,3 +36,4 @@ class RemoveElement {
         return rightIndex + 1
     }
 }
+

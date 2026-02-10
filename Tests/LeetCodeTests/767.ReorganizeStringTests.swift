@@ -28,13 +28,11 @@ import XCTest
 /// - `s` consists of lowercase English letters.
 final class ReorganizeStringTests: XCTestCase {
     
-    let solution = ReorganizeString()
-    
     func testExample1() {
-        XCTAssertEqual(solution.reorganizeString("aab"), "aba")
+        XCTAssertEqual(P0767.reorganizeString("aab"), "aba")
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.reorganizeString("aaab"), "")
+        XCTAssertEqual(P0767.reorganizeString("aaab"), "")
     }
 }

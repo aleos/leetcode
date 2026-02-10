@@ -37,13 +37,11 @@ import XCTest
 /// `1 <= nums[i] <= 105`
 final class FindNumbersWithEvenNumberOfDigitsTests: XCTestCase {
     
-    let solution = FindNumbersWithEvenNumberOfDigits()
-    
     func testExample1() {
-        XCTAssertEqual(solution.findNumbers([12,345,2,6,7896]), 2)
+        XCTAssertEqual(P1295.findNumbers([12,345,2,6,7896]), 2)
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.findNumbers([555,901,482,1771]), 1)
+        XCTAssertEqual(P1295.findNumbers([555,901,482,1771]), 1)
     }
 }

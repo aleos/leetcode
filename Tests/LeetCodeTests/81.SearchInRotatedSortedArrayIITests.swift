@@ -30,17 +30,16 @@ import XCTest
 /// - `-104 <= target <= 104`
 final class SearchInRotatedSortedArrayIITests: XCTestCase {
     
-    let solution = SearchInRotatedSortedArrayII()
-    
     func testExample1() throws {
-        XCTAssertEqual(solution.search([2,5,6,0,0,1,2], 0), true)
+        XCTAssertEqual(P0081.search([2,5,6,0,0,1,2], 0), true)
     }
     
     func testExample2() throws {
-        XCTAssertEqual(solution.search([2,5,6,0,0,1,2], 3), false)
+        XCTAssertEqual(P0081.search([2,5,6,0,0,1,2], 3), false)
     }
     
     func testExample() throws {
-        XCTAssertEqual(solution.search([1,0,1,1,1], 0), true)
+        XCTAssertEqual(P0081.search([1,0,1,1,1], 0), true)
     }
 }
+

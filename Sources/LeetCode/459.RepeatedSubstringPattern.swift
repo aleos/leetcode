@@ -7,14 +7,23 @@
 
 import Foundation
 
-/// [459. Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)
-class RepeatedSubstringPattern {
+/// Repeated Substring Pattern
+///
+/// Given a string `s`, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.
+///
+/// **Difficulty:** Easy
+///
+/// **Topics:** Staff, String, String Matching
+///
+/// - SeeAlso: [459. Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)
+public enum P0459 {
     
-    /// Given a string `s`, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.
-    ///
     /// - Parameter s: A string.
     /// - Returns: `true` if it can be constructed by taking a substring of it and appending multiple copies of the substring together.
-    func repeatedSubstringPattern(_ s: String) -> Bool {
+    /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    public static func repeatedSubstringPattern(_ s: String) -> Bool {
         let ss = s + s
         return ss[ss.index(after: ss.startIndex)..<ss.index(before: ss.endIndex)].contains(s)
     }

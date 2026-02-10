@@ -34,17 +34,15 @@ import XCTest
 /// - All the integers of `nums` are unique
 final class PermutationsTests: XCTestCase {
     
-    let solution = Permutations()
-    
     func testExample1() throws {
-        XCTAssertEqual(Set(solution.permute([1,2,3])), Set([[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]))
+        XCTAssertEqual(Set(P0046.permute([1,2,3])), Set([[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]))
     }
     
     func testExample2() throws {
-        XCTAssertEqual(Set(solution.permute([0,1])), Set([[0,1],[1,0]]))
+        XCTAssertEqual(Set(P0046.permute([0,1])), Set([[0,1],[1,0]]))
     }
     
     func testExample3() throws {
-        XCTAssertEqual(solution.permute([1]), [[1]])
+        XCTAssertEqual(P0046.permute([1]), [[1]])
     }
 }

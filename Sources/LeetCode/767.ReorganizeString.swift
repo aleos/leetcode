@@ -1,22 +1,31 @@
 //
 //  767.ReorganizeString.swift
-//  
+//
 //
 //  Created by Alexander Ostrovsky on 23/8/2023.
 //
 
 import Foundation
 
-/// [767. Reorganize String](https://leetcode.com/problems/reorganize-string/)
-class ReorganizeString {
+/// Reorganize String
+///
+/// Given a string `s`, rearrange the characters of `s` so that any two adjacent characters are not the same.
+///
+/// Return any possible rearrangement of `s` or return `""` if not possible.
+///
+/// **Difficulty:** Medium
+///
+/// **Topics:** Staff, Hash Table, String, Greedy, Sorting, Heap (Priority Queue), Counting, Weekly Contest 68
+///
+/// - SeeAlso: [767. Reorganize String](https://leetcode.com/problems/reorganize-string/)
+public enum P0767 {
     
-    /// Given a string `s`, rearrange the characters of `s` so that any two adjacent characters are not the same.
-    ///
-    /// Return any possible rearrangement of `s` or return `""` if not possible.
-    ///
     /// - Parameter s: A string.
     /// - Returns: Any possible rearrangement of `s` or return `""` if not possible.
-    func reorganizeString(_ s: String) -> String {
+    /// - Complexity:
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    public static func reorganizeString(_ s: String) -> String {
         let length = s.count
         let frequences = Array(s.reduce(into: [:]) { f, c in f[c, default: 0] += 1 })
         let maxFreq = frequences.max(by: { $0.value < $1.value })!

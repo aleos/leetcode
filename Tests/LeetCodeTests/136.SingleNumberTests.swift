@@ -33,17 +33,15 @@ import XCTest
 /// - Each element in the array appears twice except for one element which appears only once.
 final class SingleNumberTests: XCTestCase {
     
-    let solution = SingleNumber()
-    
     func testExample1() throws {
-        XCTAssertEqual(solution.singleNumber([2,2,1]), 1)
+        XCTAssertEqual(P0136.singleNumber([2,2,1]), 1)
     }
     
     func testExample2() throws {
-        XCTAssertEqual(solution.singleNumber([4,1,2,1,2]), 4)
+        XCTAssertEqual(P0136.singleNumber([4,1,2,1,2]), 4)
     }
 
     func testExample3() throws {
-        XCTAssertEqual(solution.singleNumber([1]), 1)
+        XCTAssertEqual(P0136.singleNumber([1]), 1)
     }
 }

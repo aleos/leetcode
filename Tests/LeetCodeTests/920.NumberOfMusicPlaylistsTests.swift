@@ -35,17 +35,15 @@ import XCTest
 /// - `0 <= k < n <= goal <= 100`
 final class NumberOfMusicPlaylistsTests: XCTestCase {
     
-    let solution = NumberOfMusicPlaylists()
-    
     func testExample1() {
-        XCTAssertEqual(solution.numMusicPlaylists(3, 3, 1), 6)
+        XCTAssertEqual(P0920.numMusicPlaylists(3, 3, 1), 6)
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.numMusicPlaylists(2, 3, 0), 6)
+        XCTAssertEqual(P0920.numMusicPlaylists(2, 3, 0), 6)
     }
     
     func testExample3() {
-        XCTAssertEqual(solution.numMusicPlaylists(2, 3, 1), 2)
+        XCTAssertEqual(P0920.numMusicPlaylists(2, 3, 1), 2)
     }
 }

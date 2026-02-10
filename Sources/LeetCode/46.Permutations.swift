@@ -7,15 +7,21 @@
 
 import Foundation
 
-/// [46. Permutations](https://leetcode.com/problems/permutations/)
-class Permutations {
+/// Permutations
+///
+/// Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+///
+/// **Difficulty:** Medium
+///
+/// **Topics:** Array, Backtracking
+///
+/// - SeeAlso: [46. Permutations](https://leetcode.com/problems/permutations/)
+public enum P0046 {
     
-    /// Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
-    ///
     /// - Parameters:
     ///   - nums: Distinct integers.
     /// - Returns: All the possible permutations.
-    func permute(_ nums: [Int]) -> [[Int]] {
+    public static func permute(_ nums: [Int]) -> [[Int]] {
         guard nums.count > 1 else { return [nums] }
         guard nums.count != 2 else { return [nums, [nums[1], nums[0]]] }
         var permutations = [[Int]]()
@@ -27,3 +33,4 @@ class Permutations {
         return permutations
     }
 }
+

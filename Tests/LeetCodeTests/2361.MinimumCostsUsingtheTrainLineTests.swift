@@ -41,13 +41,11 @@ import XCTest
 /// - `1 <= regular[i], express[i], expressCost <= 105`
 final class MinimumCostsUsingTheTrainLineTests: XCTestCase {
     
-    let solution = MinimumCostsUsingTheTrainLine()
-    
     func testExample1() {
-        XCTAssertEqual(solution.minimumCosts([1,6,9,5], [5,2,3,10], 8), [1,7,14,19])
+        XCTAssertEqual(P2361.minimumCosts([1,6,9,5], [5,2,3,10], 8), [1,7,14,19])
     }
     
     func testExample2() {
-        XCTAssertEqual(solution.minimumCosts([11,5,13], [7,10,6], 3), [10,15,24])
+        XCTAssertEqual(P2361.minimumCosts([11,5,13], [7,10,6], 3), [10,15,24])
     }
 }

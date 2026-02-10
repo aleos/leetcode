@@ -7,17 +7,23 @@
 
 import Foundation
 
-/// [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
-class SearchA2DMatrix {
+/// Search a 2D Matrix
+///
+/// You are given an `m x n` integer matrix `matrix` with the following two properties:
+/// - Each row is sorted in non-decreasing order.
+/// - The first integer of each row is greater than the last integer of the previous row.
+///
+/// Given an integer `target`, return `true` if `target` is in `matrix` or `false` otherwise.
+///
+/// You must write a solution in `O(log(m * n))` time complexity.
+///
+/// **Difficulty:** Medium
+///
+/// **Topics:** Array, Binary Search, Matrix
+///
+/// - SeeAlso: [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
+public enum P0074 {
     
-    /// You are given an `m x n` integer matrix `matrix` with the following two properties:
-    /// - Each row is sorted in non-decreasing order.
-    /// - The first integer of each row is greater than the last integer of the previous row.
-    ///
-    /// Given an integer `target`, return `true` if `target` is in `matrix` or `false` otherwise.
-    ///
-    /// You must write a solution in `O(log(m * n))` time complexity.
-    ///
     /// - Complexity: O(log(m * n))
     ///
     /// - Parameters:
@@ -26,7 +32,7 @@ class SearchA2DMatrix {
     ///     - The first integer of each row is greater than the last integer of the previous row.
     ///   - target: An integer.
     /// - Returns: `true` if `target` is in `matrix` or `false` otherwise.
-    func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
+    public static func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
         
         /// Adapter to use flat indexes instead of 2D.
         /// - Parameter i: A 'flat' index.
@@ -54,3 +60,4 @@ class SearchA2DMatrix {
         return value(at: l) == target
     }
 }
+

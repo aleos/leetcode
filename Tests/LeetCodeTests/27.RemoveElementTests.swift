@@ -34,17 +34,15 @@ import XCTest
 /// - `0 <= val <= 100`
 final class RemoveElementTests: XCTestCase {
     
-    let solution = RemoveElement()
-    
     func testExample1() throws {
         var nums = [3,2,2,3]
-        XCTAssertEqual(solution.removeElement(&nums, 3), 2)
+        XCTAssertEqual(P0027.removeElement(&nums, 3), 2)
         XCTAssertEqual(nums[0..<2], [2, 2])
     }
     
     func testExample2() throws {
         var nums = [0,1,2,2,3,0,4,2]
-        XCTAssertEqual(solution.removeElement(&nums, 2), 5)
+        XCTAssertEqual(P0027.removeElement(&nums, 2), 5)
         XCTAssertEqual(nums[0..<5], [0,1,4,0,3])
     }
 }
