@@ -11,22 +11,6 @@ import XCTest
 
 /// [852. Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
 ///
-/// **Example 1**:
-///
-///     Input: arr = [0,1,0]
-///     Output: 1
-///
-/// **Example 2**:
-///
-///     Input: arr = [0,2,1,0]
-///     Output: 1
-///
-/// **Example 3**:
-///
-///     Input: arr = [0,10,5,2]
-///     Output: 1
-///
-///
 /// **Constraints**:
 ///
 /// - `3 <= arr.length <= 105`
@@ -34,14 +18,26 @@ import XCTest
 /// - `arr` is guaranteed to be a mountain array.
 final class PeakIndexInAMountainArrayTests: XCTestCase {
     
+    /// **Example 1**:
+    ///
+    ///     Input: arr = [0,1,0]
+    ///     Output: 1
     func testExample1() {
         XCTAssertEqual(P0852.peakIndexInMountainArray([0,1,0]), 1)
     }
     
+    /// **Example 2**:
+    ///
+    ///     Input: arr = [0,2,1,0]
+    ///     Output: 1
     func testExample2() {
         XCTAssertEqual(P0852.peakIndexInMountainArray([0,2,1,0]), 1)
     }
     
+    /// **Example 3**:
+    ///
+    ///     Input: arr = [0,10,5,2]
+    ///     Output: 1
     func testExample3() {
         XCTAssertEqual(P0852.peakIndexInMountainArray([0,10,5,2]), 1)
     }

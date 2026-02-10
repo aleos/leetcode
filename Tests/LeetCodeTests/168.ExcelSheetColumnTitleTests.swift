@@ -22,36 +22,31 @@ import XCTest
 ///     AB -> 28
 ///     ...
 ///
-///
-/// **Example 1**:
-///
-///     Input: columnNumber = 1
-///     Output: "A"
-///
-/// **Example 2**:
-///
-///     Input: columnNumber = 28
-///     Output: "AB"
-///
-/// **Example 3**:
-///
-///     Input: columnNumber = 701
-///     Output: "ZY"
-///
-///
 /// **Constraints**:
 ///
 /// - `1 <= columnNumber <= 2^31 - 1`
 final class ExcelSheetColumnTitleTests: XCTestCase {
     
+    /// **Example 1**:
+    ///
+    ///     Input: columnNumber = 1
+    ///     Output: "A"
     func testExample1() {
         XCTAssertEqual(P0168.convertToTitle(1), "A")
     }
     
+    /// **Example 2**:
+    ///
+    ///     Input: columnNumber = 28
+    ///     Output: "AB"
     func testExample2() {
         XCTAssertEqual(P0168.convertToTitle(28), "AB")
     }
 
+    /// **Example 3**:
+    ///
+    ///     Input: columnNumber = 701
+    ///     Output: "ZY"
     func testExample3() {
         XCTAssertEqual(P0168.convertToTitle(701), "ZY")
     }

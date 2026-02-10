@@ -11,25 +11,6 @@ import XCTest
 
 /// [139. Word Break](https://leetcode.com/problems/word-break/)
 ///
-/// **Example 1**:
-///
-///     Input: s = "leetcode", wordDict = ["leet","code"]
-///     Output: true
-///     Explanation: Return true because "leetcode" can be segmented as "leet code".
-///
-/// **Example 2**:
-///
-///     Input: s = "applepenapple", wordDict = ["apple","pen"]
-///     Output: true
-///     Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
-///     Note that you are allowed to reuse a dictionary word.
-///
-/// **Example 3**:
-///
-///     Input: s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]
-///     Output: false
-///
-///
 /// **Constraints**:
 ///
 /// - `1 <= s.length <= 300`
@@ -39,14 +20,29 @@ import XCTest
 /// - All the strings of `wordDict` are unique.
 final class WordBreakTests: XCTestCase {
     
+    /// **Example 1**:
+    ///
+    ///     Input: s = "leetcode", wordDict = ["leet","code"]
+    ///     Output: true
+    ///     Explanation: Return true because "leetcode" can be segmented as "leet code".
     func testExample1() {
         XCTAssertEqual(P0139.wordBreak("leetcode", ["leet","code"]), true)
     }
     
+    /// **Example 2**:
+    ///
+    ///     Input: s = "applepenapple", wordDict = ["apple","pen"]
+    ///     Output: true
+    ///     Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
+    ///     Note that you are allowed to reuse a dictionary word.
     func testExample2() {
         XCTAssertEqual(P0139.wordBreak("applepenapple", ["apple","pen"]), true)
     }
 
+    /// **Example 3**:
+    ///
+    ///     Input: s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]
+    ///     Output: false
     func testExample3() {
         XCTAssertEqual(P0139.wordBreak("catsandog", ["cats","dog","sand","and","cat"]), false)
     }

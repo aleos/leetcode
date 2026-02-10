@@ -10,21 +10,6 @@ import XCTest
 @testable import LeetCode
 
 /// [1723. Find Minimum Time to Finish All Jobs](https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/)
-/// 
-/// **Example 1**:
-///
-///     Input: jobs = [3,2,3], k = 3
-///     Output: 3
-///     Explanation: By assigning each person one job, the maximum time is 3.
-///
-/// **Example 2**:
-///
-///     Input: jobs = [1,2,4,7,8], k = 2
-///     Output: 11
-///     Explanation: Assign the jobs the following way:
-///     Worker 1: 1, 2, 8 (working time = 1 + 2 + 8 = 11)
-///     Worker 2: 4, 7 (working time = 4 + 7 = 11)
-///     The maximum working time is 11.
 ///
 /// **Constraints**:
 ///
@@ -32,10 +17,23 @@ import XCTest
 /// - `1 <= jobs[i] <= 107`
 final class FindMinimumTimetoFinishAllJobsTests: XCTestCase {
     
+    /// **Example 1**:
+    ///
+    ///     Input: jobs = [3,2,3], k = 3
+    ///     Output: 3
+    ///     Explanation: By assigning each person one job, the maximum time is 3.
     func testExample1() {
         XCTAssertEqual(P1723.minimumTimeRequired([3,2,3], 3), 3)
     }
     
+    /// **Example 2**:
+    ///
+    ///     Input: jobs = [1,2,4,7,8], k = 2
+    ///     Output: 11
+    ///     Explanation: Assign the jobs the following way:
+    ///     Worker 1: 1, 2, 8 (working time = 1 + 2 + 8 = 11)
+    ///     Worker 2: 4, 7 (working time = 4 + 7 = 11)
+    ///     The maximum working time is 11.
     func testExample2() {
         XCTAssertEqual(P1723.minimumTimeRequired([1,2,4,7,8], 2), 11)
     }

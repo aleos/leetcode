@@ -11,17 +11,6 @@ import XCTest
 
 /// [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
 ///
-/// **Example 1**:
-///
-///     Input: nums = [2,5,6,0,0,1,2], target = 0
-///     Output: true
-///
-/// **Example 2**:
-///
-///     Input: nums = [2,5,6,0,0,1,2], target = 3
-///     Output: false
-///
-///
 /// **Constraints**:
 ///
 /// - `1 <= nums.length <= 5000`
@@ -30,10 +19,18 @@ import XCTest
 /// - `-104 <= target <= 104`
 final class SearchInRotatedSortedArrayIITests: XCTestCase {
     
+    /// **Example 1**:
+    ///
+    ///     Input: nums = [2,5,6,0,0,1,2], target = 0
+    ///     Output: true
     func testExample1() throws {
         XCTAssertEqual(P0081.search([2,5,6,0,0,1,2], 0), true)
     }
     
+    /// **Example 2**:
+    ///
+    ///     Input: nums = [2,5,6,0,0,1,2], target = 3
+    ///     Output: false
     func testExample2() throws {
         XCTAssertEqual(P0081.search([2,5,6,0,0,1,2], 3), false)
     }
