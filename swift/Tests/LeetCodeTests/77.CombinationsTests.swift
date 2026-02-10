@@ -11,15 +11,13 @@ import Testing
 
 /// [77. Combinations](https://leetcode.com/problems/combinations/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `1 <= n <= 20`
 /// - `1 <= k <= n`
-@Suite("Combinations")
-struct CombinationsTests {
+@Suite("77. Combinations")
+struct P0077Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: n = 4, k = 2
     ///     Output: [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]
     ///     Explanation: There are 4 choose 2 = 6 total combinations.
@@ -29,8 +27,7 @@ struct CombinationsTests {
         #expect(P0077.combine(4, 2) == [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]])
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: n = 1, k = 1
     ///     Output: [[1]]
     ///     Explanation: There is 1 choose 1 = 1 total combination.
@@ -39,3 +36,4 @@ struct CombinationsTests {
         #expect(P0077.combine(1, 1) == [[1]])
     }
 }
+

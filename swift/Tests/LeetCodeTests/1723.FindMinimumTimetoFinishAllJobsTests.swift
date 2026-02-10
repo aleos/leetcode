@@ -11,15 +11,13 @@ import Testing
 
 /// [1723. Find Minimum Time to Finish All Jobs](https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `1 <= k <= jobs.length <= 12`
 /// - `1 <= jobs[i] <= 107`
-@Suite("Find Minimum Time to Finish All Jobs")
-struct FindMinimumTimetoFinishAllJobsTests {
+@Suite("1723. Find Minimum Time to Finish All Jobs")
+struct P1723Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: jobs = [3,2,3], k = 3
     ///     Output: 3
     ///     Explanation: By assigning each person one job, the maximum time is 3.
@@ -28,8 +26,7 @@ struct FindMinimumTimetoFinishAllJobsTests {
         #expect(P1723.minimumTimeRequired([3,2,3], 3) == 3)
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: jobs = [1,2,4,7,8], k = 2
     ///     Output: 11
     ///     Explanation: Assign the jobs the following way:
@@ -47,3 +44,4 @@ struct FindMinimumTimetoFinishAllJobsTests {
 //        #expect(P1723.minimumTimeRequired([9899456,8291115,9477657,9288480,5146275,7697968,8573153,3582365,3758448,9881935,2420271,4542202], 9) == 0)
     }
 }
+

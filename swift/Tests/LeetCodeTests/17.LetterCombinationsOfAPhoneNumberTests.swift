@@ -11,15 +11,13 @@ import Testing
 
 /// [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `0 <= digits.length <= 4`
 /// - `digits[i]` is a digit in the range `['2', '9']`.
-@Suite("Letter Combinations of a Phone Number")
-struct LetterCombinationsOfAPhoneNumberTests {
+@Suite("17. Letter Combinations of a Phone Number")
+struct P0017Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: digits = "23"
     ///     Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
     @Test("Digits '23' produces 9 combinations")
@@ -27,8 +25,7 @@ struct LetterCombinationsOfAPhoneNumberTests {
         #expect(P0017.letterCombinations("23") == ["ad","ae","af","bd","be","bf","cd","ce","cf"])
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: digits = ""
     ///     Output: []
     @Test("Empty input produces empty output")
@@ -36,8 +33,7 @@ struct LetterCombinationsOfAPhoneNumberTests {
         #expect(P0017.letterCombinations("") == [])
     }
 
-    /// **Example 3**:
-    ///
+    /// ## Example 3:
     ///     Input: digits = "2"
     ///     Output: ["a","b","c"]
     @Test("Single digit '2' produces 3 combinations")
@@ -45,3 +41,4 @@ struct LetterCombinationsOfAPhoneNumberTests {
         #expect(P0017.letterCombinations("2") == ["a","b","c"])
     }
 }
+

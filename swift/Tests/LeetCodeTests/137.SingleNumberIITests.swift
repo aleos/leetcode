@@ -11,15 +11,14 @@ import Testing
 
 /// [137. Single Number II](https://leetcode.com/problems/single-number-ii/)
 ///
-/// **Constraints**:
+/// ## Constraints:
 /// - `1 <= nums.length <= 3 * 104`
 /// - `-231 <= nums[i] <= 231 - 1`
 /// - Each element in `nums` appears exactly three times except for one element which appears once.
-@Suite("Single Number II")
-struct SingleNumberIITests {
+@Suite("137. Single Number II")
+struct P0137Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: nums = [2,2,3,2]
     ///     Output: 3
     @Test("Find single number among triplets")
@@ -27,8 +26,7 @@ struct SingleNumberIITests {
         #expect(P0137.singleNumber([2,2,3,2]) == 3)
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: nums = [0,1,0,1,0,1,99]
     ///     Output: 99
     @Test("Find single number 99")
@@ -41,3 +39,4 @@ struct SingleNumberIITests {
         #expect(P0137.singleNumber([2,2,-3,2]) == -3)
     }
 }
+

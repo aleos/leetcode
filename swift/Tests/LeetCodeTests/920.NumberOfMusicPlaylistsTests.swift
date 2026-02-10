@@ -11,14 +11,12 @@ import Testing
 
 /// [920. Number of Music Playlists](https://leetcode.com/problems/number-of-music-playlists/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `0 <= k < n <= goal <= 100`
-@Suite("Number of Music Playlists")
-struct NumberOfMusicPlaylistsTests {
+@Suite("920. Number of Music Playlists")
+struct P0920Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: n = 3, goal = 3, k = 1
     ///     Output: 6
     ///     Explanation: There are 6 possible playlists: [1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], and [3, 2, 1].
@@ -27,8 +25,7 @@ struct NumberOfMusicPlaylistsTests {
         #expect(P0920.numMusicPlaylists(3, 3, 1) == 6)
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: n = 2, goal = 3, k = 0
     ///     Output: 6
     ///     Explanation: There are 6 possible playlists: [1, 1, 2], [1, 2, 1], [2, 1, 1], [2, 2, 1], [2, 1, 2], and [1, 2, 2].
@@ -37,8 +34,7 @@ struct NumberOfMusicPlaylistsTests {
         #expect(P0920.numMusicPlaylists(2, 3, 0) == 6)
     }
     
-    /// **Example 3**:
-    ///
+    /// ## Example 3:
     ///     Input: n = 2, goal = 3, k = 1
     ///     Output: 2
     ///     Explanation: There are 2 possible playlists: [1, 2, 1] and [2, 1, 2].
@@ -47,3 +43,4 @@ struct NumberOfMusicPlaylistsTests {
         #expect(P0920.numMusicPlaylists(2, 3, 1) == 2)
     }
 }
+

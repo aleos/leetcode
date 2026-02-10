@@ -11,15 +11,13 @@ import Testing
 
 /// [1493. Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `1 <= nums.length <= 10^5`
 /// - `nums[i]` is either `0` or `1`.
-@Suite("Longest Subarray of 1's After Deleting One Element")
-struct LongestSubarrayOf1sAfterDeletingOneElementTests {
+@Suite("1493. Longest Subarray of 1's After Deleting One Element")
+struct P1493Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: nums = [1,1,0,1]
     ///     Output: 3
     ///     Explanation: After deleting the number in position 2, [1,1,1] contains 3 numbers with value of 1's.
@@ -28,8 +26,7 @@ struct LongestSubarrayOf1sAfterDeletingOneElementTests {
         #expect(P1493.longestSubarray([1,1,0,1]) == 3)
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: nums = [0,1,1,1,0,1,1,0,1]
     ///     Output: 5
     ///     Explanation: After deleting the number in position 4, [0,1,1,1,1,1,0,1] longest subarray with value of 1's is [1,1,1,1,1].
@@ -38,8 +35,7 @@ struct LongestSubarrayOf1sAfterDeletingOneElementTests {
         #expect(P1493.longestSubarray([0,1,1,1,0,1,1,0,1]) == 5)
     }
 
-    /// **Example 3**:
-    ///
+    /// ## Example 3:
     ///     Input: nums = [1,1,1]
     ///     Output: 2
     ///     Explanation: You must delete one element.
@@ -54,3 +50,4 @@ struct LongestSubarrayOf1sAfterDeletingOneElementTests {
         #expect(P1493.longestSubarray([1,1,0,0,1,1,1,0,1]) == 4)
     }
 }
+

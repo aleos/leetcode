@@ -11,15 +11,13 @@ import Testing
 
 /// [1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// `1 <= nums.length <= 500`
 /// `1 <= nums[i] <= 105`
-@Suite("Find Numbers with Even Number of Digits")
-struct FindNumbersWithEvenNumberOfDigitsTests {
+@Suite("1295. Find Numbers with Even Number of Digits")
+struct P1295Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: nums = [12,345,2,6,7896]
     ///     Output: 2
     ///     Explanation:
@@ -34,8 +32,7 @@ struct FindNumbersWithEvenNumberOfDigitsTests {
         #expect(P1295.findNumbers([12,345,2,6,7896]) == 2)
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: nums = [555,901,482,1771]
     ///     Output: 1
     ///     Explanation:
@@ -45,3 +42,4 @@ struct FindNumbersWithEvenNumberOfDigitsTests {
         #expect(P1295.findNumbers([555,901,482,1771]) == 1)
     }
 }
+

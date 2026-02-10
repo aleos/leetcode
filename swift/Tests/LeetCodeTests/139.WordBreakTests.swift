@@ -11,18 +11,16 @@ import Testing
 
 /// [139. Word Break](https://leetcode.com/problems/word-break/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `1 <= s.length <= 300`
 /// - `1 <= wordDict.length <= 1000`
 /// - `1 <= wordDict[i].length <= 20`
 /// - `s` and `wordDict[i]` consist of only lowercase English letters.
 /// - All the strings of `wordDict` are unique.
-@Suite("Word Break")
-struct WordBreakTests {
+@Suite("139. Word Break")
+struct P0139Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: s = "leetcode", wordDict = ["leet","code"]
     ///     Output: true
     ///     Explanation: Return true because "leetcode" can be segmented as "leet code".
@@ -31,8 +29,7 @@ struct WordBreakTests {
         #expect(P0139.wordBreak("leetcode", ["leet","code"]) == true)
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: s = "applepenapple", wordDict = ["apple","pen"]
     ///     Output: true
     ///     Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
@@ -42,8 +39,7 @@ struct WordBreakTests {
         #expect(P0139.wordBreak("applepenapple", ["apple","pen"]) == true)
     }
 
-    /// **Example 3**:
-    ///
+    /// ## Example 3:
     ///     Input: s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]
     ///     Output: false
     @Test("String cannot be segmented")
@@ -56,3 +52,4 @@ struct WordBreakTests {
         #expect(P0139.wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", ["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"]) == false)
     }
 }
+

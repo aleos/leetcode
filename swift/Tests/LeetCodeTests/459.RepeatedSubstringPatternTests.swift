@@ -11,15 +11,13 @@ import Testing
 
 /// [459. Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `1 <= s.length <= 104`
 /// - `s` consists of lowercase English letters.
-@Suite("Repeated Substring Pattern")
-struct RepeatedSubstringPatternTests {
+@Suite("459. Repeated Substring Pattern")
+struct P0459Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: s = "abab"
     ///     Output: true
     ///     Explanation: It is the substring "ab" twice.
@@ -28,8 +26,7 @@ struct RepeatedSubstringPatternTests {
         #expect(P0459.repeatedSubstringPattern("abab") == true)
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: s = "aba"
     ///     Output: false
     @Test("String is not a repeated pattern")
@@ -37,8 +34,7 @@ struct RepeatedSubstringPatternTests {
         #expect(P0459.repeatedSubstringPattern("aba") == false)
     }
     
-    /// **Example 3**:
-    ///
+    /// ## Example 3:
     ///     Input: s = "abcabcabcabc"
     ///     Output: true
     ///     Explanation: It is the substring "abc" four times or the substring "abcabc" twice.
@@ -47,3 +43,4 @@ struct RepeatedSubstringPatternTests {
         #expect(P0459.repeatedSubstringPattern("abcabcabcabc") == true)
     }
 }
+

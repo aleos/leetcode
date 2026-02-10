@@ -11,14 +11,12 @@ import Testing
 
 /// [168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `1 <= columnNumber <= 2^31 - 1`
-@Suite("Excel Sheet Column Title")
-struct ExcelSheetColumnTitleTests {
+@Suite("168. Excel Sheet Column Title")
+struct P0168Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: columnNumber = 1
     ///     Output: "A"
     @Test("Column 1 is 'A'")
@@ -26,8 +24,7 @@ struct ExcelSheetColumnTitleTests {
         #expect(P0168.convertToTitle(1) == "A")
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: columnNumber = 28
     ///     Output: "AB"
     @Test("Column 28 is 'AB'")
@@ -35,8 +32,7 @@ struct ExcelSheetColumnTitleTests {
         #expect(P0168.convertToTitle(28) == "AB")
     }
 
-    /// **Example 3**:
-    ///
+    /// ## Example 3:
     ///     Input: columnNumber = 701
     ///     Output: "ZY"
     @Test("Column 701 is 'ZY'")
@@ -44,3 +40,4 @@ struct ExcelSheetColumnTitleTests {
         #expect(P0168.convertToTitle(701) == "ZY")
     }
 }
+

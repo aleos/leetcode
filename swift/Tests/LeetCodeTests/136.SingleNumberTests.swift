@@ -11,16 +11,14 @@ import Testing
 
 /// [136. Single Number](https://leetcode.com/problems/single-number/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `1 <= nums.length <= 3 * 104`
 /// - `-3 * 104 <= nums[i] <= 3 * 104`
 /// - Each element in the array appears twice except for one element which appears only once.
-@Suite("Single Number")
-struct SingleNumberTests {
+@Suite("136. Single Number")
+struct P0136Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: nums = [2,2,1]
     ///     Output: 1
     @Test("Find single number among pairs")
@@ -28,8 +26,7 @@ struct SingleNumberTests {
         #expect(P0136.singleNumber([2,2,1]) == 1)
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: nums = [4,1,2,1,2]
     ///     Output: 4
     @Test("Single number is 4")
@@ -37,8 +34,7 @@ struct SingleNumberTests {
         #expect(P0136.singleNumber([4,1,2,1,2]) == 4)
     }
 
-    /// **Example 3**:
-    ///
+    /// ## Example 3:
     ///     Input: nums = [1]
     ///     Output: 1
     @Test("Array with single element")
@@ -46,3 +42,4 @@ struct SingleNumberTests {
         #expect(P0136.singleNumber([1]) == 1)
     }
 }
+

@@ -11,15 +11,13 @@ import Testing
 
 /// [767. Reorganize String](https://leetcode.com/problems/reorganize-string/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `1 <= s.length <= 500`
 /// - `s` consists of lowercase English letters.
-@Suite("Reorganize String")
-struct ReorganizeStringTests {
+@Suite("767. Reorganize String")
+struct P0767Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: s = "aab"
     ///     Output: "aba"
     @Test("Reorganize string with possible solution")
@@ -27,8 +25,7 @@ struct ReorganizeStringTests {
         #expect(P0767.reorganizeString("aab") == "aba")
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: s = "aaab"
     ///     Output: ""
     @Test("Impossible to reorganize returns empty string")
@@ -36,3 +33,4 @@ struct ReorganizeStringTests {
         #expect(P0767.reorganizeString("aaab") == "")
     }
 }
+

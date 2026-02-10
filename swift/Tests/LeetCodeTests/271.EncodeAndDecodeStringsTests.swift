@@ -11,16 +11,14 @@ import Testing
 
 /// [271. Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `1 <= strs.length <= 200`
 /// - `0 <= strs[i].length <= 200`
 /// - `strs[i]` contains any possible characters out of `256` valid ASCII characters.
-@Suite("Encode and Decode Strings")
-struct EncodeAndDecodeStringsTests {
+@Suite("271. Encode and Decode Strings")
+struct P0271Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: dummy_input = ["Hello","World"]
     ///     Output: ["Hello","World"]
     ///     Explanation:
@@ -37,8 +35,7 @@ struct EncodeAndDecodeStringsTests {
         #expect(P0271.decode(P0271.encode(["Hello","World"])) == ["Hello","World"])
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: dummy_input = [""]
     ///     Output: [""]
     @Test("Encode and decode empty string")
@@ -46,3 +43,4 @@ struct EncodeAndDecodeStringsTests {
         #expect(P0271.decode(P0271.encode([""])) == [""])
     }
 }
+

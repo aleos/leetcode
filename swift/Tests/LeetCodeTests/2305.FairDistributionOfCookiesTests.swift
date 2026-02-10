@@ -11,16 +11,14 @@ import Testing
 
 /// [2305. Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `2 <= cookies.length <= 8`
 /// - `1 <= cookies[i] <= 105`
 /// - `2 <= k <= cookies.length`
-@Suite("Fair Distribution of Cookies")
-struct FairDistributionOfCookiesTests {
+@Suite("2305. Fair Distribution of Cookies")
+struct P2305Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: cookies = [8,15,10,20,8], k = 2
     ///     Output: 31
     ///     Explanation: One optimal distribution is [8,15,8] and [10,20]
@@ -33,8 +31,7 @@ struct FairDistributionOfCookiesTests {
         #expect(P2305.distributeCookies([8,15,10,20,8], 2) == 31)
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: cookies = [6,1,3,2,2,4,1,2], k = 3
     ///     Output: 7
     ///     Explanation: One optimal distribution is [6,1], [3,2,2], and [4,1,2]
@@ -54,3 +51,4 @@ struct FairDistributionOfCookiesTests {
         #expect(P2305.distributeCookies([13,3], 2) == 13)
     }
 }
+

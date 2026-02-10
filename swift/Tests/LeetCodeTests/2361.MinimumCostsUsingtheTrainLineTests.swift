@@ -11,16 +11,14 @@ import Testing
 
 /// [2361. Minimum Costs Using the Train Line](https://leetcode.com/problems/minimum-costs-using-the-train-line/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `n == regular.length == express.length`
 /// - `1 <= n <= 105`
 /// - `1 <= regular[i], express[i], expressCost <= 105`
-@Suite("Minimum Costs Using the Train Line")
-struct MinimumCostsUsingTheTrainLineTests {
+@Suite("2361. Minimum Costs Using the Train Line")
+struct P2361Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: regular = [1,6,9,5], express = [5,2,3,10], expressCost = 8
     ///     Output: [1,7,14,19]
     ///     Explanation: The diagram above shows how to reach stop 4 from stop 0 with minimum cost.
@@ -35,8 +33,7 @@ struct MinimumCostsUsingTheTrainLineTests {
         #expect(P2361.minimumCosts([1,6,9,5], [5,2,3,10], 8) == [1,7,14,19])
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: regular = [11,5,13], express = [7,10,6], expressCost = 3
     ///     Output: [10,15,24]
     ///     Explanation: The diagram above shows how to reach stop 3 from stop 0 with minimum cost.
@@ -50,3 +47,4 @@ struct MinimumCostsUsingTheTrainLineTests {
         #expect(P2361.minimumCosts([11,5,13], [7,10,6], 3) == [10,15,24])
     }
 }
+

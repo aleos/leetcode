@@ -11,18 +11,16 @@ import Testing
 
 /// [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 ///
-/// **Constraints**:
-///
+/// ## Constraints:
 /// - `nums1.length == m + n`
 /// - `nums2.length == n`
 /// - `0 <= m, n <= 200`
 /// - `1 <= m + n <= 200`
 /// - `-109 <= nums1[i], nums2[j] <= 109`
-@Suite("Merge Sorted Array")
-struct MergeSortedArrayTests {
+@Suite("88. Merge Sorted Array")
+struct P0088Tests {
     
-    /// **Example 1**:
-    ///
+    /// ## Example 1:
     ///     Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
     ///     Output: [1,2,2,3,5,6]
     ///     Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
@@ -34,8 +32,7 @@ struct MergeSortedArrayTests {
         #expect(nums1 == [1,2,2,3,5,6])
     }
     
-    /// **Example 2**:
-    ///
+    /// ## Example 2:
     ///     Input: nums1 = [1], m = 1, nums2 = [], n = 0
     ///     Output: [1]
     ///     Explanation: The arrays we are merging are [1] and [].
@@ -47,8 +44,7 @@ struct MergeSortedArrayTests {
         #expect(nums1 == [1])
     }
     
-    /// **Example 3**:
-    ///
+    /// ## Example 3:
     ///     Input: nums1 = [0], m = 0, nums2 = [1], n = 1
     ///     Output: [1]
     ///     Explanation: The arrays we are merging are [] and [1].
@@ -61,3 +57,4 @@ struct MergeSortedArrayTests {
         #expect(nums1 == [1])
     }
 }
+
