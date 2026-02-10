@@ -1,65 +1,63 @@
 # LeetCode
 
-**[Live Documentation](https://aleos.github.io/leetcode/documentation/leetcode/)**
+A personal library of algorithm solutions in Swift 6, built with [Swift Testing](https://developer.apple.com/documentation/testing) and a test-driven workflow.
 
-A collection of solutions for LeetCode problems. This repository serves as a personal reference for algorithms and a way to maintain technical skills.
+**[Browse the documentation →](https://aleos.github.io/leetcode/documentation/leetcode/)**
+
+## At a Glance
+
+Each problem lives in a self-contained enum (`P0001`, `P0017`, …) with public methods matching LeetCode's function signatures. Every solution carries full problem metadata and complexity analysis in its DocString — browsable in Xcode Quick Help and the [hosted DocC site](https://aleos.github.io/leetcode/documentation/leetcode/).
 
 ## Repository Structure
 
-The project is organized with a `swift/` subdirectory to keep the root clean and allow for future languages.
+The project uses a `swift/` subdirectory to keep the root clean and leave room for other languages.
 
 ```text
 .
-├── swift/                # Swift Package root
-│   ├── Package.swift     # SPM Manifest
-│   ├── Sources/          # Problem namespaces (P0001, P0002, etc.)
-│   ├── Tests/            # Swift Testing suites
-│   └── _templates/       # Plain file templates and .codesnippet files
-└── .github/workflows/    # Automation for aleos.github.io deployment
+├── swift/                       Swift Package root
+│   ├── Package.swift
+│   ├── Sources/LeetCode/        Problem namespaces (P0001, P0026, …)
+│   │   └── LeetCode.docc/       Documentation catalog
+│   ├── Tests/LeetCodeTests/     Swift Testing suites
+│   └── _templates/              File templates and Xcode .codesnippet files
+└── .github/workflows/           DocC deployment to GitHub Pages
 ```
 
-## Conventions
-
 ### Naming
-* **Namespaces (Enums):** Problems use four-digit zero-padding (e.g., `P0017`) for correct sorting in the documentation browser.
-* **Files:** Source and test files use standard numbering (e.g., `17.LetterCombinations.swift`) for natural sorting in the file system.
+
+Source files use the problem number and title (`17.LetterCombinations.swift`) for natural filesystem sorting. Enums use zero-padded names (`P0017`) for correct ordering in the documentation browser.
 
 ### Documentation Split
-* **Implementation:** Contains the problem link, description, and complexity analysis. The first paragraph is used as the summary for the documentation landing page.
-* **Tests:** Contain constraints and example input/output data. This keeps the implementation files focused strictly on logic.
 
----
+Implementation files contain the problem link, description, and complexity analysis. Test files contain constraints and example data. This keeps solution files focused strictly on logic.
 
 ## Adding a New Solution
 
-I follow a TDD (Test-Driven Development) approach:
+1. **Scaffold** — use the `lcsol` and `lctest` Xcode snippets, or copy files from `swift/_templates/`
+2. **Test** — fill in LeetCode's examples and constraints
+3. **Solve** — implement until all tests pass
+4. **Document** — add time and space complexity to the DocString
 
-1.  **Scaffolding:** Use the `lcsol` and `lctest` snippets in Xcode, or copy the files from `swift/_templates/`.
-2.  **Tests:** Fill in the LeetCode examples and constraints in the test suite.
-3.  **Solve:** Implement the logic in the enum until all tests pass.
-4.  **Complexity:** Add time and space analysis (e.g., `O(n)`) to the docstring.
-
-### Xcode Snippets
-To install or restore snippets, copy the `.codesnippet` files from `swift/_templates/` to:
-`~/Library/Developer/Xcode/UserData/CodeSnippets`
-
----
+To install or restore Xcode snippets, copy the `.codesnippet` files from `swift/_templates/` to `~/Library/Developer/Xcode/UserData/CodeSnippets`.
 
 ## Build and Test
 
-Run these commands from the `swift/` directory:
+From the `swift/` directory:
 
 ```bash
-# Build the package
 swift build
-
-# Run all tests
 swift test
-
-# Run tests for a specific problem (e.g., P0017)
-swift test --filter P0017
+swift test --filter LetterCombinations   # by name
+swift test --filter P0017                # by number
 ```
 
-## Automation
+## Documentation
 
-Documentation is automatically rebuilt and deployed to **aleos.github.io** whenever changes are pushed to `main`. This is handled by a GitHub Action using the `macos-26` runner.
+Documentation is generated with [DocC](https://www.swift.org/documentation/docc/) from source comments and deployed to GitHub Pages automatically on push to `main`.
+
+```bash
+# Preview locally
+swift package --disable-sandbox preview-documentation --target LeetCode
+```
+
+In Xcode: **Product → Build Documentation**.
