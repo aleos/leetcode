@@ -5,7 +5,7 @@
 //  Created by Alexander Ostrovsky on 11/8/2023.
 //
 
-import XCTest
+import Testing
 
 @testable import LeetCode
 
@@ -17,7 +17,8 @@ import XCTest
 /// - `1 <= coins[i] <= 5000`
 /// - All the values of `coins` are unique.
 /// - `0 <= amount <= 5000`
-final class CoinChangeIITests: XCTestCase {
+@Suite("Coin Change II")
+struct CoinChangeIITests {
     
     /// **Example 1**:
     ///
@@ -28,8 +29,9 @@ final class CoinChangeIITests: XCTestCase {
     ///     5=2+2+1
     ///     5=2+1+1+1
     ///     5=1+1+1+1+1
-    func testExample1() {
-        XCTAssertEqual(P0518.change(5, [1,2,5]), 4)
+    @Test("Four ways to make amount 5")
+    func example1() {
+        #expect(P0518.change(5, [1,2,5]) == 4)
     }
     
     /// **Example 2**:
@@ -37,15 +39,17 @@ final class CoinChangeIITests: XCTestCase {
     ///     Input: amount = 3, coins = [2]
     ///     Output: 0
     ///     Explanation: the amount of 3 cannot be made up just with coins of 2.
-    func testExample2() {
-        XCTAssertEqual(P0518.change(3, [2]), 0)
+    @Test("Amount cannot be made with available coins")
+    func example2() {
+        #expect(P0518.change(3, [2]) == 0)
     }
     
     /// **Example 3**:
     ///
     ///     Input: amount = 10, coins = [10]
     ///     Output: 1
-    func testExample3() {
-        XCTAssertEqual(P0518.change(10, [10]), 1)
+    @Test("Exact match with single coin")
+    func example3() {
+        #expect(P0518.change(10, [10]) == 1)
     }
 }

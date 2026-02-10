@@ -5,7 +5,7 @@
 //  Created by Alexander Ostrovsky on 4/8/2023.
 //
 
-import XCTest
+import Testing
 
 @testable import LeetCode
 
@@ -18,15 +18,17 @@ import XCTest
 /// - `1 <= wordDict[i].length <= 20`
 /// - `s` and `wordDict[i]` consist of only lowercase English letters.
 /// - All the strings of `wordDict` are unique.
-final class WordBreakTests: XCTestCase {
+@Suite("Word Break")
+struct WordBreakTests {
     
     /// **Example 1**:
     ///
     ///     Input: s = "leetcode", wordDict = ["leet","code"]
     ///     Output: true
     ///     Explanation: Return true because "leetcode" can be segmented as "leet code".
-    func testExample1() {
-        XCTAssertEqual(P0139.wordBreak("leetcode", ["leet","code"]), true)
+    @Test("String can be segmented with dictionary words")
+    func example1() {
+        #expect(P0139.wordBreak("leetcode", ["leet","code"]) == true)
     }
     
     /// **Example 2**:
@@ -35,20 +37,22 @@ final class WordBreakTests: XCTestCase {
     ///     Output: true
     ///     Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
     ///     Note that you are allowed to reuse a dictionary word.
-    func testExample2() {
-        XCTAssertEqual(P0139.wordBreak("applepenapple", ["apple","pen"]), true)
+    @Test("Dictionary words can be reused")
+    func example2() {
+        #expect(P0139.wordBreak("applepenapple", ["apple","pen"]) == true)
     }
 
     /// **Example 3**:
     ///
     ///     Input: s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]
     ///     Output: false
-    func testExample3() {
-        XCTAssertEqual(P0139.wordBreak("catsandog", ["cats","dog","sand","and","cat"]), false)
+    @Test("String cannot be segmented")
+    func example3() {
+        #expect(P0139.wordBreak("catsandog", ["cats","dog","sand","and","cat"]) == false)
     }
     
-    func testExample() {
-        XCTAssertEqual(P0139.wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", ["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"]), false)
+    @Test("Long string with insufficient dictionary")
+    func longStringTest() {
+        #expect(P0139.wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", ["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"]) == false)
     }
-
 }

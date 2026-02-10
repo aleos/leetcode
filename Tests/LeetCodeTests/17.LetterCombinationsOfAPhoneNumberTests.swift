@@ -5,7 +5,7 @@
 //  Created by Alexander Ostrovsky on 3/8/2023.
 //
 
-import XCTest
+import Testing
 
 @testable import LeetCode
 
@@ -15,29 +15,33 @@ import XCTest
 ///
 /// - `0 <= digits.length <= 4`
 /// - `digits[i]` is a digit in the range `['2', '9']`.
-final class LetterCombinationsOfAPhoneNumberTests: XCTestCase {
+@Suite("Letter Combinations of a Phone Number")
+struct LetterCombinationsOfAPhoneNumberTests {
     
     /// **Example 1**:
     ///
     ///     Input: digits = "23"
     ///     Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
-    func testExample1() throws {
-        XCTAssertEqual(P0017.letterCombinations("23"), ["ad","ae","af","bd","be","bf","cd","ce","cf"])
+    @Test("Digits '23' produces 9 combinations")
+    func example1() {
+        #expect(P0017.letterCombinations("23") == ["ad","ae","af","bd","be","bf","cd","ce","cf"])
     }
     
     /// **Example 2**:
     ///
     ///     Input: digits = ""
     ///     Output: []
-    func testExample2() throws {
-        XCTAssertEqual(P0017.letterCombinations(""), [])
+    @Test("Empty input produces empty output")
+    func example2() {
+        #expect(P0017.letterCombinations("") == [])
     }
 
     /// **Example 3**:
     ///
     ///     Input: digits = "2"
     ///     Output: ["a","b","c"]
-    func testExample3() throws {
-        XCTAssertEqual(P0017.letterCombinations("2"), ["a","b","c"])
+    @Test("Single digit '2' produces 3 combinations")
+    func example3() {
+        #expect(P0017.letterCombinations("2") == ["a","b","c"])
     }
 }

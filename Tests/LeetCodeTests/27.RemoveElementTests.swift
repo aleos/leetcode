@@ -5,7 +5,7 @@
 //  Created by Alexander Ostrovsky on 3/8/2023.
 //
 
-import XCTest
+import Testing
 
 @testable import LeetCode
 
@@ -16,7 +16,8 @@ import XCTest
 /// - `0 <= nums.length <= 100`
 /// - `0 <= nums[i] <= 50`
 /// - `0 <= val <= 100`
-final class RemoveElementTests: XCTestCase {
+@Suite("Remove Element")
+struct RemoveElementTests {
     
     /// **Example 1**:
     ///
@@ -24,10 +25,11 @@ final class RemoveElementTests: XCTestCase {
     ///     Output: 2, nums = [2,2,_,_]
     ///     Explanation: Your function should return k = 2, with the first two elements of nums being 2.
     ///     It does not matter what you leave beyond the returned k (hence they are underscores).
-    func testExample1() throws {
+    @Test("Remove element from small array")
+    func example1() {
         var nums = [3,2,2,3]
-        XCTAssertEqual(P0027.removeElement(&nums, 3), 2)
-        XCTAssertEqual(nums[0..<2], [2, 2])
+        #expect(P0027.removeElement(&nums, 3) == 2)
+        #expect(nums[0..<2] == [2, 2])
     }
     
     /// **Example 2**:
@@ -37,9 +39,10 @@ final class RemoveElementTests: XCTestCase {
     ///     Explanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.
     ///     Note that the five elements can be returned in any order.
     ///     It does not matter what you leave beyond the returned k (hence they are underscores).
-    func testExample2() throws {
+    @Test("Remove element from larger array")
+    func example2() {
         var nums = [0,1,2,2,3,0,4,2]
-        XCTAssertEqual(P0027.removeElement(&nums, 2), 5)
-        XCTAssertEqual(nums[0..<5], [0,1,4,0,3])
+        #expect(P0027.removeElement(&nums, 2) == 5)
+        #expect(nums[0..<5] == [0,1,4,0,3])
     }
 }

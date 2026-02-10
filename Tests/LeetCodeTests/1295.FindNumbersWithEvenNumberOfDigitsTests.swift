@@ -5,7 +5,7 @@
 //  Created by Alexander Ostrovsky on 3/8/2023.
 //
 
-import XCTest
+import Testing
 
 @testable import LeetCode
 
@@ -15,7 +15,8 @@ import XCTest
 ///
 /// `1 <= nums.length <= 500`
 /// `1 <= nums[i] <= 105`
-final class FindNumbersWithEvenNumberOfDigitsTests: XCTestCase {
+@Suite("Find Numbers with Even Number of Digits")
+struct FindNumbersWithEvenNumberOfDigitsTests {
     
     /// **Example 1**:
     ///
@@ -28,8 +29,9 @@ final class FindNumbersWithEvenNumberOfDigitsTests: XCTestCase {
     ///     6 contains 1 digit (odd number of digits).
     ///     7896 contains 4 digits (even number of digits).
     ///     Therefore only 12 and 7896 contain an even number of digits.
-    func testExample1() {
-        XCTAssertEqual(P1295.findNumbers([12,345,2,6,7896]), 2)
+    @Test("Array with 2 numbers having even digits")
+    func example1() {
+        #expect(P1295.findNumbers([12,345,2,6,7896]) == 2)
     }
     
     /// **Example 2**:
@@ -38,7 +40,8 @@ final class FindNumbersWithEvenNumberOfDigitsTests: XCTestCase {
     ///     Output: 1
     ///     Explanation:
     ///     Only 1771 contains an even number of digits.
-    func testExample2() {
-        XCTAssertEqual(P1295.findNumbers([555,901,482,1771]), 1)
+    @Test("Array with 1 number having even digits")
+    func example2() {
+        #expect(P1295.findNumbers([555,901,482,1771]) == 1)
     }
 }

@@ -5,7 +5,7 @@
 //  Created by Alexander Ostrovsky on 8/8/2023.
 //
 
-import XCTest
+import Testing
 
 @testable import LeetCode
 
@@ -16,7 +16,8 @@ import XCTest
 /// - `1 <= strs.length <= 200`
 /// - `0 <= strs[i].length <= 200`
 /// - `strs[i]` contains any possible characters out of `256` valid ASCII characters.
-final class EncodeAndDecodeStringsTests: XCTestCase {
+@Suite("Encode and Decode Strings")
+struct EncodeAndDecodeStringsTests {
     
     /// **Example 1**:
     ///
@@ -31,15 +32,17 @@ final class EncodeAndDecodeStringsTests: XCTestCase {
     ///     Machine 2:
     ///     Codec decoder = new Codec();
     ///     String[] strs = decoder.decode(msg);
-    func testExample1() {
-        XCTAssertEqual(P0271.decode(P0271.encode(["Hello","World"])), ["Hello","World"])
+    @Test("Encode and decode multiple strings")
+    func example1() {
+        #expect(P0271.decode(P0271.encode(["Hello","World"])) == ["Hello","World"])
     }
     
     /// **Example 2**:
     ///
     ///     Input: dummy_input = [""]
     ///     Output: [""]
-    func testExample2() {
-        XCTAssertEqual(P0271.decode(P0271.encode([""])), [""])
+    @Test("Encode and decode empty string")
+    func example2() {
+        #expect(P0271.decode(P0271.encode([""])) == [""])
     }
 }

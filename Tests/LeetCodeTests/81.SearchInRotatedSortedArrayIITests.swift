@@ -5,7 +5,7 @@
 //  Created by Alexander Ostrovsky on 10/8/2023.
 //
 
-import XCTest
+import Testing
 
 @testable import LeetCode
 
@@ -17,26 +17,29 @@ import XCTest
 /// - `-104 <= nums[i] <= 104`
 /// - `nums` is guaranteed to be rotated at some pivot.
 /// - `-104 <= target <= 104`
-final class SearchInRotatedSortedArrayIITests: XCTestCase {
+@Suite("Search in Rotated Sorted Array II")
+struct SearchInRotatedSortedArrayIITests {
     
     /// **Example 1**:
     ///
     ///     Input: nums = [2,5,6,0,0,1,2], target = 0
     ///     Output: true
-    func testExample1() throws {
-        XCTAssertEqual(P0081.search([2,5,6,0,0,1,2], 0), true)
+    @Test("Target found in rotated array with duplicates")
+    func example1() {
+        #expect(P0081.search([2,5,6,0,0,1,2], 0) == true)
     }
     
     /// **Example 2**:
     ///
     ///     Input: nums = [2,5,6,0,0,1,2], target = 3
     ///     Output: false
-    func testExample2() throws {
-        XCTAssertEqual(P0081.search([2,5,6,0,0,1,2], 3), false)
+    @Test("Target not found in rotated array")
+    func example2() {
+        #expect(P0081.search([2,5,6,0,0,1,2], 3) == false)
     }
     
-    func testExample() throws {
-        XCTAssertEqual(P0081.search([1,0,1,1,1], 0), true)
+    @Test("Array with many duplicates")
+    func arrayWithDuplicates() {
+        #expect(P0081.search([1,0,1,1,1], 0) == true)
     }
 }
-

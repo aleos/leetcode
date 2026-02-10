@@ -5,7 +5,7 @@
 //  Created by Alexander Ostrovsky on 6/7/2023.
 //
 
-import XCTest
+import Testing
 
 @testable import LeetCode
 
@@ -16,7 +16,8 @@ import XCTest
 /// - `2 <= cookies.length <= 8`
 /// - `1 <= cookies[i] <= 105`
 /// - `2 <= k <= cookies.length`
-final class FairDistributionOfCookiesTests: XCTestCase {
+@Suite("Fair Distribution of Cookies")
+struct FairDistributionOfCookiesTests {
     
     /// **Example 1**:
     ///
@@ -27,8 +28,9 @@ final class FairDistributionOfCookiesTests: XCTestCase {
     ///     - The 2nd child receives [10,20] which has a total of 10 + 20 = 30 cookies.
     ///     The unfairness of the distribution is max(31,30) = 31.
     ///     It can be shown that there is no distribution with an unfairness less than 31.
-    func testExample1() {
-        XCTAssertEqual(P2305.distributeCookies([8,15,10,20,8], 2), 31)
+    @Test("Distribute cookies between 2 children")
+    func example1() {
+        #expect(P2305.distributeCookies([8,15,10,20,8], 2) == 31)
     }
     
     /// **Example 2**:
@@ -41,12 +43,14 @@ final class FairDistributionOfCookiesTests: XCTestCase {
     ///     - The 3rd child receives [4,1,2] which has a total of 4 + 1 + 2 = 7 cookies.
     ///     The unfairness of the distribution is max(7,7,7) = 7.
     ///     It can be shown that there is no distribution with an unfairness less than 7.
-    func testExample2() {
-        XCTAssertEqual(P2305.distributeCookies([6,1,3,2,2,4,1,2], 3), 7)
+    @Test("Distribute cookies between 3 children")
+    func example2() {
+        #expect(P2305.distributeCookies([6,1,3,2,2,4,1,2], 3) == 7)
     }
     
-    func testExample() {
-        XCTAssertEqual(P2305.distributeCookies([15,18,19,5,6,13,15,20], 3), 38)
-        XCTAssertEqual(P2305.distributeCookies([13,3], 2), 13)
+    @Test("Additional test cases")
+    func additionalCases() {
+        #expect(P2305.distributeCookies([15,18,19,5,6,13,15,20], 3) == 38)
+        #expect(P2305.distributeCookies([13,3], 2) == 13)
     }
 }

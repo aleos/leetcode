@@ -5,7 +5,7 @@
 //  Created by Alexander Ostrovsky on 1/8/2023.
 //
 
-import XCTest
+import Testing
 
 @testable import LeetCode
 
@@ -16,7 +16,8 @@ import XCTest
 /// - `n == regular.length == express.length`
 /// - `1 <= n <= 105`
 /// - `1 <= regular[i], express[i], expressCost <= 105`
-final class MinimumCostsUsingTheTrainLineTests: XCTestCase {
+@Suite("Minimum Costs Using the Train Line")
+struct MinimumCostsUsingTheTrainLineTests {
     
     /// **Example 1**:
     ///
@@ -29,8 +30,9 @@ final class MinimumCostsUsingTheTrainLineTests: XCTestCase {
     ///     - Take the regular route from stop 3 to stop 4, costing 5.
     ///     The total cost is 1 + 10 + 3 + 5 = 19.
     ///     Note that a different route could be taken to reach the other stops with minimum cost.
-    func testExample1() {
-        XCTAssertEqual(P2361.minimumCosts([1,6,9,5], [5,2,3,10], 8), [1,7,14,19])
+    @Test("Minimum costs with 4 stops")
+    func example1() {
+        #expect(P2361.minimumCosts([1,6,9,5], [5,2,3,10], 8) == [1,7,14,19])
     }
     
     /// **Example 2**:
@@ -43,7 +45,8 @@ final class MinimumCostsUsingTheTrainLineTests: XCTestCase {
     ///     - Take the express route from stop 2 to stop 3, costing 3 + 6 = 9.
     ///     The total cost is 10 + 5 + 9 = 24.
     ///     Note that the expressCost is paid again to transfer back to the express route.
-    func testExample2() {
-        XCTAssertEqual(P2361.minimumCosts([11,5,13], [7,10,6], 3), [10,15,24])
+    @Test("Minimum costs with 3 stops")
+    func example2() {
+        #expect(P2361.minimumCosts([11,5,13], [7,10,6], 3) == [10,15,24])
     }
 }

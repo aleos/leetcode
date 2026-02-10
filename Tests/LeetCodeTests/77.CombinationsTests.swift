@@ -5,7 +5,7 @@
 //  Created by Alexander Ostrovsky on 1/8/2023.
 //
 
-import XCTest
+import Testing
 
 @testable import LeetCode
 
@@ -15,7 +15,8 @@ import XCTest
 ///
 /// - `1 <= n <= 20`
 /// - `1 <= k <= n`
-final class CombinationsTests: XCTestCase {
+@Suite("Combinations")
+struct CombinationsTests {
     
     /// **Example 1**:
     ///
@@ -23,8 +24,9 @@ final class CombinationsTests: XCTestCase {
     ///     Output: [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]
     ///     Explanation: There are 4 choose 2 = 6 total combinations.
     ///     Note that combinations are unordered, i.e., [1,2] and [2,1] are considered to be the same combination.
-    func testExample1() throws {
-        XCTAssertEqual(P0077.combine(4, 2), [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]])
+    @Test("4 choose 2 produces 6 combinations")
+    func example1() {
+        #expect(P0077.combine(4, 2) == [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]])
     }
     
     /// **Example 2**:
@@ -32,8 +34,8 @@ final class CombinationsTests: XCTestCase {
     ///     Input: n = 1, k = 1
     ///     Output: [[1]]
     ///     Explanation: There is 1 choose 1 = 1 total combination.
-    func testExample2() throws {
-        XCTAssertEqual(P0077.combine(1, 1), [[1]])
+    @Test("1 choose 1 produces single combination")
+    func example2() {
+        #expect(P0077.combine(1, 1) == [[1]])
     }
 }
-

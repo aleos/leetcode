@@ -5,7 +5,7 @@
 //  Created by Alexander Ostrovsky on 5/7/2023.
 //
 
-import XCTest
+import Testing
 
 @testable import LeetCode
 
@@ -15,15 +15,17 @@ import XCTest
 ///
 /// - `1 <= nums.length <= 10^5`
 /// - `nums[i]` is either `0` or `1`.
-final class LongestSubarrayOf1sAfterDeletingOneElementTests: XCTestCase {
+@Suite("Longest Subarray of 1's After Deleting One Element")
+struct LongestSubarrayOf1sAfterDeletingOneElementTests {
     
     /// **Example 1**:
     ///
     ///     Input: nums = [1,1,0,1]
     ///     Output: 3
     ///     Explanation: After deleting the number in position 2, [1,1,1] contains 3 numbers with value of 1's.
-    func testExample1() {
-        XCTAssertEqual(P1493.longestSubarray([1,1,0,1]), 3)
+    @Test("Delete single 0 between 1s")
+    func example1() {
+        #expect(P1493.longestSubarray([1,1,0,1]) == 3)
     }
     
     /// **Example 2**:
@@ -31,8 +33,9 @@ final class LongestSubarrayOf1sAfterDeletingOneElementTests: XCTestCase {
     ///     Input: nums = [0,1,1,1,0,1,1,0,1]
     ///     Output: 5
     ///     Explanation: After deleting the number in position 4, [0,1,1,1,1,1,0,1] longest subarray with value of 1's is [1,1,1,1,1].
-    func testExample2() {
-        XCTAssertEqual(P1493.longestSubarray([0,1,1,1,0,1,1,0,1]), 5)
+    @Test("Multiple 0s, delete optimal one")
+    func example2() {
+        #expect(P1493.longestSubarray([0,1,1,1,0,1,1,0,1]) == 5)
     }
 
     /// **Example 3**:
@@ -40,12 +43,14 @@ final class LongestSubarrayOf1sAfterDeletingOneElementTests: XCTestCase {
     ///     Input: nums = [1,1,1]
     ///     Output: 2
     ///     Explanation: You must delete one element.
-    func testExample3() {
-        XCTAssertEqual(P1493.longestSubarray([1,1,1]), 2)
+    @Test("All 1s, must delete one")
+    func example3() {
+        #expect(P1493.longestSubarray([1,1,1]) == 2)
     }
     
-    func testExample() {
-        XCTAssertEqual(P1493.longestSubarray([0,0,0,1,1,1,0,1,1,0,0,0,0,1,0,0,0,0,0,0]), 5)
-        XCTAssertEqual(P1493.longestSubarray([1,1,0,0,1,1,1,0,1]), 4)
+    @Test("Additional test cases")
+    func additionalCases() {
+        #expect(P1493.longestSubarray([0,0,0,1,1,1,0,1,1,0,0,0,0,1,0,0,0,0,0,0]) == 5)
+        #expect(P1493.longestSubarray([1,1,0,0,1,1,1,0,1]) == 4)
     }
 }

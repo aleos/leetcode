@@ -5,7 +5,7 @@
 //  Created by Alexander Ostrovsky on 3/8/2023.
 //
 
-import XCTest
+import Testing
 
 @testable import LeetCode
 
@@ -16,7 +16,8 @@ import XCTest
 /// - `1 <= nums.length <= 3 * 104`
 /// - `-100 <= nums[i] <= 100`
 /// - `nums` is sorted in non-decreasing order.
-final class RemoveDuplicatesFromSortedArrayTests: XCTestCase {
+@Suite("Remove Duplicates from Sorted Array")
+struct RemoveDuplicatesFromSortedArrayTests {
     
     /// Example 1:
     ///
@@ -24,10 +25,11 @@ final class RemoveDuplicatesFromSortedArrayTests: XCTestCase {
     ///     Output: 2, nums = [1,2,_]
     ///     Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
     ///     It does not matter what you leave beyond the returned k (hence they are underscores).
-    func testExample1() throws {
+    @Test("Remove duplicates from small array")
+    func example1() {
         var nums = [1,1,2]
-        XCTAssertEqual(P0026.removeDuplicates(&nums), 2)
-        XCTAssertEqual(nums[..<2], [1,2])
+        #expect(P0026.removeDuplicates(&nums) == 2)
+        #expect(nums[..<2] == [1,2])
     }
     
     /// Example 2:
@@ -36,9 +38,10 @@ final class RemoveDuplicatesFromSortedArrayTests: XCTestCase {
     ///     Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
     ///     Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
     ///     It does not matter what you leave beyond the returned k (hence they are underscores).
-    func testExample2() throws {
+    @Test("Remove duplicates from larger array")
+    func example2() {
         var nums = [0,0,1,1,1,2,2,3,3,4]
-        XCTAssertEqual(P0026.removeDuplicates(&nums), 5)
-        XCTAssertEqual(nums[..<5], [0,1,2,3,4])
+        #expect(P0026.removeDuplicates(&nums) == 5)
+        #expect(nums[..<5] == [0,1,2,3,4])
     }
 }
