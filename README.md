@@ -16,7 +16,7 @@ Built as a Swift Package with Swift Testing.
 
 Each solution file contains:
 - Full problem description, constraints, difficulty, topics, and a link to the problem
-- A public enum (`P1`, `P2`, ...) namespacing the solution function(s)
+- A public enum (`P0001`, `P0002`, ...) namespacing the solution function(s)
 - DocStrings for Xcode Quick Help
 
 Each test file contains:
@@ -41,8 +41,8 @@ swift build
 swift test
 
 # Run tests for a specific problem
-swift test --filter TwoSum
+swift test --filter Word
 
 # Run tests for a specific problem by number
-swift test --filter P1
+swift test --filter P0001
 ```
