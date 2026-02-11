@@ -1,0 +1,67 @@
+name: Test and Report Coverage
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  run-tests:
+    name: Run Test Plan
+    runs-on: macos-26
+    # Tell the runner where to look for the package
+    defaults:
+      run:
+        working-directory: swift
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build and Test
+        run: |
+          set -o pipefail && xcodebuild test \
+            -scheme LeetCode \
+            -testPlan LeetCode \
+            -destination 'platform=macOS' \
+            -enableCodeCoverage YES \
+            -derivedDataPath .build/ | xcbeautify
+
+      - name: Generate Coverage Summary
+        run: |
+          # 1. Locate results and generate JSON
+          RESULT_BUNDLE=$(find .build/Logs/Test -name "*.xcresult" | head -n 1)
+          xcrun xccov view --report --json "$RESULT_BUNDLE" > coverage.json
+
+          # 2. Extract metrics
+          COV_RAW=$(jq -r '.lineCoverage * 100' coverage.json)
+          TOTAL_COV=$(printf "%.2f" "$COV_RAW")
+          COVERED=$(jq -r '.coveredLines' coverage.json)
+          TOTAL=$(jq -r '.executableLines' coverage.json)
+
+          # 3. Construct Summary Header
+          echo "## Code Coverage Summary" >> $GITHUB_STEP_SUMMARY
+          echo "Total Coverage: **${TOTAL_COV}%**" >> $GITHUB_STEP_SUMMARY
+          echo "Lines: ${COVERED} / ${TOTAL}" >> $GITHUB_STEP_SUMMARY
+
+          echo -e "\n### Target Breakdown" >> $GITHUB_STEP_SUMMARY
+          echo "| Target | Coverage | Lines |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+          jq -r '.targets[] | "| \(.name) | \((.lineCoverage * 10000 | round / 100))% | \(.coveredLines)/\(.executableLines) |"' coverage.json >> $GITHUB_STEP_SUMMARY
+
+          echo -e "\n### Coverage Gaps" >> $GITHUB_STEP_SUMMARY
+          echo "| File | Coverage | Missing Lines |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+
+          # 4. Reporting gaps with whole numbers for file coverage
+          BASE_URL="${{ github.server_url }}/${{ github.repository }}/blob/${{ github.sha }}/swift/Sources/LeetCode"
+
+          jq -r --arg base "$BASE_URL" '
+            .targets[0].files[]
+            | select(.lineCoverage < 1)
+            | (.name | split("/") | last) as $file
+            | (.lineCoverage * 100 | round | tostring + "%") as $cov
+            | (.executableLines - .coveredLines) as $missing
+            | "| [\($file)](\($base)/\($file)) | \($cov) | **\($missing)** |"
+          ' coverage.json >> $GITHUB_STEP_SUMMARY
