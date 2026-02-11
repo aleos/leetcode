@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "D77247D8-C8D8-4DCC-B1A5-F441BBD2DB0B",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:",
+          "identifier" : "LeetCode",
+          "name" : "LeetCode"
+        }
+      ]
+    },
+    "performanceAntipatternCheckerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "LeetCodeTests",
+        "name" : "LeetCodeTests"
+      }
+    }
+  ],
+  "version" : 1
+}
