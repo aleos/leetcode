@@ -1,5 +1,3 @@
-[![Build Status](https://github.com/aleos/leetcode/actions/workflows/deploy-docc.yml/badge.svg)](https://github.com/aleos/leetcode/actions/workflows/deploy-docc.yml)
-
 # LeetCode
 
 A personal library of algorithm solutions in Swift 6, built with [Swift Testing](https://developer.apple.com/documentation/testing) and a test-driven workflow.
