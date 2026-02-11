@@ -22,7 +22,7 @@ public enum P0137 {
     /// - Returns: The single element
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the length of the input array,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func singleNumber(_ nums: [Int]) -> Int {
         var seenOnce = 0
         var seenTwice = 0

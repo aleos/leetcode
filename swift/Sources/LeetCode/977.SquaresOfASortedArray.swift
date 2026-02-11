@@ -20,7 +20,7 @@ public enum P0977 {
     /// - Returns: An array of the squares of each number sorted in non-decreasing order.
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the length of the input array,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func sortedSquares(_ nums: [Int]) -> [Int] {
         var result = [Int](repeating: 0, count: nums.count)
         var left = 0

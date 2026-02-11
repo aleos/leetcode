@@ -31,7 +31,7 @@ public enum P0168 {
     /// - Returns: Corresponding column title as it appears in an Excel sheet.
     /// - Complexity:
     ///   **Time**: O(log₂₆(*n*)), where *n* is the column number,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func convertToTitle(_ columnNumber: Int) -> String {
         var columnNumber = UInt32(columnNumber)
         let alphabetCount: UInt32 = 26

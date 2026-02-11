@@ -37,7 +37,7 @@ public enum P2361 {
     /// - Returns: A 1-indexed array costs of length n, where costs[i] is the minimum cost to reach stop i from stop 0.
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the number of stops,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func minimumCosts(_ regular: [Int], _ express: [Int], _ expressCost: Int) -> [Int] {
         var minCosts = [Int]()
         var lastRegularCost = 0

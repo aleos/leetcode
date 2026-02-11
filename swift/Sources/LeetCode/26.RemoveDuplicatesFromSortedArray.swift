@@ -23,7 +23,7 @@ public enum P0026 {
     /// - Returns: The number of unique elements in `nums`.
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the length of the array,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func removeDuplicates(_ nums: inout [Int]) -> Int {
         guard !nums.isEmpty else { return 0 }
         var i = 1

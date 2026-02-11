@@ -22,7 +22,7 @@ public enum P0136 {
     /// - Returns: Find the single one.
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the length of the array,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func singleNumber(_ nums: [Int]) -> Int {
         var single = 0
         for num in nums {

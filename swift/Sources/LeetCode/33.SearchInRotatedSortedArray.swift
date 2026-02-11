@@ -28,7 +28,7 @@ public enum P0033 {
     /// - Returns: An index of `target` if it is in `nums`, or `-1` if it is not in `nums`.
     /// - Complexity:
     ///   **Time**: O(log *n*), where *n* is the length of the input array,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func search(_ nums: [Int], _ target: Int) -> Int {
         var l = 0, r = nums.count - 1
         

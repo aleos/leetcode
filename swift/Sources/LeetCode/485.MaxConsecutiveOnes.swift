@@ -20,7 +20,7 @@ public enum P0485 {
     /// - Returns: The maximum number of consecutive `1`'s in the array.
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the length of the array,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
         var maximumNumberOfConsecutive1s = 0
         var currentNumberOfConsecutive1s = 0

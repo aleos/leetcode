@@ -29,7 +29,7 @@ public enum P0852 {
     /// - Returns: The index `i` such that `arr[0] < arr[1] < ... < arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`.
     /// - Complexity:
     ///   **Time**: O(log *n*), where *n* is the length of the array,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func peakIndexInMountainArray(_ arr: [Int]) -> Int {
         var left = 0
         var right = arr.count - 1

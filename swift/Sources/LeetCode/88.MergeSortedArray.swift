@@ -27,7 +27,7 @@ public enum P0088 {
     ///   - n: The number of elements in `nums2`.
     /// - Complexity:
     ///   **Time**: O(*m* + *n*), where *m* and *n* are the number of elements in nums1 and nums2,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
         var mIndex = m - 1
         var nIndex = n - 1

@@ -28,7 +28,7 @@ public enum P0081 {
     /// - Returns: `true` if target is in `nums`, or `false` if it is not in `nums`.
     /// - Complexity:
     ///   **Time**: O(*n*) worst case (when all elements are duplicates), O(log *n*) average case,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func search(_ nums: [Int], _ target: Int) -> Bool {
         var l = 0, r = nums.count - 1
         

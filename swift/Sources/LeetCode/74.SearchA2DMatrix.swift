@@ -30,7 +30,7 @@ public enum P0074 {
     /// - Returns: `true` if `target` is in `matrix` or `false` otherwise.
     /// - Complexity:
     ///   **Time**: O(log(*m* × *n*)), where *m* and *n* are the dimensions of the input matrix,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
         
         /// Adapter to use flat indexes instead of 2D.

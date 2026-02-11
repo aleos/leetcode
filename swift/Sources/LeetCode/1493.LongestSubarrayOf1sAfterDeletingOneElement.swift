@@ -22,7 +22,7 @@ public enum P1493 {
     /// - Returns: The size of the longest non-empty subarray containing only `1`'s in the resulting array. `0` if there is no such subarray.
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the length of the array,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func longestSubarray(_ nums: [Int]) -> Int {
         var lastStart1Index: Int?
         var last0Index: Int?

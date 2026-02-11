@@ -54,7 +54,7 @@ public enum P0271 {
     /// - Returns: An encoded string representation.
     /// - Complexity:
     ///   **Time**: O(*n* × *m*), where *n* is the number of strings and *m* is the average string length,\
-    ///   **Space**: O(*1*).
+    ///   **Space**: O(1).
     public static func encode(_ strs: [String]) -> String {
         strs
             .map({ $0.replacingOccurrences(of: #"\"#, with: #"\\"#) })
