@@ -1,0 +1,42 @@
+name: publish-docs
+
+on:
+  workflow_call:
+defaults:
+  run:
+    working-directory: swift
+
+jobs:
+  generate-site:
+    name: Generate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate DocC
+        run: |
+          swift package --allow-writing-to-package-directory \
+            generate-documentation --target LeetCode \
+            --output-path ./docs \
+            --transform-for-static-hosting \
+            --hosting-base-path "${{ github.event.repository.name }}"
+
+      - name: Log
+        run: |
+          echo "Generated documentation at $TARGET_FILE"
+          echo "Current working directory: $PWD"
+          echo "Files in the current directory:"
+          ls -l
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: swift/docs
+
+  deploy:
+    name: Deploy
+    needs: generate-site
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

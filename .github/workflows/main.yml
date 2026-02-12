@@ -1,0 +1,24 @@
+name: main-pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  test:
+    name: test
+    uses: ./.github/workflows/build-and-test.yml
+
+  docs:
+    name: docs
+    needs: test
+    if: github.ref == 'refs/heads/main' && success()
+    uses: ./.github/workflows/publish-docs.yml
+    secrets: inherit

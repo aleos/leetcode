@@ -1,0 +1,99 @@
+name: build-and-test
+on: workflow_call
+
+jobs:
+  run-tests:
+    name: Build & Test
+    runs-on: macos-26
+    defaults:
+      run:
+        working-directory: swift
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build and Test
+        run: |
+          set -o pipefail && xcodebuild test \
+            -scheme LeetCode \
+            -testPlan LeetCode \
+            -destination 'platform=macOS' \
+            -enableCodeCoverage YES \
+            -derivedDataPath .build/ | xcbeautify
+
+      - name: Export Raw Coverage
+        run: |
+          RESULT_BUNDLE=$(find .build/Logs/Test -name "*.xcresult" | head -n 1)
+          xcrun xccov view --report --json "$RESULT_BUNDLE" > coverage.json
+
+      - name: Inspect Output Directory
+        run: |
+          echo "Current Path: $(pwd)"
+          echo "Looking for coverage.json:"
+          ls -lh coverage.json
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-data
+          path: swift/coverage.json
+
+  analyze-coverage:
+    name: Report Coverage
+    needs: run-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Badges Branch
+        uses: actions/checkout@v4
+        with:
+          ref: badges
+          path: badges-repo
+        continue-on-error: true
+
+      - name: Download Results
+        uses: actions/download-artifact@v4
+        with:
+          name: test-data
+
+      - name: Debug Workspace Structure
+        run: |
+          echo "Current Workspace Root: $(pwd)"
+          echo "Recursive File List:"
+          ls -R
+
+      - name: Generate Coverage Summary
+        run: |
+          TARGET_FILE="coverage.json"
+
+          if [ ! -f "$TARGET_FILE" ]; then
+            echo "Error: $TARGET_FILE not found."
+            exit 1
+          fi
+
+          COV_RAW=$(jq -r '.lineCoverage * 100' "$TARGET_FILE")
+          TOTAL_COV=$(printf "%.2f" "$COV_RAW")
+          COVERED=$(jq -r '.coveredLines' "$TARGET_FILE")
+          TOTAL=$(jq -r '.executableLines' "$TARGET_FILE")
+
+          echo "## Code Coverage Summary" >> $GITHUB_STEP_SUMMARY
+          echo "Total Coverage: **${TOTAL_COV}%**" >> $GITHUB_STEP_SUMMARY
+          echo "Lines: ${COVERED} / ${TOTAL}" >> $GITHUB_STEP_SUMMARY
+
+          echo -e "\n### Target Breakdown" >> $GITHUB_STEP_SUMMARY
+          echo "| Target | Coverage | Lines |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+          jq -r '.targets[] | "| \(.name) | \((.lineCoverage * 10000 | round / 100))% | \(.coveredLines)/\(.executableLines) |"' "$TARGET_FILE" >> $GITHUB_STEP_SUMMARY
+
+          echo -e "\n### Coverage Gaps" >> $GITHUB_STEP_SUMMARY
+          echo "| File | Coverage | Missing Lines |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+
+          BASE_URL="${{ github.server_url }}/${{ github.repository }}/blob/${{ github.sha }}/swift/Sources/LeetCode"
+
+          jq -r --arg base "$BASE_URL" '
+            .targets[0].files[]
+            | select(.lineCoverage < 1)
+            | (.name | split("/") | last) as $file
+            | (.lineCoverage * 100 | round | tostring + "%") as $cov
+            | (.executableLines - .coveredLines) as $missing
+            | "| [\($file)](\($base)/\($file)) | \($cov) | **\($missing)** |"
+          ' "$TARGET_FILE" >> $GITHUB_STEP_SUMMARY

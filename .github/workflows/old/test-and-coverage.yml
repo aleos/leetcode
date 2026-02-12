@@ -2,9 +2,9 @@ name: Test and Report Coverage
 
 on:
   push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+    branches: ["main1"]
+  # pull_request:
+  #   branches: ["main"]
 
 jobs:
   run-tests:
