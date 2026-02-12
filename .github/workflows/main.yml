@@ -13,12 +13,13 @@ permissions:
 
 jobs:
   test:
-    name: test
+    name: Test
     uses: ./.github/workflows/build-and-test.yml
 
-  docs:
-    name: docs
+  deploy-docs:
+    name: Deploy Docs
     needs: test
+    # Only deploy on main branch push and successful tests
     if: github.ref == 'refs/heads/main' && success()
     uses: ./.github/workflows/publish-docs.yml
     secrets: inherit

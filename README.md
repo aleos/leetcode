@@ -1,16 +1,16 @@
 # LeetCode
 
-A personal library of algorithm solutions in Swift 6, built with [Swift Testing](https://developer.apple.com/documentation/testing) and a test-driven workflow.
+[![Build & Test](https://github.com/aleos/leetcode/actions/workflows/main.yml/badge.svg)](https://github.com/aleos/leetcode/actions/workflows/main.yml)
+[![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/aleos/leetcode/badges/coverage.json)](https://github.com/aleos/leetcode/actions/workflows/main.yml)
+[![Documentation](https://img.shields.io/badge/DocC-GitHub%20Pages-blue)](https://aleos.github.io/leetcode/documentation/leetcode/)
 
-**[Browse the documentation →](https://aleos.github.io/leetcode/documentation/leetcode/)**
+A personal library of [LeetCode](https://leetcode.com) solutions in Swift 6, built with [Swift Testing](https://developer.apple.com/documentation/testing) and a test-driven workflow.
 
 ## At a Glance
 
-Each problem lives in a self-contained enum (`P0001`, `P0017`, …) with public methods matching LeetCode's function signatures. Every solution carries full problem metadata and complexity analysis in its DocString — browsable in Xcode Quick Help and the [hosted DocC site](https://aleos.github.io/leetcode/documentation/leetcode/).
+Each problem lives in a self-contained enum (`P0001`, `P0017`, …) with public methods matching LeetCode's function signatures. Every solution carries full problem metadata and complexity analysis in its DocString — browsable in Xcode Quick Help and the hosted DocC site.
 
 ## Repository Structure
-
-The project uses a `swift/` subdirectory to keep the root clean and leave room for other languages.
 
 ```text
 .
@@ -20,7 +20,7 @@ The project uses a `swift/` subdirectory to keep the root clean and leave room f
 │   │   └── LeetCode.docc/       Documentation catalog
 │   ├── Tests/LeetCodeTests/     Swift Testing suites
 │   └── _templates/              File templates and Xcode .codesnippet files
-└── .github/workflows/           DocC deployment to GitHub Pages
+└── .github/workflows/           CI pipeline and DocC deployment
 ```
 
 ### Naming
@@ -38,7 +38,7 @@ Implementation files contain the problem link, description, and complexity analy
 3. **Solve** — implement until all tests pass
 4. **Document** — add time and space complexity to the DocString
 
-To install or restore Xcode snippets, copy the `.codesnippet` files from `swift/_templates/` to `~/Library/Developer/Xcode/UserData/CodeSnippets`.
+To install Xcode snippets, copy the `.codesnippet` files from `swift/_templates/` to `~/Library/Developer/Xcode/UserData/CodeSnippets`.
 
 ## Build and Test
 
@@ -51,9 +51,13 @@ swift test --filter LetterCombinations   # by name
 swift test --filter P0017                # by number
 ```
 
+## CI/CD
+
+Every push to `main` triggers a pipeline that runs tests with code coverage, generates a coverage report, and deploys updated documentation to GitHub Pages. Pull requests run the test suite only.
+
 ## Documentation
 
-Documentation is generated with [DocC](https://www.swift.org/documentation/docc/) from source comments and deployed to GitHub Pages automatically on push to `main`.
+Documentation is generated with [DocC](https://www.swift.org/documentation/docc/) from source comments and published automatically.
 
 ```bash
 # Preview locally

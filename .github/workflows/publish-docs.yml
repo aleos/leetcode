@@ -1,42 +1,52 @@
 name: publish-docs
+on: workflow_call
 
-on:
-  workflow_call:
 defaults:
   run:
     working-directory: swift
 
 jobs:
-  generate-site:
-    name: Generate
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Web Renderer
+        run: |
+          git clone https://github.com/apple/swift-docc-render-artifact.git .render
+          # Export to environment for subsequent DocC command
+          echo "DOCC_HTML_DIR=$(pwd)/.render/dist" >> $GITHUB_ENV
 
       - name: Generate DocC
         run: |
-          swift package --allow-writing-to-package-directory \
-            generate-documentation --target LeetCode \
+          swift package \
+            --allow-writing-to-package-directory \
+            generate-documentation \
+            --target LeetCode \
             --output-path ./docs \
             --transform-for-static-hosting \
             --hosting-base-path "${{ github.event.repository.name }}"
 
-      - name: Log
-        run: |
-          echo "Generated documentation at $TARGET_FILE"
-          echo "Current working directory: $PWD"
-          echo "Files in the current directory:"
-          ls -l
+          [ -f "docs/index.html" ] || { echo "::error::Index file missing"; exit 1; }
 
-      - name: Upload Pages Artifact
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: swift/docs
 
-  deploy:
-    name: Deploy
-    needs: generate-site
+  publish:
+    name: Publish
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}documentation/leetcode/
     runs-on: ubuntu-latest
     steps:
-      - id: deployment
+      - name: Publish
+        id: deployment
         uses: actions/deploy-pages@v4
