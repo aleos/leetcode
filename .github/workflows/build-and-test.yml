@@ -1,19 +1,26 @@
-name: build-and-test
-on: workflow_call
+name: Build and Test
+
+on:
+  workflow_call:
+    outputs:
+      report-file:
+        value: ${{ jobs.test.outputs.report-file }}
+      coverage-artifact:
+        value: ${{ jobs.test.outputs.coverage-artifact }}
 
 jobs:
   test:
-    name: Execute
+    name: Test
     runs-on: macos-26
     defaults:
       run:
         working-directory: swift
     env:
       REPORT: coverage.json
-      ARTIFACT: swift-coverage-results
+      ARTIFACT: coverage-results
     outputs:
-      report-file: ${{ env.REPORT }}
-      coverage-artifact: ${{ env.ARTIFACT }}
+      report-file: ${{ steps.export.outputs.report }}
+      coverage-artifact: ${{ steps.export.outputs.artifact }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -39,108 +46,8 @@ jobs:
           path: swift/${{ env.REPORT }}
           retention-days: 7
 
-  summarize-coverage:
-    name: Summarize Coverage
-    needs: test
-    runs-on: ubuntu-latest
-    env:
-      REPORT: ${{ needs.test.outputs.report-file }}
-    steps:
-      - name: Download Results
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ needs.test.outputs.coverage-artifact }}
-          path: .
-
-      - name: Extract metrics
+      - name: Export Outputs
+        id: export
         run: |
-          [ -f "$REPORT" ] || { echo "::error::Coverage report missing"; exit 1; }
-
-          echo "PERCENTAGE=$(printf "%.2f" "$(jq -r '.lineCoverage * 100' "$REPORT")")" >> $GITHUB_ENV
-          echo "COVERED=$(jq -r '.coveredLines' "$REPORT")" >> $GITHUB_ENV
-          echo "TOTAL=$(jq -r '.executableLines' "$REPORT")" >> $GITHUB_ENV
-
-      - name: Generate coverage header
-        run: |
-          echo "## 📊 Coverage Report: ${PERCENTAGE}%" >> $GITHUB_STEP_SUMMARY
-          echo "Lines: ${COVERED} / ${TOTAL}" >> $GITHUB_STEP_SUMMARY
-
-      - name: Generate module breakdown
-        run: |
-          echo -e "\n### Module Breakdown" >> $GITHUB_STEP_SUMMARY
-          echo "| Module | Coverage | Lines |" >> $GITHUB_STEP_SUMMARY
-          echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
-
-          jq -r '
-            .targets[] |
-            [
-              .name,
-              ((.lineCoverage * 10000 | round / 100 | tostring) + "%"),
-              ((.coveredLines | tostring) + "/" + (.executableLines | tostring))
-            ] |
-            "| " + join(" | ") + " |"
-          ' "$REPORT" >> $GITHUB_STEP_SUMMARY
-
-      - name: Generate coverage gaps
-        run: |
-          echo -e "\n### Coverage Gaps" >> $GITHUB_STEP_SUMMARY
-          echo "| File | Coverage | Missing Lines |" >> $GITHUB_STEP_SUMMARY
-          echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
-
-          BASE_URL="${{ github.server_url }}/${{ github.repository }}/blob/${{ github.sha }}/swift/Sources/LeetCode"
-
-          jq -r --arg base "$BASE_URL" '
-            .targets[].files[] |
-            select(.lineCoverage < 1) |
-            [
-              "[" + (.name | split("/") | last) + "](" + $base + "/" + (.name | split("/") | last) + ")",
-              ((.lineCoverage * 100 | round | tostring) + "%"),
-              "**" + ((.executableLines - .coveredLines) | tostring) + "**"
-            ] |
-            "| " + join(" | ") + " |"
-          ' "$REPORT" >> $GITHUB_STEP_SUMMARY
-
-  sync-badge:
-    name: Sync Badge
-    needs: test
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    env:
-      REPORT: ${{ needs.test.outputs.report-file }}
-    steps:
-      - name: Checkout badges branch
-        uses: actions/checkout@v4
-        with:
-          ref: badges
-        continue-on-error: true
-
-      - name: Create badges branch if missing
-        run: |
-          if [ "$(git branch --show-current)" != "badges" ]; then
-            git checkout --orphan badges
-            git reset
-          fi
-
-      - name: Download Results
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ needs.test.outputs.coverage-artifact }}
-          path: .
-
-      - name: Update Badge
-        run: |
-          PERCENTAGE=$(printf "%.2f" "$(jq -r '.lineCoverage * 100' "$REPORT")")
-
-          cat <<EOF > "$REPORT"
-          {
-            "schemaVersion": 1,
-            "label": "coverage",
-            "message": "${PERCENTAGE}%",
-            "color": "brightgreen"
-          }
-          EOF
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "$REPORT"
-          git commit -m "chore: update coverage to ${PERCENTAGE}%" && git push || echo "No changes."
+          echo "report=$REPORT" >> $GITHUB_OUTPUT
+          echo "artifact=$ARTIFACT" >> $GITHUB_OUTPUT

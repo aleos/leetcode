@@ -1,4 +1,4 @@
-name: main-pipeline
+name: CI
 
 on:
   push:
@@ -15,6 +15,14 @@ jobs:
   test:
     name: Test
     uses: ./.github/workflows/build-and-test.yml
+
+  coverage:
+    name: Coverage
+    needs: test
+    uses: ./.github/workflows/report-coverage.yml
+    with:
+      report-file: ${{ needs.test.outputs.report-file }}
+      coverage-artifact: ${{ needs.test.outputs.coverage-artifact }}
 
   deploy-docs:
     name: Deploy Docs

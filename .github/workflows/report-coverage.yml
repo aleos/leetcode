@@ -1,0 +1,114 @@
+name: Report Coverage
+
+on:
+  workflow_call:
+    inputs:
+      report-file:
+        type: string
+        required: true
+      coverage-artifact:
+        type: string
+        required: true
+
+jobs:
+  summarize:
+    name: Summarize
+    runs-on: ubuntu-latest
+    env:
+      REPORT: ${{ inputs.report-file }}
+    steps:
+      - name: Download Results
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.coverage-artifact }}
+
+      - name: Extract Metrics
+        run: |
+          [ -f "$REPORT" ] || { echo "::error::Coverage report missing"; exit 1; }
+
+          echo "PERCENTAGE=$(printf "%.2f" "$(jq -r '.lineCoverage * 100' "$REPORT")")" >> $GITHUB_ENV
+          echo "COVERED=$(jq -r '.coveredLines' "$REPORT")" >> $GITHUB_ENV
+          echo "TOTAL=$(jq -r '.executableLines' "$REPORT")" >> $GITHUB_ENV
+
+      - name: Generate Coverage Header
+        run: |
+          echo "## 📊 Coverage Report: ${PERCENTAGE}%" >> $GITHUB_STEP_SUMMARY
+          echo "Lines: ${COVERED} / ${TOTAL}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Generate Module Breakdown
+        run: |
+          echo -e "\n### Module Breakdown" >> $GITHUB_STEP_SUMMARY
+          echo "| Module | Coverage | Lines |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+
+          jq -r '
+            .targets[] |
+            [
+              .name,
+              ((.lineCoverage * 10000 | round / 100 | tostring) + "%"),
+              ((.coveredLines | tostring) + "/" + (.executableLines | tostring))
+            ] |
+            "| " + join(" | ") + " |"
+          ' "$REPORT" >> $GITHUB_STEP_SUMMARY
+
+      - name: Generate Coverage Gaps
+        run: |
+          echo -e "\n### Coverage Gaps" >> $GITHUB_STEP_SUMMARY
+          echo "| File | Coverage | Missing Lines |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+
+          BASE_URL="${{ github.server_url }}/${{ github.repository }}/blob/${{ github.sha }}/swift/Sources/LeetCode"
+
+          jq -r --arg base "$BASE_URL" '
+            .targets[].files[] |
+            select(.lineCoverage < 1) |
+            [
+              "[" + (.name | split("/") | last) + "](" + $base + "/" + (.name | split("/") | last) + ")",
+              ((.lineCoverage * 100 | round | tostring) + "%"),
+              "**" + ((.executableLines - .coveredLines) | tostring) + "**"
+            ] |
+            "| " + join(" | ") + " |"
+          ' "$REPORT" >> $GITHUB_STEP_SUMMARY
+
+  sync-badge:
+    name: Sync Badge
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    env:
+      REPORT: ${{ inputs.report-file }}
+    steps:
+      - name: Checkout Badges Branch
+        uses: actions/checkout@v4
+        with:
+          ref: badges
+        continue-on-error: true
+
+      - name: Create badges Branch if Missing
+        run: |
+          if [ "$(git branch --show-current)" != "badges" ]; then
+            git switch --orphan badges
+          fi
+
+      - name: Download Results
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.coverage-artifact }}
+
+      - name: Update Badge
+        run: |
+          PERCENTAGE=$(printf "%.2f" "$(jq -r '.lineCoverage * 100' "$REPORT")")
+
+          cat <<EOF > "$REPORT"
+          {
+            "schemaVersion": 1,
+            "label": "coverage",
+            "message": "${PERCENTAGE}%",
+            "color": "brightgreen"
+          }
+          EOF
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$REPORT"
+          git commit -m "Update coverage to ${PERCENTAGE}%" || exit 0
+          git push --set-upstream origin badges
