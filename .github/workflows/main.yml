@@ -19,7 +19,6 @@ jobs:
   deploy-docs:
     name: Deploy Docs
     needs: test
-    # Only deploy on main branch push and successful tests
-    if: github.ref == 'refs/heads/main' && success()
+    if: github.ref == 'refs/heads/main'
     uses: ./.github/workflows/publish-docs.yml
     secrets: inherit
