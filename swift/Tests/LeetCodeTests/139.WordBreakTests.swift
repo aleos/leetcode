@@ -44,5 +44,11 @@ struct P0139Tests {
     func longStringTest() {
         #expect(P0139.wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", ["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"]) == false)
     }
+    
+    /// Edge case: empty string should be segmentable (by definition)
+    @Test("Empty string returns true")
+    func emptyStringReturnsTrue() {
+        #expect(P0139.wordBreak("", ["a","b"]) == true)
+    }
 }
 
