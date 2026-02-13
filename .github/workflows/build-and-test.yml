@@ -37,7 +37,9 @@ jobs:
       - name: Export coverage
         run: |
           RESULT_BUNDLE=$(find .build/Logs/Test -name "*.xcresult" | head -n 1)
+          echo "Found result bundle: $RESULT_BUNDLE"
           xcrun xccov view --report --json "$RESULT_BUNDLE" > "$REPORT"
+          echo "Coverage: $(jq -r '.lineCoverage * 100 | round' "$REPORT")%"
 
       - name: Upload results
         uses: actions/upload-artifact@v4
@@ -51,3 +53,4 @@ jobs:
         run: |
           echo "report=$REPORT" >> $GITHUB_OUTPUT
           echo "artifact=$ARTIFACT" >> $GITHUB_OUTPUT
+          echo "Exported: report=$REPORT, artifact=$ARTIFACT"

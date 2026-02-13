@@ -26,9 +26,15 @@ jobs:
         run: |
           [ -f "$REPORT" ] || { echo "::error::Coverage report missing"; exit 1; }
 
-          echo "PERCENTAGE=$(printf "%.2f" "$(jq -r '.lineCoverage * 100' "$REPORT")")" >> $GITHUB_ENV
-          echo "COVERED=$(jq -r '.coveredLines' "$REPORT")" >> $GITHUB_ENV
-          echo "TOTAL=$(jq -r '.executableLines' "$REPORT")" >> $GITHUB_ENV
+          PERCENTAGE=$(printf "%.2f" "$(jq -r '.lineCoverage * 100' "$REPORT")")
+          COVERED=$(jq -r '.coveredLines' "$REPORT")
+          TOTAL=$(jq -r '.executableLines' "$REPORT")
+
+          echo "PERCENTAGE=$PERCENTAGE" >> $GITHUB_ENV
+          echo "COVERED=$COVERED" >> $GITHUB_ENV
+          echo "TOTAL=$TOTAL" >> $GITHUB_ENV
+
+          echo "Coverage: ${PERCENTAGE}% (${COVERED}/${TOTAL} lines)"
 
       - name: Generate coverage header
         run: |
@@ -86,7 +92,10 @@ jobs:
       - name: Create badges branch if missing
         run: |
           if [ "$(git branch --show-current)" != "badges" ]; then
+            echo "Branch 'badges' not found, creating orphan branch..."
             git switch --orphan badges
+          else
+            echo "Branch 'badges' checked out successfully"
           fi
 
       - name: Download results
@@ -97,6 +106,7 @@ jobs:
       - name: Update badge
         run: |
           PERCENTAGE=$(printf "%.2f" "$(jq -r '.lineCoverage * 100' "$REPORT")")
+          echo "Badge coverage: ${PERCENTAGE}%"
 
           cat <<EOF > "$REPORT"
           {
@@ -110,5 +120,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$REPORT"
-          git commit -m "Update coverage to ${PERCENTAGE}%" || exit 0
+          git commit -m "Update coverage to ${PERCENTAGE}%" || { echo "No changes to commit"; exit 0; }
           git push --set-upstream origin badges
+          echo "Badge pushed to badges branch"

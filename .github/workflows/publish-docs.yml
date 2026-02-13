@@ -16,8 +16,8 @@ jobs:
       - name: Setup web renderer
         run: |
           git clone https://github.com/apple/swift-docc-render-artifact.git .render
-          # Export to environment for subsequent DocC command
           echo "DOCC_HTML_DIR=$(pwd)/.render/dist" >> $GITHUB_ENV
+          echo "Renderer cloned to $(pwd)/.render/dist"
 
       - name: Generate DocC
         run: |
@@ -30,6 +30,7 @@ jobs:
             --hosting-base-path "${{ github.event.repository.name }}"
 
           [ -f "docs/index.html" ] || { echo "::error::Index file missing"; exit 1; }
+          echo "Docs generated at ./docs (base path: ${{ github.event.repository.name }})"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
