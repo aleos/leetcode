@@ -43,5 +43,11 @@ struct P0033Tests {
         #expect(P0033.search([4,5,6,7,8,1,2,3], 8) == 4)
         #expect(P0033.search([5,1,2,3,4], 1) == 1)
     }
+    
+    @Test("Right-sorted branch: move left boundary")
+    func rightSortedBranchMovesLeft() {
+        // Target is in the right sorted part
+        #expect(P0033.search([6,7,0,1,2,3,4,5], 3) == 5)
+    }
 }
 
