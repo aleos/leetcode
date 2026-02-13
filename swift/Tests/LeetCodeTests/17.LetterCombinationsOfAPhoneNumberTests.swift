@@ -33,5 +33,17 @@ struct P0017Tests {
     func example3() {
         #expect(P0017.letterCombinations("2") == ["a","b","c"])
     }
+
+    /// Intentionally invalid input to exercise first-digit fallback (?? [])
+    @Test("Unmapped first digit '1' returns empty array")
+    func invalidFirstDigit1() {
+        #expect(P0017.letterCombinations("1") == [])
+    }
+    /// Valid first digit followed by unmapped digit to exercise loop fallback (?? [])
+    @Test("Digits '21' exercise loop fallback and return empty array")
+    func validThenInvalidDigit21() {
+        // Seeds from '2' => ["a","b","c"], then '1' has no mapping => combinations collapse to []
+        #expect(P0017.letterCombinations("21") == [])
+    }
 }
 
