@@ -17,12 +17,12 @@ jobs:
     env:
       REPORT: ${{ inputs.report-file }}
     steps:
-      - name: Download Results
+      - name: Download results
         uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.coverage-artifact }}
 
-      - name: Extract Metrics
+      - name: Extract metrics
         run: |
           [ -f "$REPORT" ] || { echo "::error::Coverage report missing"; exit 1; }
 
@@ -30,12 +30,12 @@ jobs:
           echo "COVERED=$(jq -r '.coveredLines' "$REPORT")" >> $GITHUB_ENV
           echo "TOTAL=$(jq -r '.executableLines' "$REPORT")" >> $GITHUB_ENV
 
-      - name: Generate Coverage Header
+      - name: Generate coverage header
         run: |
           echo "## 📊 Coverage Report: ${PERCENTAGE}%" >> $GITHUB_STEP_SUMMARY
           echo "Lines: ${COVERED} / ${TOTAL}" >> $GITHUB_STEP_SUMMARY
 
-      - name: Generate Module Breakdown
+      - name: Generate module breakdown
         run: |
           echo -e "\n### Module Breakdown" >> $GITHUB_STEP_SUMMARY
           echo "| Module | Coverage | Lines |" >> $GITHUB_STEP_SUMMARY
@@ -51,7 +51,7 @@ jobs:
             "| " + join(" | ") + " |"
           ' "$REPORT" >> $GITHUB_STEP_SUMMARY
 
-      - name: Generate Coverage Gaps
+      - name: Generate coverage gaps
         run: |
           echo -e "\n### Coverage Gaps" >> $GITHUB_STEP_SUMMARY
           echo "| File | Coverage | Missing Lines |" >> $GITHUB_STEP_SUMMARY
@@ -71,30 +71,30 @@ jobs:
           ' "$REPORT" >> $GITHUB_STEP_SUMMARY
 
   sync-badge:
-    name: Sync Badge
+    name: Sync badge
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     env:
       REPORT: ${{ inputs.report-file }}
     steps:
-      - name: Checkout Badges Branch
+      - name: Checkout badges branch
         uses: actions/checkout@v4
         with:
           ref: badges
         continue-on-error: true
 
-      - name: Create badges Branch if Missing
+      - name: Create badges branch if missing
         run: |
           if [ "$(git branch --show-current)" != "badges" ]; then
             git switch --orphan badges
           fi
 
-      - name: Download Results
+      - name: Download results
         uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.coverage-artifact }}
 
-      - name: Update Badge
+      - name: Update badge
         run: |
           PERCENTAGE=$(printf "%.2f" "$(jq -r '.lineCoverage * 100' "$REPORT")")
 

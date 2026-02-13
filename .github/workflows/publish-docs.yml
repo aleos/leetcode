@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Web Renderer
+      - name: Setup web renderer
         run: |
           git clone https://github.com/apple/swift-docc-render-artifact.git .render
           # Export to environment for subsequent DocC command
@@ -31,7 +31,7 @@ jobs:
 
           [ -f "docs/index.html" ] || { echo "::error::Index file missing"; exit 1; }
 
-      - name: Upload Artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: swift/docs
