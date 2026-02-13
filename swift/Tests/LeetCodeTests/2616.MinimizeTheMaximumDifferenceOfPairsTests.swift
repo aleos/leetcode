@@ -29,5 +29,11 @@ struct P2616Tests {
     func example2() {
         #expect(P2616.minimizeMax([4,2,1,2], 1) == 0)
     }
+
+    /// Edge case: empty array returns 0
+    @Test("Empty array returns 0")
+    func emptyArrayReturnsZero() {
+        #expect(P2616.minimizeMax([], 0) == 0)
+    }
 }
 
