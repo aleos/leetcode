@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    name: Test
+    name: Run
     runs-on: macos-26
     defaults:
       run:
