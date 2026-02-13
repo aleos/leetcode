@@ -42,5 +42,17 @@ struct P1493Tests {
         #expect(P1493.longestSubarray([0,0,0,1,1,1,0,1,1,0,0,0,0,1,0,0,0,0,0,0]) == 5)
         #expect(P1493.longestSubarray([1,1,0,0,1,1,1,0,1]) == 4)
     }
+
+    /// Array with all zeros should return 0
+    @Test("All zeros returns 0")
+    func allZeros() {
+        #expect(P1493.longestSubarray([0,0,0]) == 0)
+    }
+    
+    /// Array ending with zero should handle tail update correctly
+    @Test("Ends with zero returns correct length")
+    func endsWithZero() {
+        #expect(P1493.longestSubarray([1,1,0]) == 2)
+    }
 }
 
