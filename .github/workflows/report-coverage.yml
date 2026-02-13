@@ -59,13 +59,8 @@ jobs:
 
       - name: Generate coverage gaps
         run: |
-          echo -e "\n### Coverage Gaps" >> $GITHUB_STEP_SUMMARY
-          echo "| File | Coverage | Missing Lines |" >> $GITHUB_STEP_SUMMARY
-          echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
-
           BASE_URL="${{ github.server_url }}/${{ github.repository }}/blob/${{ github.sha }}/swift/Sources/LeetCode"
-
-          jq -r --arg base "$BASE_URL" '
+          GAPS=$(jq -r --arg base "$BASE_URL" '
             .targets[].files[] |
             select(.lineCoverage < 1) |
             [
@@ -74,7 +69,16 @@ jobs:
               "**" + ((.executableLines - .coveredLines) | tostring) + "**"
             ] |
             "| " + join(" | ") + " |"
-          ' "$REPORT" >> $GITHUB_STEP_SUMMARY
+          ' "$REPORT")
+
+          if [ -n "$GAPS" ]; then
+            echo -e "\n### Coverage Gaps" >> $GITHUB_STEP_SUMMARY
+            echo "| File | Coverage | Missing Lines |" >> $GITHUB_STEP_SUMMARY
+            echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+            printf "%s\n" "$GAPS" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "No coverage gaps found; skipping Coverage Gaps section."
+          fi
 
   sync-badge:
     name: Sync badge
