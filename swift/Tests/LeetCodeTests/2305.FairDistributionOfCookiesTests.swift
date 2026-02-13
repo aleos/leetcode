@@ -43,5 +43,15 @@ struct P2305Tests {
         #expect(P2305.distributeCookies([15,18,19,5,6,13,15,20], 3) == 38)
         #expect(P2305.distributeCookies([13,3], 2) == 13)
     }
+
+    @Test("Empty cookies and zero children returns Int.max")
+    func emptyCookiesZeroChildrenReturnsMax() {
+        #expect(P2305.distributeCookies([], 0) == Int.max)
+    }
+
+    @Test("More children than bags returns Int.max")
+    func moreChildrenThanBagsReturnsMax() {
+        #expect(P2305.distributeCookies([1,2], 3) == Int.max)
+    }
 }
 
