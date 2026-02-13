@@ -105,7 +105,7 @@ jobs:
 
       - name: Update badge
         run: |
-          PERCENTAGE=$(printf "%.2f" "$(jq -r '.lineCoverage * 100' "$REPORT")")
+          PERCENTAGE=$(printf "%.1f" "$(jq -r '.lineCoverage * 100' "$REPORT")")
           echo "Badge coverage: ${PERCENTAGE}%"
 
           cat <<EOF > "$REPORT"
