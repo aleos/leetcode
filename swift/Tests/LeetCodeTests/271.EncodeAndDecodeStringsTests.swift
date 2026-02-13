@@ -35,5 +35,20 @@ struct P0271Tests {
     func example2() {
         #expect(P0271.decode(P0271.encode([""])) == [""])
     }
+    
+    @Test("Roundtrip with backslash in string")
+    func backslashInString() {
+        #expect(P0271.decode(P0271.encode(["a\\b","c"])) == ["a\\b","c"])
+    }
+
+    @Test("Roundtrip with comma inside string")
+    func commaInsideString() {
+        #expect(P0271.decode(P0271.encode(["a,b","c"])) == ["a,b","c"])
+    }
+    
+    @Test("Roundtrip with literal separator sequence in string")
+    func literalSeparatorSequenceInString() {
+        #expect(P0271.decode(P0271.encode(["\\,","x\\,y","\\"])) == ["\\,","x\\,y","\\"])
+    }
 }
 
