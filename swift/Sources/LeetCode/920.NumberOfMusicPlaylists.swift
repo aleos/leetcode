@@ -1,10 +1,3 @@
-//
-//  920.NumberOfMusicPlaylists.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 6/8/2023.
-//
-
 /// Number of Music Playlists
 ///
 /// Your music player contains `n` different songs. You want to listen to `goal` songs (not necessarily different) during your trip.

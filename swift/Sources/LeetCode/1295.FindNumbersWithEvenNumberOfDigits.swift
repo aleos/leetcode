@@ -1,10 +1,3 @@
-//
-//  1295.FindNumbersWithEvenNumberOfDigits.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 3/8/2023.
-//
-
 /// Find Numbers with Even Number of Digits
 ///
 /// Given an array nums of integers, return how many of them contain an even number of digits.

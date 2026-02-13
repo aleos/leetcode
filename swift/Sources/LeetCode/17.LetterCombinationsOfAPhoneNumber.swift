@@ -1,10 +1,3 @@
-//
-//  17.LetterCombinationsOfAPhoneNumber.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 3/8/2023.
-//
-
 /// Letter Combinations of a Phone Number
 ///
 /// Given a string containing digits from `2-9` inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.

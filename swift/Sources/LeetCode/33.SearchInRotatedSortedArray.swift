@@ -1,10 +1,3 @@
-//
-//  33.SearchInRotatedSortedArray.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 8/8/2023.
-//
-
 /// Search in Rotated Sorted Array
 ///
 /// There is an integer array `nums` sorted in ascending order (with distinct values).

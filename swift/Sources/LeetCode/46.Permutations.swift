@@ -1,10 +1,3 @@
-//
-//  46.Permutations.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 2/8/2023.
-//
-
 /// Permutations
 ///
 /// Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.

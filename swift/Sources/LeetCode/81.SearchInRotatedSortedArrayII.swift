@@ -1,10 +1,3 @@
-//
-//  81.SearchInRotatedSortedArrayII.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 10/8/2023.
-//
-
 /// Search in Rotated Sorted Array II
 ///
 /// There is an integer array `nums` sorted in non-decreasing order (not necessarily with distinct values).

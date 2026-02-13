@@ -1,10 +1,3 @@
-//
-//  2024.MaximizeTheConfusionOfAnExam.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 7/7/2023.
-//
-
 /// Maximize the Confusion of an Exam
 ///
 /// A teacher is writing a test with `n` true/false questions, with `'T'` denoting true and `'F'` denoting false. He wants to confuse the students by maximizing the number of consecutive questions with the same answer (multiple trues or multiple falses in a row).

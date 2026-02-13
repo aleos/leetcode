@@ -1,10 +1,3 @@
-//
-//  767.ReorganizeString.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 23/8/2023.
-//
-
 /// Reorganize String
 ///
 /// Given a string `s`, rearrange the characters of `s` so that any two adjacent characters are not the same.

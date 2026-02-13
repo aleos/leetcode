@@ -1,10 +1,3 @@
-//
-//  74.SearchA2DMatrix.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 7/8/2023.
-//
-
 /// Search a 2D Matrix
 ///
 /// You are given an `m x n` integer matrix `matrix` with the following two properties:

@@ -1,10 +1,3 @@
-//
-//  852.PeakIndexInAMountainArray.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 25/7/2023.
-//
-
 /// Peak Index in a Mountain Array
 ///
 /// Given a mountain array arr, return the index `i` such that `arr[0] < arr[1] < ... < arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`.

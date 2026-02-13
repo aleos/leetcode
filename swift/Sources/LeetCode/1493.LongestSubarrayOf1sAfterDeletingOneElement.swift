@@ -1,10 +1,3 @@
-//
-//  1493.LongestSubarrayOf1sAfterDeletingOneElement.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 5/7/2023.
-//
-
 /// Longest Subarray of 1's After Deleting One Element
 ///
 /// Given a binary array `nums`, you should delete one element from it.

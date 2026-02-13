@@ -1,10 +1,3 @@
-//
-//  2024.MaximizeTheConfusionOfAnExamTests.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 7/7/2023.
-//
-
 import Testing
 
 @testable import LeetCode

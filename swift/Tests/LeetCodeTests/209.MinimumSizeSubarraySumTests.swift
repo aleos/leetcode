@@ -1,10 +1,3 @@
-//
-//  209.MinimumSizeSubarraySumTests.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 6/7/2023.
-//
-
 import Testing
 
 @testable import LeetCode

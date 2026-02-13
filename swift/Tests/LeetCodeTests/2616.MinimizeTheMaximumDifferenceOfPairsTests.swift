@@ -1,10 +1,3 @@
-//
-//  2616.MinimizeTheMaximumDifferenceOfPairsTests.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 9/8/2023.
-//
-
 import Testing
 
 @testable import LeetCode

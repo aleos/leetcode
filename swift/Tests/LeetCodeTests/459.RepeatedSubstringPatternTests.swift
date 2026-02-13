@@ -1,10 +1,3 @@
-//
-//  459.RepeatedSubstringPatternTests.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 21/8/2023.
-//
-
 import Testing
 
 @testable import LeetCode

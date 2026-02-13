@@ -1,10 +1,3 @@
-//
-//  46.PermutationsTests.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 2/8/2023.
-//
-
 import Testing
 
 @testable import LeetCode

@@ -1,10 +1,3 @@
-//
-//  459.RepeatedSubstringPattern.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 21/8/2023.
-//
-
 /// Repeated Substring Pattern
 ///
 /// Given a string `s`, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.

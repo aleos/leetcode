@@ -1,10 +1,3 @@
-//
-//  137.SingleNumberII.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 4/7/2023.
-//
-
 /// Single Number II
 ///
 /// Given an integer array `nums` where every element appears three times except for one, which appears **exactly once**. *Find the single element and return it.*

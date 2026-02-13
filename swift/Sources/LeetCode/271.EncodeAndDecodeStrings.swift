@@ -1,10 +1,3 @@
-//
-//  271.EncodeAndDecodeStrings.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 8/8/2023.
-//
-
 import Foundation
 
 /// Encode and Decode Strings

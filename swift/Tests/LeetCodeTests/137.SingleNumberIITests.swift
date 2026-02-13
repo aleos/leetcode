@@ -1,10 +1,3 @@
-//
-//  137.SingleNumberIITests.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 4/7/2023.
-//
-
 import Testing
 
 @testable import LeetCode

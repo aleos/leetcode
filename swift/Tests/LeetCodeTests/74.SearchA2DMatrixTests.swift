@@ -1,10 +1,3 @@
-//
-//  74.SearchA2DMatrixTests.swift
-//  LeetCode
-//
-//  Created by Alexander Ostrovsky on 7/8/2023.
-//
-
 import Testing
 
 @testable import LeetCode
