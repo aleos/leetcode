@@ -34,5 +34,13 @@ struct P0026Tests {
         #expect(P0026.removeDuplicates(&nums) == 5)
         #expect(nums[..<5] == [0,1,2,3,4])
     }
+    
+    /// Edge case: empty array should return k = 0 and leave array unchanged
+    @Test("Empty array returns 0 and remains empty")
+    func emptyArray() {
+        var nums: [Int] = []
+        #expect(P0026.removeDuplicates(&nums) == 0)
+        #expect(nums.isEmpty)
+    }
 }
 
