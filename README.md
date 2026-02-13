@@ -1,6 +1,6 @@
 # LeetCode
 
-[![Build & Test](https://github.com/aleos/leetcode/actions/workflows/main.yml/badge.svg)](https://github.com/aleos/leetcode/actions/workflows/main.yml)
+[![CI](https://github.com/aleos/leetcode/actions/workflows/ci.yml/badge.svg)](https://github.com/aleos/leetcode/actions/workflows/ci.yml)
 [![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/aleos/leetcode/badges/coverage.json)](https://github.com/aleos/leetcode/actions/workflows/main.yml)
 [![Documentation](https://img.shields.io/badge/DocC-GitHub%20Pages-blue)](https://aleos.github.io/leetcode/documentation/leetcode/)
 [![Swift 6](https://img.shields.io/badge/Swift-6-orange)](https://swift.org)
