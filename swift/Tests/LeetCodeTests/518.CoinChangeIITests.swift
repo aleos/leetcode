@@ -41,5 +41,17 @@ struct P0518Tests {
     func example3() {
         #expect(P0518.change(10, [10]) == 1)
     }
+    
+    /// Edge case: zero amount with coins should return 1
+    @Test("Zero amount with coins returns 1")
+    func zeroAmountWithCoins() {
+        #expect(P0518.change(0, [5]) == 1)
+    }
+    
+    /// First coin greater than amount triggers early break and yields 0 combinations
+    @Test("First coin greater than amount returns 0")
+    func firstCoinGreaterThanAmount() {
+        #expect(P0518.change(3, [5]) == 0)
+    }
 }
 

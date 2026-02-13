@@ -23,10 +23,7 @@ public enum P0518 {
     ///   **Time**: O(*n* × *amount*), where *n* is the number of coin types and *amount* is the target amount,\
     ///   **Space**: O(*amount*), where *amount* is the target amount.
     public static func change(_ amount: Int, _ coins: [Int]) -> Int {
-        if coins.count == 0 && amount == 0 { return 1 }
-        if amount == 0 {
-            if amount < coins[0] { return 1 }
-        }
+        if amount == 0 { return 1 }
         
         var dp = Array(repeating: 0, count: amount + 1)
         dp[0] = 1
