@@ -32,5 +32,23 @@ struct P0081Tests {
     func arrayWithDuplicates() {
         #expect(P0081.search([1,0,1,1,1], 0) == true)
     }
+    
+    /// Edge case: empty array should return false
+    @Test("Empty array returns false")
+    func emptyArrayReturnsFalse() {
+        #expect(P0081.search([], 1) == false)
+    }
+
+    /// Duplicate bounds with target equal triggers early return in duplicate-trim loop
+    @Test("Duplicate bounds early return true")
+    func duplicateBoundsEarlyReturn() {
+        #expect(P0081.search([2,2,2], 2) == true)
+    }
+    /// Force the right-sorted branch to move left boundary (l = m + 1)
+    @Test("Right-sorted branch moves left boundary")
+    func rightSortedBranchMovesLeftBoundary() {
+        // Target is in the right sorted part
+        #expect(P0081.search([3,4,5,6,0,1,2,2,2], 1) == true)
+    }
 }
 
