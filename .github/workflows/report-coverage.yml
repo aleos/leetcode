@@ -112,12 +112,23 @@ jobs:
           PERCENTAGE=$(printf "%.1f" "$(jq -r '.lineCoverage * 100' "$REPORT")")
           echo "Badge coverage: ${PERCENTAGE}%"
 
+          PCT_INT=$(printf "%.0f" "$PERCENTAGE")
+          if [ "$PCT_INT" -ge 80 ]; then
+            COLOR="brightgreen"
+          elif [ "$PCT_INT" -ge 60 ]; then
+            COLOR="yellow"
+          elif [ "$PCT_INT" -ge 40 ]; then
+            COLOR="orange"
+          else
+            COLOR="red"
+          fi
+
           cat <<EOF > "$REPORT"
           {
             "schemaVersion": 1,
             "label": "coverage",
             "message": "${PERCENTAGE}%",
-            "color": "brightgreen"
+            "color": "${COLOR}"
           }
           EOF
 

@@ -2,9 +2,7 @@
 
 [![CI](https://github.com/aleos/leetcode/actions/workflows/ci.yml/badge.svg)](https://github.com/aleos/leetcode/actions/workflows/ci.yml)
 [![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/aleos/leetcode/badges/coverage.json)](https://raw.githubusercontent.com/aleos/leetcode/badges/coverage.json)
-[![Documentation](https://img.shields.io/badge/DocC-GitHub%20Pages-blue)](https://aleos.github.io/leetcode/documentation/leetcode/)
-[![Swift 6](https://img.shields.io/badge/Swift-6-orange)](https://swift.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Documentation](https://img.shields.io/badge/Documentation-DocC-blue)](https://aleos.github.io/leetcode/documentation/leetcode/)
 
 A personal library of [LeetCode](https://leetcode.com) solutions in Swift 6, built with [Swift Testing](https://developer.apple.com/documentation/testing) and a test-driven workflow.
 
