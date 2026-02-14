@@ -45,4 +45,28 @@ public enum P0518 {
         
         return change(amount, 0)
     }
+    
+    /// - Parameters:
+    ///   - amount: A total amount of money.
+    ///   - coins: An integer array of coins of different denominations.
+    /// - Returns: The number of combinations that make up that amount. If that amount of money cannot be made up by any combination of the coins, return `0`.
+    /// - Complexity:
+    ///   **Time**: O(*n* × *amount*), where *n* is the number of coins and *amount* is the target amount,\
+    ///   **Space**: O(*n* × *amount*), where *n* is the number of coins and *amount* is the target amount.
+    public static func change2(_ amount: Int, _ coins: [Int]) -> Int {
+        var table: [[Int]] = Array(repeating: Array(repeating: 0, count: amount + 1), count: coins.count)
+        table[0][0] = 1
+        for c in 0..<coins.count {
+            for a in 0...amount {
+                if c > 0 {
+                    table[c][a] += table[c - 1][a]
+                }
+                if a + coins[c] <= amount {
+                    table[c][a + coins[c]] = table[c][a]
+                }
+            }
+        }
+        
+        return table[coins.count - 1][amount]
+    }
 }
