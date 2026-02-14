@@ -6,25 +6,25 @@ import Testing
 @Suite("17. Letter Combinations of a Phone Number")
 struct P0017Tests {
     
-    /// ## Example 1:
-    ///     Input: digits = "23"
-    ///     Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+    /// Example 1:
+    /// - Input: `digits = "23"`
+    /// - Output: `["ad","ae","af","bd","be","bf","cd","ce","cf"]`
     @Test("Digits '23' produces 9 combinations")
     func example1() {
         #expect(P0017.letterCombinations("23") == ["ad","ae","af","bd","be","bf","cd","ce","cf"])
     }
     
-    /// ## Example 2:
-    ///     Input: digits = ""
-    ///     Output: []
+    /// Example 2:
+    /// - Input: `digits = ""`
+    /// - Output: `[]`
     @Test("Empty input produces empty output")
     func example2() {
         #expect(P0017.letterCombinations("") == [])
     }
 
-    /// ## Example 3:
-    ///     Input: digits = "2"
-    ///     Output: ["a","b","c"]
+    /// Example 3:
+    /// - Input: `digits = "2"`
+    /// - Output: `["a","b","c"]`
     @Test("Single digit '2' produces 3 combinations")
     func example3() {
         #expect(P0017.letterCombinations("2") == ["a","b","c"])

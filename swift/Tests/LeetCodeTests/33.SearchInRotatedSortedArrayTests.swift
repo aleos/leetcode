@@ -6,25 +6,25 @@ import Testing
 @Suite("33. Search in Rotated Sorted Array")
 struct P0033Tests {
     
-    /// ## Example 1:
-    ///     Input: nums = [4,5,6,7,0,1,2], target = 0
-    ///     Output: 4
+    /// Example 1:
+    /// - Input: `nums = [4,5,6,7,0,1,2], target = 0`
+    /// - Output: `4`
     @Test("Find target 0 in rotated array")
     func example1() {
         #expect(P0033.search([4,5,6,7,0,1,2], 0) == 4)
     }
     
-    /// ## Example 2:
-    ///     Input: nums = [4,5,6,7,0,1,2], target = 3
-    ///     Output: -1
+    /// Example 2:
+    /// - Input: `nums = [4,5,6,7,0,1,2], target = 3`
+    /// - Output: `-1`
     @Test("Target not found returns -1")
     func example2() {
         #expect(P0033.search([4,5,6,7,0,1,2], 3) == -1)
     }
     
-    /// ## Example 3:
-    ///     Input: nums = [1], target = 0
-    ///     Output: -1
+    /// Example 3:
+    /// - Input: `nums = [1], target = 0`
+    /// - Output: `-1`
     @Test("Single element array, target not found")
     func example3() {
         #expect(P0033.search([1], 0) == -1)

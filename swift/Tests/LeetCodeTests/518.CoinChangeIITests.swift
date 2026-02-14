@@ -6,31 +6,31 @@ import Testing
 @Suite("518. Coin Change II")
 struct P0518Tests {
     
-    /// ## Example 1:
-    ///     Input: amount = 5, coins = [1,2,5]
-    ///     Output: 4
-    ///     Explanation: there are four ways to make up the amount:
-    ///     5=5
-    ///     5=2+2+1
-    ///     5=2+1+1+1
-    ///     5=1+1+1+1+1
+    /// Example 1:
+    /// - Input: `amount = 5, coins = [1,2,5]`
+    /// - Output: `4`
+    /// - Explanation: there are four ways to make up the amount:
+    ///   5=5
+    ///   5=2+2+1
+    ///   5=2+1+1+1
+    ///   5=1+1+1+1+1
     @Test("Four ways to make amount 5")
     func example1() {
         #expect(P0518.change(5, [1,2,5]) == 4)
     }
     
-    /// ## Example 2:
-    ///     Input: amount = 3, coins = [2]
-    ///     Output: 0
-    ///     Explanation: the amount of 3 cannot be made up just with coins of 2.
+    /// Example 2:
+    /// - Input: `amount = 3, coins = [2]`
+    /// - Output: `0`
+    /// - Explanation: the amount of 3 cannot be made up just with coins of 2.
     @Test("Amount cannot be made with available coins")
     func example2() {
         #expect(P0518.change(3, [2]) == 0)
     }
     
-    /// ## Example 3:
-    ///     Input: amount = 10, coins = [10]
-    ///     Output: 1
+    /// Example 3:
+    /// - Input: `amount = 10, coins = [10]`
+    /// - Output: `1`
     @Test("Exact match with single coin")
     func example3() {
         #expect(P0518.change(10, [10]) == 1)

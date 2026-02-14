@@ -6,17 +6,17 @@ import Testing
 @Suite("81. Search in Rotated Sorted Array II")
 struct P0081Tests {
     
-    /// ## Example 1:
-    ///     Input: nums = [2,5,6,0,0,1,2], target = 0
-    ///     Output: true
+    /// Example 1:
+    /// - Input: `nums = [2,5,6,0,0,1,2], target = 0`
+    /// - Output: `true`
     @Test("Target found in rotated array with duplicates")
     func example1() {
         #expect(P0081.search([2,5,6,0,0,1,2], 0) == true)
     }
     
-    /// ## Example 2:
-    ///     Input: nums = [2,5,6,0,0,1,2], target = 3
-    ///     Output: false
+    /// Example 2:
+    /// - Input: `nums = [2,5,6,0,0,1,2], target = 3`
+    /// - Output: `false`
     @Test("Target not found in rotated array")
     func example2() {
         #expect(P0081.search([2,5,6,0,0,1,2], 3) == false)

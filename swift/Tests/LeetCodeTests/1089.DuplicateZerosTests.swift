@@ -6,10 +6,10 @@ import Testing
 @Suite("1089. Duplicate Zeros")
 struct P1089Tests {
     
-    /// ## Example 1:
-    ///     Input: arr = [1,0,2,3,0,4,5,0]
-    ///     Output: [1,0,0,2,3,0,0,4]
-    ///     Explanation: After calling your function, the input array is modified to: /// [1,0,0,2,3,0,0,4]
+    /// Example 1:
+    /// - Input: `arr = [1,0,2,3,0,4,5,0]`
+    /// - Output: `[1,0,0,2,3,0,0,4]`
+    /// - Explanation: After calling your function, the input array is modified to: /// [1,0,0,2,3,0,0,4]
     @Test("Duplicate zeros in array with multiple zeros")
     func example1() {
         var arr = [1,0,2,3,0,4,5,0]
@@ -17,10 +17,10 @@ struct P1089Tests {
         #expect(arr == [1,0,0,2,3,0,0,4])
     }
     
-    /// ## Example 2:
-    ///     Input: arr = [1,2,3]
-    ///     Output: [1,2,3]
-    ///     Explanation: After calling your function, the input array is modified to: [1,2,3]
+    /// Example 2:
+    /// - Input: `arr = [1,2,3]`
+    /// - Output: `[1,2,3]`
+    /// - Explanation: After calling your function, the input array is modified to: [1,2,3]
     @Test("Array with no zeros remains unchanged")
     func example2() {
         var arr = [1,2,3]

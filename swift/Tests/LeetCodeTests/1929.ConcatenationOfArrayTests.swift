@@ -6,7 +6,7 @@ import Testing
 @Suite("1929. Concatenation of Array")
 struct P1929Tests {
 
-    /// ## Example 1:
+    /// Example 1:
     /// - Input: `nums = [1,2,1]`
     /// - Output: `[1,2,1,1,2,1]`
     /// - Explanation: The array ans is formed as follows:
@@ -17,7 +17,7 @@ struct P1929Tests {
         #expect(P1929.getConcatenation([1, 2, 1]) == [1, 2, 1, 1, 2, 1])
     }
 
-    /// ## Example 2:
+    /// Example 2:
     /// - Input: `nums = [1,3,2,1]`
     /// - Output: `[1,3,2,1,1,3,2,1]`
     /// - Explanation: Concatenate the array with itself.
