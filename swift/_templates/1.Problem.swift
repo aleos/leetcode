@@ -1,3 +1,5 @@
+/// <#Two Sum#>
+///
 /// <#Problem Description#>
 ///
 /// **Difficulty:** <#Easy/Medium/Hard#>
@@ -8,10 +10,12 @@
 ///   - <#Constraint 1#>
 ///   - <#Constraint 2#>
 ///
-/// - SeeAlso: [<#PN#>. <#Problem Name#>](https://leetcode.com/problems/<#problem-slug#>/)
-public enum <#PNNNN#> {
+/// - SeeAlso: [<#1. Two Sum#>](https://leetcode.com/problems/<#problem-slug#>/)
+public enum P<#0001#> {
     /// - Complexity:
-    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#> ,\
+    ///   **Time**: O(*<#...#>*), where *<#n#>* is <#...#>,\
     ///   **Space**: O(*<#...#>*), where *<#n#>* is <#...#>.
+    public static <#paste func signature from LeetCode#> {
 
+    }
 }
