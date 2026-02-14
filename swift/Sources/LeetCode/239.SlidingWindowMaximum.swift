@@ -8,6 +8,11 @@
 ///
 /// **Topics:** Array, Queue, Sliding Window, Heap (Priority Queue), Monotonic Queue
 ///
+/// - Precondition:
+///   - `1 <= nums.length <= 105`
+///   - `-104 <= nums[i] <= 104`
+///   - `1 <= k <= nums.length`
+///
 /// - SeeAlso: [239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
 public enum P0239 {
     

@@ -6,6 +6,11 @@
 ///
 /// **Topics:** Array, Backtracking
 ///
+/// - Precondition:
+///   - `1 <= nums.length <= 6`
+///   - `-10 <= nums[i] <= 10`
+///   - All the integers of `nums` are unique
+///
 /// - SeeAlso: [46. Permutations](https://leetcode.com/problems/permutations/)
 public enum P0046 {
     

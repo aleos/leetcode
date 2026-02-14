@@ -17,6 +17,9 @@
 ///
 /// **Topics:** Math, String
 ///
+/// - Precondition:
+///   - `1 <= columnNumber <= 2^31 - 1`
+///
 /// - SeeAlso: [168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
 public enum P0168 {
     

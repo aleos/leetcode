@@ -3,11 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [2305. Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/)
-///
-/// ## Constraints:
-/// - `2 <= cookies.length <= 8`
-/// - `1 <= cookies[i] <= 105`
-/// - `2 <= k <= cookies.length`
 @Suite("2305. Fair Distribution of Cookies")
 struct P2305Tests {
     

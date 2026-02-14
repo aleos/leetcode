@@ -3,9 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
-///
-/// ## Constraints:
-/// - `1 <= columnNumber <= 2^31 - 1`
 @Suite("168. Excel Sheet Column Title")
 struct P0168Tests {
     

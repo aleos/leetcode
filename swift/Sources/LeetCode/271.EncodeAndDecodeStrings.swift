@@ -32,12 +32,16 @@ import Foundation
 ///
 /// You are not allowed to solve the problem using any serialize methods (such as `eval`).
 ///
-///
 /// Follow up: Could you write a generalized algorithm to work on any possible set of characters?
 ///
 /// **Difficulty:** Medium
 ///
 /// **Topics:** Array, String, Design
+///
+/// - Precondition:
+///   - `1 <= strs.length <= 200`
+///   - `0 <= strs[i].length <= 200`
+///   - `strs[i]` contains any possible characters out of `256` valid ASCII characters.
 ///
 /// - SeeAlso: [271. Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
 public enum P0271 {

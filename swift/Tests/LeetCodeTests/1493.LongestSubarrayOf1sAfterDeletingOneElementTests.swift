@@ -3,10 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [1493. Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/)
-///
-/// ## Constraints:
-/// - `1 <= nums.length <= 10^5`
-/// - `nums[i]` is either `0` or `1`.
 @Suite("1493. Longest Subarray of 1's After Deleting One Element")
 struct P1493Tests {
     

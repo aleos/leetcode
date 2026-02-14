@@ -15,6 +15,11 @@
 ///
 /// **Topics:** Junior, Array, Binary Search, Weekly Contest 89
 ///
+/// - Precondition:
+///   - `3 <= arr.length <= 105`
+///   - `0 <= arr[i] <= 106`
+///   - `arr` is guaranteed to be a mountain array.
+///
 /// - SeeAlso: [852. Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
 public enum P0852 {
     

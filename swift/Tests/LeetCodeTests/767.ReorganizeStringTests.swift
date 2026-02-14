@@ -3,10 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [767. Reorganize String](https://leetcode.com/problems/reorganize-string/)
-///
-/// ## Constraints:
-/// - `1 <= s.length <= 500`
-/// - `s` consists of lowercase English letters.
 @Suite("767. Reorganize String")
 struct P0767Tests {
     

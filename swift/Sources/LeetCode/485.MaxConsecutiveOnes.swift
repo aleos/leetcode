@@ -6,6 +6,10 @@
 ///
 /// **Topics:** Mid Level, Array
 ///
+/// - Precondition:
+///   - `1 <= nums.length <= 105`
+///   - `nums[i]` is either `0` or `1`.
+///
 /// - SeeAlso: [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
 public enum P0485 {
     

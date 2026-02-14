@@ -3,10 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [1723. Find Minimum Time to Finish All Jobs](https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/)
-///
-/// ## Constraints:
-/// - `1 <= k <= jobs.length <= 12`
-/// - `1 <= jobs[i] <= 107`
 @Suite("1723. Find Minimum Time to Finish All Jobs")
 struct P1723Tests {
     

@@ -6,6 +6,11 @@
 ///
 /// **Topics:** Junior, Array, Two Pointers, Sorting, Weekly Contest 120
 ///
+/// - Precondition:
+///   - `1 <= nums.length <= 104`
+///   - `-104 <= nums[i] <= 104`
+///   - `nums` is sorted in non-decreasing order.
+///
 /// - SeeAlso: [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
 public enum P0977 {
     

@@ -3,10 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
-///
-/// ## Constraints:
-/// - `0 <= digits.length <= 4`
-/// - `digits[i]` is a digit in the range `['2', '9']`.
 @Suite("17. Letter Combinations of a Phone Number")
 struct P0017Tests {
     

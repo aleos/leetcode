@@ -3,24 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lcsol</string>
+	<string>sol</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// &lt;#Paste the problem description here.#&gt;
-/// 
+	<string>/// &lt;#Problem Description#&gt;
+///
 /// **Difficulty:** &lt;#Easy/Medium/Hard#&gt;
-/// 
+///
 /// **Topics:** &lt;#Topics#&gt;
 ///
-/// - SeeAlso: [&lt;#NNNN#&gt;. &lt;#Problem Name#&gt;](https://leetcode.com/problems/&lt;#problem-slug#&gt;/)
-public enum &lt;#...#&gt; {
-    /// - Complexity:
-    ///   **Time**: O(*&lt;#...#&gt;*), where *&lt;#n#&gt;* is &lt;#...#&gt; ,\
-    ///   **Space**: O(*&lt;#...#&gt;*), where *&lt;#n#&gt;* is &lt;#...#&gt;.
+/// - Precondition:
+///   - &lt;#Constraint 1#&gt;
+///   - &lt;#Constraint 2#&gt;
+///
+/// - SeeAlso: [&lt;#PN#&gt;. &lt;#Problem Name#&gt;](https://leetcode.com/problems/&lt;#problem-slug#&gt;/)
+public enum &lt;#PNNNN#&gt; {
 
+    /// - Complexity:
+    ///   **Time**: O(*&lt;#...#&gt;*), where *&lt;#n#&gt;* is &lt;#...#&gt;,\
+    ///   **Space**: O(*&lt;#...#&gt;*), where *&lt;#n#&gt;* is &lt;#...#&gt;.
+    public static func &lt;#name#&gt;() {
+        &lt;#implementation#&gt;
+    }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>7A2EB4A8-F2CA-4FBE-A8D1-8530573CDA50</string>

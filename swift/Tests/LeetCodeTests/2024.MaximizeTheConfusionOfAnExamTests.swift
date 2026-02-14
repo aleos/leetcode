@@ -3,12 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [2024. Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam/)
-///
-/// ## Constraints:
-/// - `n == answerKey.length`
-/// - `1 <= n <= 5 * 104`
-/// - `answerKey[i]` is either `'T'` or `'F'`
-/// - `1 <= k <= n`
 @Suite("2024. Maximize the Confusion of an Exam")
 struct P2024Tests {
     

@@ -8,6 +8,10 @@
 ///
 /// **Topics:** Staff, Hash Table, String, Greedy, Sorting, Heap (Priority Queue), Counting, Weekly Contest 68
 ///
+/// - Precondition:
+///   - `1 <= s.length <= 500`
+///   - `s` consists of lowercase English letters.
+///
 /// - SeeAlso: [767. Reorganize String](https://leetcode.com/problems/reorganize-string/)
 public enum P0767 {
     

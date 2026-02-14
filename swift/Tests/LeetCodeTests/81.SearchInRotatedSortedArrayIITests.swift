@@ -3,12 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
-///
-/// ## Constraints:
-/// - `1 <= nums.length <= 5000`
-/// - `-104 <= nums[i] <= 104`
-/// - `nums` is guaranteed to be rotated at some pivot.
-/// - `-104 <= target <= 104`
 @Suite("81. Search in Rotated Sorted Array II")
 struct P0081Tests {
     

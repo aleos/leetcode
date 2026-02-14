@@ -10,6 +10,11 @@
 ///
 /// **Topics:** Staff, Array, Dynamic Programming, Backtracking, Bit Manipulation, Bitmask, Weekly Contest 297
 ///
+/// - Precondition:
+///   - `2 <= cookies.length <= 8`
+///   - `1 <= cookies[i] <= 105`
+///   - `2 <= k <= cookies.length`
+///
 /// - SeeAlso: [2305. Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/)
 public enum P2305 {
     

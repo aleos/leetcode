@@ -3,9 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [920. Number of Music Playlists](https://leetcode.com/problems/number-of-music-playlists/)
-///
-/// ## Constraints:
-/// - `0 <= k < n <= goal <= 100`
 @Suite("920. Number of Music Playlists")
 struct P0920Tests {
     

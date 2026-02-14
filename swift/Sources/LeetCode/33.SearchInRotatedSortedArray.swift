@@ -12,6 +12,13 @@
 ///
 /// **Topics:** Array, Binary Search
 ///
+/// - Precondition:
+///   - `1 <= nums.length <= 5000`
+///   - `-104 <= nums[i] <= 104`
+///   - All values of `nums` are unique.
+///   - `nums` is an ascending array that is possibly rotated.
+///   - `-104 <= target <= 104`
+///
 /// - SeeAlso: [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 public enum P0033 {
     

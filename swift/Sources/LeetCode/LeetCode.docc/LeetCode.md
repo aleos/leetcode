@@ -17,8 +17,8 @@ To ensure the documentation is sorted chronologically while keeping source files
 
 Documentation is split to provide information where it is most relevant:
 
-- **Implementation**: Contains the problem link, difficulty, topics, high-level description, and complexity analysis.
-- **Test Suite**: Contains boundary constraints and specific example data (Inputs/Outputs) for individual test cases.
+- **Implementation**: Contains the problem link, difficulty, topics, high-level description, preconditions, and complexity analysis.
+- **Test Suite**: Contains specific example data (Inputs/Outputs) for individual test cases.
 
 ## Topics
 

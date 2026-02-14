@@ -6,6 +6,11 @@
 ///
 /// **Topics:** Array, Two Pointers
 ///
+/// - Precondition:
+///   - `0 <= nums.length <= 100`
+///   - `0 <= nums[i] <= 50`
+///   - `0 <= val <= 100`
+///
 /// - SeeAlso: [27. Remove Element](https://leetcode.com/problems/remove-element/)
 public enum P0027 {
     

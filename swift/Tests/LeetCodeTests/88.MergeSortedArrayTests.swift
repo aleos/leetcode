@@ -3,13 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
-///
-/// ## Constraints:
-/// - `nums1.length == m + n`
-/// - `nums2.length == n`
-/// - `0 <= m, n <= 200`
-/// - `1 <= m + n <= 200`
-/// - `-109 <= nums1[i], nums2[j] <= 109`
 @Suite("88. Merge Sorted Array")
 struct P0088Tests {
     

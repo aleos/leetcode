@@ -8,6 +8,10 @@
 ///
 /// **Topics:** Backtracking, Combinatorics
 ///
+/// - Precondition:
+///   - `1 <= n <= 20`
+///   - `1 <= k <= n`
+///
 /// - SeeAlso: [77. Combinations](https://leetcode.com/problems/combinations/)
 public enum P0077 {
     

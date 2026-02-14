@@ -12,6 +12,9 @@
 ///
 /// **Topics:** Principal, Math, Dynamic Programming, Combinatorics, Weekly Contest 105
 ///
+/// - Precondition:
+///   - `0 <= k < n <= goal <= 100`
+///
 /// - SeeAlso: [920. Number of Music Playlists](https://leetcode.com/problems/number-of-music-playlists/)
 public enum P0920 {
     

@@ -3,12 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
-///
-/// ## Constraints:
-/// - `m == matrix.length`
-/// - `n == matrix[i].length`
-/// - `1 <= m, n <= 100`
-/// - `-104 <= matrix[i][j], target <= 104`
 @Suite("74. Search a 2D Matrix")
 struct P0074Tests {
     

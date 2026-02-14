@@ -3,10 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
-///
-/// ## Constraints:
-/// - `1 <= nums.length <= 105`
-/// - `nums[i]` is either `0` or `1`.
 @Suite("485. Max Consecutive Ones")
 struct P0485Tests {
     

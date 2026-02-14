@@ -10,6 +10,11 @@
 ///
 /// **Topics:** Staff, Array, Binary Search, Dynamic Programming, Greedy, Sorting, Weekly Contest 340
 ///
+/// - Precondition:
+///   - `1 <= nums.length <= 105`
+///   - `0 <= nums[i] <= 109`
+///   - `0 <= p <= (nums.length)/2`
+///
 /// - SeeAlso: [2616. Minimize the Maximum Difference of Pairs](https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/)
 public enum P2616 {
     

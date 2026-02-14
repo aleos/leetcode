@@ -3,10 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [1089. Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)
-///
-/// ## Constraints:
-/// - `1 <= arr.length <= 104`
-/// - `0 <= arr[i] <= 9`
 @Suite("1089. Duplicate Zeros")
 struct P1089Tests {
     

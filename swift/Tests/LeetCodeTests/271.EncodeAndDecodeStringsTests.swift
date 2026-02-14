@@ -3,11 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [271. Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
-///
-/// ## Constraints:
-/// - `1 <= strs.length <= 200`
-/// - `0 <= strs[i].length <= 200`
-/// - `strs[i]` contains any possible characters out of `256` valid ASCII characters.
 @Suite("271. Encode and Decode Strings")
 struct P0271Tests {
     

@@ -3,11 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
-///
-/// ## Constraints:
-/// - `1 <= nums.length <= 105`
-/// - `-104 <= nums[i] <= 104`
-/// - `1 <= k <= nums.length`
 @Suite("239. Sliding Window Maximum")
 struct P0239Tests {
     

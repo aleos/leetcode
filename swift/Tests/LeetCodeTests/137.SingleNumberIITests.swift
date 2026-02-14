@@ -3,11 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [137. Single Number II](https://leetcode.com/problems/single-number-ii/)
-///
-/// ## Constraints:
-/// - `1 <= nums.length <= 3 * 104`
-/// - `-231 <= nums[i] <= 231 - 1`
-/// - Each element in `nums` appears exactly three times except for one element which appears once.
 @Suite("137. Single Number II")
 struct P0137Tests {
     

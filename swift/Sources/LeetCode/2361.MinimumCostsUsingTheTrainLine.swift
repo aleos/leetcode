@@ -20,6 +20,11 @@
 ///
 /// **Topics:** Array, Dynamic Programming
 ///
+/// - Precondition:
+///   - `n == regular.length == express.length`
+///   - `1 <= n <= 105`
+///   - `1 <= regular[i], express[i], expressCost <= 105`
+///
 /// - SeeAlso: [2361. Minimum Costs Using the Train Line](https://leetcode.com/problems/minimum-costs-using-the-train-line/)
 public enum P2361 {
     

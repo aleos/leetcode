@@ -3,10 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)
-///
-/// ## Constraints:
-/// `1 <= nums.length <= 500`
-/// `1 <= nums[i] <= 105`
 @Suite("1295. Find Numbers with Even Number of Digits")
 struct P1295Tests {
     

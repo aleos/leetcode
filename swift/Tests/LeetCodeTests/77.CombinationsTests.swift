@@ -3,10 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [77. Combinations](https://leetcode.com/problems/combinations/)
-///
-/// ## Constraints:
-/// - `1 <= n <= 20`
-/// - `1 <= k <= n`
 @Suite("77. Combinations")
 struct P0077Tests {
     

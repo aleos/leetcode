@@ -12,6 +12,12 @@
 ///
 /// **Topics:** Array, Binary Search
 ///
+/// - Precondition:
+///   - `1 <= nums.length <= 5000`
+///   - `-104 <= nums[i] <= 104`
+///   - `nums` is guaranteed to be rotated at some pivot.
+///   - `-104 <= target <= 104`
+///
 /// - SeeAlso: [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
 public enum P0081 {
     

@@ -6,6 +6,10 @@
 ///
 /// **Topics:** Staff, String, String Matching
 ///
+/// - Precondition:
+///   - `1 <= s.length <= 104`
+///   - `s` consists of lowercase English letters.
+///
 /// - SeeAlso: [459. Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)
 public enum P0459 {
     

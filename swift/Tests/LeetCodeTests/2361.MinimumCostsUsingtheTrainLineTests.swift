@@ -3,11 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [2361. Minimum Costs Using the Train Line](https://leetcode.com/problems/minimum-costs-using-the-train-line/)
-///
-/// ## Constraints:
-/// - `n == regular.length == express.length`
-/// - `1 <= n <= 105`
-/// - `1 <= regular[i], express[i], expressCost <= 105`
 @Suite("2361. Minimum Costs Using the Train Line")
 struct P2361Tests {
     

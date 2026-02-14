@@ -3,10 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [<#PN#>. <#Problem Name#>](https://leetcode.com/problems/<#problem-slug#>/)
-///
-/// ## Constraints
-/// - <#Constraint 1#>
-/// - <#Constraint 2#>
 @Suite("<#NNNN#>. <#Problem Name#>")
 struct P<#NNNN#>Tests {
 

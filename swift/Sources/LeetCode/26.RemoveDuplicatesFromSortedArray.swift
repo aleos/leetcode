@@ -10,6 +10,11 @@
 ///
 /// **Topics:** Array, Two Pointers
 ///
+/// - Precondition:
+///   - `1 <= nums.length <= 3 * 104`
+///   - `-100 <= nums[i] <= 100`
+///   - `nums` is sorted in non-decreasing order.
+///
 /// - SeeAlso: [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 public enum P0026 {
     /// - Parameter nums: An integer array sorted in non-decreasing order.

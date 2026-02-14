@@ -6,6 +6,10 @@
 ///
 /// **Topics:** Mid Level, Array, Math, Weekly Contest 168
 ///
+/// - Precondition:
+///   - `1 <= nums.length <= 500`
+///   - `1 <= nums[i] <= 105`
+///
 /// - SeeAlso: [1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)
 public enum P1295 {
     

@@ -8,6 +8,10 @@
 ///
 /// **Topics:** Senior, Array, Two Pointers, Weekly Contest 141
 ///
+/// - Precondition:
+///   - `1 <= arr.length <= 104`
+///   - `0 <= arr[i] <= 9`
+///
 /// - SeeAlso: [1089. Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)
 public enum P1089 {
     

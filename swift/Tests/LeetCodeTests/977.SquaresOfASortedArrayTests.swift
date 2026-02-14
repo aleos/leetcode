@@ -3,11 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
-///
-/// ## Constraints:
-/// - `1 <= nums.length <= 104`
-/// - `-104 <= nums[i] <= 104`
-/// - `nums` is sorted in non-decreasing order.
 @Suite("977. Squares of a Sorted Array")
 struct P0977Tests {
     

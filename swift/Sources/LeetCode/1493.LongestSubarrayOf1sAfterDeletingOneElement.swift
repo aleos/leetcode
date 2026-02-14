@@ -8,6 +8,10 @@
 ///
 /// **Topics:** Staff, Array, Dynamic Programming, Sliding Window, Biweekly Contest 29
 ///
+/// - Precondition:
+///   - `1 <= nums.length <= 10^5`
+///   - `nums[i]` is either `0` or `1`.
+///
 /// - SeeAlso: [1493. Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/)
 public enum P1493 {
     

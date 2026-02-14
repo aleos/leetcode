@@ -3,11 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [2616. Minimize the Maximum Difference of Pairs](https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/)
-///
-/// ## Constraints:
-/// - `1 <= nums.length <= 105`
-/// - `0 <= nums[i] <= 109`
-/// - `0 <= p <= (nums.length)/2`
 @Suite("2616. Minimize the Maximum Difference of Pairs")
 struct P2616Tests {
     

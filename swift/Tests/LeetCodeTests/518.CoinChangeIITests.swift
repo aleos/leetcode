@@ -3,12 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [518. Coin Change II](https://leetcode.com/problems/coin-change-ii/)
-///
-/// ## Constraints:
-/// - `1 <= coins.length <= 300`
-/// - `1 <= coins[i] <= 5000`
-/// - All the values of `coins` are unique.
-/// - `0 <= amount <= 5000`
 @Suite("518. Coin Change II")
 struct P0518Tests {
     

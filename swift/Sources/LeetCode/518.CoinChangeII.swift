@@ -12,6 +12,12 @@
 ///
 /// **Topics:** Array, Dynamic Programming
 ///
+/// - Precondition:
+///   - `1 <= coins.length <= 300`
+///   - `1 <= coins[i] <= 5000`
+///   - All the values of `coins` are unique.
+///   - `0 <= amount <= 5000`
+///
 /// - SeeAlso: [518. Coin Change II](https://leetcode.com/problems/coin-change-ii/)
 public enum P0518 {
     

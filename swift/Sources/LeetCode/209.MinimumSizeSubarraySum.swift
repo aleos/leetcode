@@ -6,6 +6,11 @@
 ///
 /// **Topics:** Array, Binary Search, Sliding Window, Prefix Sum
 ///
+/// - Precondition:
+///   - `1 <= target <= 109`
+///   - `1 <= nums.length <= 105`
+///   - `1 <= nums[i] <= 104`
+///
 /// - SeeAlso: [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
 public enum P0209 {
     

@@ -3,10 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [459. Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)
-///
-/// ## Constraints:
-/// - `1 <= s.length <= 104`
-/// - `s` consists of lowercase English letters.
 @Suite("459. Repeated Substring Pattern")
 struct P0459Tests {
     

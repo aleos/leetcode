@@ -3,11 +3,6 @@ import Testing
 @testable import LeetCode
 
 /// [27. Remove Element](https://leetcode.com/problems/remove-element/)
-///
-/// ## Constraints:
-/// - `0 <= nums.length <= 100`
-/// - `0 <= nums[i] <= 50`
-/// - `0 <= val <= 100`
 @Suite("27. Remove Element")
 struct P0027Tests {
     
