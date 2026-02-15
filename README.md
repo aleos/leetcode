@@ -40,6 +40,22 @@ Implementation files contain the problem link, description, and complexity analy
 
 To install Xcode snippets, copy the `.codesnippet` files from `swift/_templates/` to `~/Library/Developer/Xcode/UserData/CodeSnippets`.
 
+### Multiple Solutions
+
+When a problem has more than one interesting approach, add each as a separate static method. Keep LeetCode's original function name for the primary solution and append a descriptive suffix for alternatives:
+
+```swift
+public enum P0518 {
+    /// Top-down memoization.
+    public static func change(_ amount: Int, _ coins: [Int]) -> Int { … }
+
+    /// Bottom-up tabulation.
+    public static func changeTabulation(_ amount: Int, _ coins: [Int]) -> Int { … }
+}
+```
+
+Each variant should carry its own `- Complexity:` annotation. Tests cover every variant.
+
 ## Build and Test
 
 From the `swift/` directory:
