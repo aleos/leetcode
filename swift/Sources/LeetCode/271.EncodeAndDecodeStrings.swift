@@ -1,38 +1,34 @@
-import Foundation
-
 /// Encode and Decode Strings
 ///
 /// Design an algorithm to encode a list of strings to a string. The encoded string is then sent over the network and is decoded back to the original list of strings.
 ///
 /// Machine 1 (sender) has the function:
-///
-///     string encode(vector<string> strs) {
-///       // ... your code
-///       return encoded_string;
-///     }
-///
+/// ```c++
+/// string encode(vector<string> strs) {
+///   // ... your code
+///   return encoded_string;
+/// }
+/// ```
 /// Machine 2 (receiver) has the function:
-///
-///     vector<string> decode(string s) {
-///       //... your code
-///       return strs;
-///     }
-///
+/// ```c++
+/// vector<string> decode(string s) {
+///   //... your code
+///   return strs;
+/// }
+/// ```
 /// So Machine 1 does:
-///
-///     string encoded_string = encode(strs);
-///
+/// ```c++
+/// string encoded_string = encode(strs);
+/// ```
 /// and Machine 2 does:
-///
-///     vector<string> strs2 = decode(encoded_string);
-///
+/// ```c++
+/// vector<string> strs2 = decode(encoded_string);
+/// ```
 /// `strs2` in Machine 2 should be the same as `strs` in Machine 1.
 ///
 /// Implement the `encode` and `decode` methods.
 ///
 /// You are not allowed to solve the problem using any serialize methods (such as `eval`).
-///
-/// Follow up: Could you write a generalized algorithm to work on any possible set of characters?
 ///
 /// **Difficulty:** Medium
 ///
@@ -54,7 +50,7 @@ public enum P0271 {
     ///   **Space**: O(1).
     public static func encode(_ strs: [String]) -> String {
         strs
-            .map({ $0.replacingOccurrences(of: #"\"#, with: #"\\"#) })
+            .map({ $0.replacing(#"\"#, with: #"\\"#) })
             .joined(separator: #"\,"#)
     }
     

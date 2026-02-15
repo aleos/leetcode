@@ -1,30 +1,26 @@
 /// Minimize the Maximum Difference of Pairs
 ///
-/// You are given a 0-indexed integer array `nums` and an integer `p`. Find `p` pairs of indices of `nums` such that the maximum difference amongst all the pairs is minimized. Also, ensure no index appears more than once amongst the `p` pairs.
+/// You are given a **0-indexed** integer array `nums` and an integer `p`. Find `p` pairs of indices of `nums` such that the maximum difference amongst all the pairs is minimized. Also, ensure no index appears more than once amongst the `p` pairs.
 ///
 /// Note that for a pair of elements at the index `i` and `j`, the difference of this pair is `|nums[i] - nums[j]|`, where `|x|` represents the absolute value of `x`.
 ///
-/// Return the minimum maximum difference among all `p` pairs. We define the maximum of an empty set to be zero.
+/// Return *the **minimum maximum** difference among all `p` pairs. We define the maximum of an empty set to be zero*.
 ///
 /// **Difficulty:** Medium
 ///
 /// **Topics:** Staff, Array, Binary Search, Dynamic Programming, Greedy, Sorting, Weekly Contest 340
 ///
 /// - Precondition:
-///   - `1 <= nums.length <= 105`
-///   - `0 <= nums[i] <= 109`
+///   - `1 <= nums.length <= 10⁵`
+///   - `0 <= nums[i] <= 10⁹`
 ///   - `0 <= p <= (nums.length)/2`
 ///
 /// - SeeAlso: [2616. Minimize the Maximum Difference of Pairs](https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/)
 public enum P2616 {
     
-    /// - Parameters:
-    ///   - nums: A 0-indexed integer array.
-    ///   - p: An integer.
-    /// - Returns: The minimum maximum difference among all `p` pairs.
     /// - Complexity:
-    ///   **Time**: O(*n* log *n* + *n* log *D*), where *n* is the array length and *D* is the range of values,\
-    ///   **Space**: O(log *n*), where *n* is the array length.
+    ///   **Time**: O(*n* log *n*), where *n* is the array length,\
+    ///   **Space**: O(*n*), where *n* is the array length.
     public static func minimizeMax(_ nums: [Int], _ p: Int) -> Int {
         guard !nums.isEmpty else { return 0 }
         

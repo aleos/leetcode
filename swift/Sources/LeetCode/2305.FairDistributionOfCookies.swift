@@ -1,10 +1,10 @@
 /// Fair Distribution of Cookies
 ///
-/// You are given an integer array `cookies`, where `cookies[i]` denotes the number of cookies in the `ith` bag. You are also given an integer `k` that denotes the number of children to distribute all the bags of cookies to. All the cookies in the same bag must go to the same child and cannot be split up.
+/// You are given an integer array `cookies`, where `cookies[i]` denotes the number of cookies in the `iᵗʰ` bag. You are also given an integer `k` that denotes the number of children to distribute **all** the bags of cookies to. All the cookies in the same bag must go to the same child and cannot be split up.
 ///
 /// The **unfairness** of a distribution is defined as the **maximum total** cookies obtained by a single child in the distribution.
 ///
-/// Return the minimum unfairness of all distributions.
+/// Return *the **minimum** unfairness of all distributions*.
 ///
 /// **Difficulty:** Medium
 ///
@@ -12,16 +12,12 @@
 ///
 /// - Precondition:
 ///   - `2 <= cookies.length <= 8`
-///   - `1 <= cookies[i] <= 105`
+///   - `1 <= cookies[i] <= 10⁵`
 ///   - `2 <= k <= cookies.length`
 ///
 /// - SeeAlso: [2305. Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/)
 public enum P2305 {
     
-    /// - Parameters:
-    ///   - cookies: Integer array cookies, where `cookies[i]` denotes the number of cookies in the `ith` bag.
-    ///   - k: The number of children to distribute all the bags of cookies to.
-    /// - Returns: The **minimum** unfairness of all distributions.
     /// - Complexity:
     ///   **Time**: O(*k^n*), where *n* is the number of cookie bags and *k* is the number of children,\
     ///   **Space**: O(*n*), where *n* is the recursion depth.

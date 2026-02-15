@@ -2,7 +2,7 @@
 ///
 /// Given a string `s`, rearrange the characters of `s` so that any two adjacent characters are not the same.
 ///
-/// Return any possible rearrangement of `s` or return `""` if not possible.
+/// Return *any possible rearrangement of `s` or return `""` if not possible*.
 ///
 /// **Difficulty:** Medium
 ///
@@ -15,8 +15,6 @@
 /// - SeeAlso: [767. Reorganize String](https://leetcode.com/problems/reorganize-string/)
 public enum P0767 {
     
-    /// - Parameter s: A string.
-    /// - Returns: Any possible rearrangement of `s` or return `""` if not possible.
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the length of the string,\
     ///   **Space**: O(1).

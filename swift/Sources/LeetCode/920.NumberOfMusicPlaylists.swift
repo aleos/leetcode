@@ -6,7 +6,7 @@
 /// - Every song is played at least once.
 /// - A song can only be played again only if `k` other songs have been played.
 ///
-/// Given `n`, `goal`, and `k`, return the number of possible playlists that you can create. Since the answer can be very large, return it modulo `10^9 + 7`.
+/// Given `n`, `goal`, and `k`, return the number of possible playlists that you can create. Since the answer can be very large, return it modulo `10⁹ + 7`.
 ///
 /// **Difficulty:** Hard
 ///
@@ -18,11 +18,6 @@
 /// - SeeAlso: [920. Number of Music Playlists](https://leetcode.com/problems/number-of-music-playlists/)
 public enum P0920 {
     
-    /// - Parameters:
-    ///   - n: A number of different songs.
-    ///   - goal: A number of songs to listen.
-    ///   - k: A song can only be played again only if `k` other songs have been played.
-    /// - Returns: The number of possible playlists that you can create. Since the answer can be very large, return it modulo `10^9 + 7`.
     /// - Complexity:
     ///   **Time**: O(*n* × *goal*), where *n* is the number of songs and *goal* is the playlist length,\
     ///   **Space**: O(*n* × *goal*), where *n* is the number of songs and *goal* is the playlist length.
@@ -43,6 +38,5 @@ public enum P0920 {
             }
         }
         return dp[n][goal]
-        
     }
 }

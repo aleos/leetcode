@@ -1,21 +1,19 @@
 /// Squares of a Sorted Array
 ///
-/// Given an integer array `nums` sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+/// Given an integer array `nums` sorted in **non-decreasing** order, return *an array of **the squares of each number** sorted in non-decreasing order*.
 ///
 /// **Difficulty:** Easy
 ///
 /// **Topics:** Junior, Array, Two Pointers, Sorting, Weekly Contest 120
 ///
 /// - Precondition:
-///   - `1 <= nums.length <= 104`
-///   - `-104 <= nums[i] <= 104`
-///   - `nums` is sorted in non-decreasing order.
+///   - `1 <= nums.length <= 10⁴`
+///   - `-10⁴ <= nums[i] <= 10⁴`
+///   - `nums` is sorted in **non-decreasing** order.
 ///
 /// - SeeAlso: [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
 public enum P0977 {
     
-    /// - Parameter nums: An integer array sorted in non-decreasing order.
-    /// - Returns: An array of the squares of each number sorted in non-decreasing order.
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the length of the input array,\
     ///   **Space**: O(1).

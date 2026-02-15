@@ -4,7 +4,7 @@
 /// - Each row is sorted in non-decreasing order.
 /// - The first integer of each row is greater than the last integer of the previous row.
 ///
-/// Given an integer `target`, return `true` if `target` is in `matrix` or `false` otherwise.
+/// Given an integer `target`, return `true` *if `target` is in `matrix` or `false` otherwise*.
 ///
 /// You must write a solution in `O(log(m * n))` time complexity.
 ///
@@ -16,17 +16,11 @@
 ///   - `m == matrix.length`
 ///   - `n == matrix[i].length`
 ///   - `1 <= m, n <= 100`
-///   - `-104 <= matrix[i][j], target <= 104`
+///   - `-10⁴ <= matrix[i][j], target <= 10⁴`
 ///
 /// - SeeAlso: [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
 public enum P0074 {
     
-    /// - Parameters:
-    ///   - matrix: An `m x n` integer matrix with the following two properties:
-    ///     - Each row is sorted in non-decreasing order.
-    ///     - The first integer of each row is greater than the last integer of the previous row.
-    ///   - target: An integer.
-    /// - Returns: `true` if `target` is in `matrix` or `false` otherwise.
     /// - Complexity:
     ///   **Time**: O(log(*m* × *n*)), where *m* and *n* are the dimensions of the input matrix,\
     ///   **Space**: O(1).
@@ -58,4 +52,3 @@ public enum P0074 {
         return value(at: l) == target
     }
 }
-

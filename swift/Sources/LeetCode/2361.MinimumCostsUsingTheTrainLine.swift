@@ -9,12 +9,12 @@
 /// Note that:
 ///
 /// - There is no cost to transfer from the express route back to the regular route.
-/// - You pay `expressCost` every time you transfer from the regular route to the express route.
+/// - You pay `expressCost` **every** time you transfer from the regular route to the express route.
 /// - There is no extra cost to stay on the express route.
 ///
-/// Return a *1-indexed* array costs of length `n`, where `costs[i]` is the minimum cost to reach stop `i` from stop `0`.
+/// Return *a **1-indexed** array costs of length `n`, where `costs[i]` is the minimum cost to reach stop `i` from stop `0`*.
 ///
-/// Note that a stop can be counted as reached from either route.
+/// Note that a stop can be counted as **reached** from either route.
 ///
 /// **Difficulty:** Hard
 ///
@@ -22,17 +22,12 @@
 ///
 /// - Precondition:
 ///   - `n == regular.length == express.length`
-///   - `1 <= n <= 105`
-///   - `1 <= regular[i], express[i], expressCost <= 105`
+///   - `1 <= n <= 10⁵`
+///   - `1 <= regular[i], express[i], expressCost <= 10⁵`
 ///
 /// - SeeAlso: [2361. Minimum Costs Using the Train Line](https://leetcode.com/problems/minimum-costs-using-the-train-line/)
 public enum P2361 {
     
-    /// - Parameters:
-    ///   - regular: `regular[i]` describes the cost it takes to go from stop `i - 1` to stop `i` using the regular route.
-    ///   - express: `express[i]` describes the cost it takes to go from stop `i - 1` to stop `i` using the express route.
-    ///   - expressCost: The cost to transfer from the regular route to the express route.
-    /// - Returns: A 1-indexed array costs of length n, where costs[i] is the minimum cost to reach stop i from stop 0.
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the number of stops,\
     ///   **Space**: O(1).

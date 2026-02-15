@@ -2,21 +2,19 @@
 ///
 /// Given a binary array `nums`, you should delete one element from it.
 ///
-/// Return the size of the longest non-empty subarray containing only `1`'s in the resulting array. Return `0` if there is no such subarray.
+/// Return *the size of the longest non-empty subarray containing only `1`'s in the resulting array*. Return `0` if there is no such subarray.
 ///
 /// **Difficulty:** Medium
 ///
 /// **Topics:** Staff, Array, Dynamic Programming, Sliding Window, Biweekly Contest 29
 ///
 /// - Precondition:
-///   - `1 <= nums.length <= 10^5`
+///   - `1 <= nums.length <= 10⁵`
 ///   - `nums[i]` is either `0` or `1`.
 ///
 /// - SeeAlso: [1493. Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/)
 public enum P1493 {
     
-    /// - Parameter nums: A binary array.
-    /// - Returns: The size of the longest non-empty subarray containing only `1`'s in the resulting array. `0` if there is no such subarray.
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the length of the array,\
     ///   **Space**: O(1).

@@ -1,6 +1,6 @@
 /// Find Numbers with Even Number of Digits
 ///
-/// Given an array nums of integers, return how many of them contain an even number of digits.
+/// Given an array `nums` of integers, return how many of them contain an **even number** of digits.
 ///
 /// **Difficulty:** Easy
 ///
@@ -8,13 +8,11 @@
 ///
 /// - Precondition:
 ///   - `1 <= nums.length <= 500`
-///   - `1 <= nums[i] <= 105`
+///   - `1 <= nums[i] <= 10⁵`
 ///
 /// - SeeAlso: [1295. Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)
 public enum P1295 {
     
-    /// - Parameter nums: An array of integers.
-    /// - Returns: How many of integers contain an even number of digits.
     /// - Complexity:
     ///   **Time**: O(*n* × *d*), where *n* is the number of integers and *d* is the average number of digits,\
     ///   **Space**: O(1).
@@ -24,6 +22,10 @@ public enum P1295 {
         }
     }
     
+    /// A number of digits
+    ///
+    /// - Parameter num: A number
+    /// - Returns: A number of digits of `num`
     private static func digits(in num: Int) -> Int {
         var num = num
         var digitsNumber = 0

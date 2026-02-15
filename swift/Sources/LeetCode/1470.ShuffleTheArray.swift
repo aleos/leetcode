@@ -2,7 +2,7 @@
 ///
 /// Given the array `nums` consisting of `2n` elements in the form `[x1,x2,...,xn,y1,y2,...,yn]`.
 ///
-/// Return the array in the form `[x1,y1,x2,y2,...,xn,yn]`.
+/// *Return the array in the form `[x1,y1,x2,y2,...,xn,yn]`*.
 ///
 /// **Difficulty:** Easy
 ///
@@ -11,10 +11,11 @@
 /// - Precondition:
 ///   - `1 <= n <= 500`
 ///   - `nums.length == 2n`
-///   - `1 <= nums[i] <= 10^3`
+///   - `1 <= nums[i] <= 10³`
 ///
 /// - SeeAlso: [1470. Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/)
 public enum P1470 {
+    
     /// - Complexity:
     ///   **Time**: O(n), where n is the half-length of the input array (nums.count / 2),\
     ///   **Space**: O(1) additional (excluding the output array).

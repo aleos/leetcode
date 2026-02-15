@@ -2,20 +2,19 @@
 ///
 /// Given a fixed-length integer array `arr`, duplicate each occurrence of zero, shifting the remaining elements to the right.
 ///
-/// Note that elements beyond the length of the original array are not written. Do the above modifications to the input array in place and do not return anything.
+/// **Note** that elements beyond the length of the original array are not written. Do the above modifications to the input array in place and do not return anything.
 ///
 /// **Difficulty:** Easy
 ///
 /// **Topics:** Senior, Array, Two Pointers, Weekly Contest 141
 ///
 /// - Precondition:
-///   - `1 <= arr.length <= 104`
+///   - `1 <= arr.length <= 10⁴`
 ///   - `0 <= arr[i] <= 9`
 ///
 /// - SeeAlso: [1089. Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/)
 public enum P1089 {
     
-    /// - Parameter arr: A fixed-length integer array.
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the length of the array,\
     ///   **Space**: O(1).

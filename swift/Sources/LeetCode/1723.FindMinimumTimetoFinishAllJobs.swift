@@ -1,10 +1,10 @@
 /// Find Minimum Time to Finish All Jobs
 ///
-/// You are given an integer array `jobs`, where `jobs[i]` is the amount of time it takes to complete the `ith` job.
+/// You are given an integer array `jobs`, where `jobs[i]` is the amount of time it takes to complete the `iᵗʰ` job.
 ///
-/// There are `k` workers that you can assign jobs to. Each job should be assigned to exactly one worker. The working time of a worker is the sum of the time it takes to complete all jobs assigned to them. Your goal is to devise an optimal assignment such that the maximum working time of  any worker is minimized.
+/// There are `k` workers that you can assign jobs to. Each job should be assigned to exactly one worker. The **working time** of a worker is the sum of the time it takes to complete all jobs assigned to them. Your goal is to devise an optimal assignment such that the maximum working time of  any worker is **minimized**.
 ///
-/// Return the minimum possible maximum working time of any assignment.
+/// *Return the **minimum** possible **maximum working time** of any assignment*.
 ///
 /// **Difficulty:** Hard
 ///
@@ -12,17 +12,13 @@
 ///
 /// - Precondition:
 ///   - `1 <= k <= jobs.length <= 12`
-///   - `1 <= jobs[i] <= 107`
+///   - `1 <= jobs[i] <= 10⁷`
 ///
 /// - SeeAlso: [1723. Find Minimum Time to Finish All Jobs](https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/)
 public enum P1723 {
     
-    /// - Parameters:
-    ///   - jobs: An integer array, where `jobs[i]` is the amount of time it takes to complete the `ith` job.
-    ///   - k: There are `k` workers that you can assign jobs to.
-    /// - Returns: The **minimum** possible **maximum working time** of any assignment.
     /// - Complexity:
-    ///   **Time**: O(*k^n*), where *n* is the number of jobs and *k* is the number of workers,\
+    ///   **Time**: O(*kⁿ*), where *n* is the number of jobs and *k* is the number of workers,\
     ///   **Space**: O(*n*), where *n* is the number of workers.
     public static func minimumTimeRequired(_ jobs: [Int], _ k: Int) -> Int {
         

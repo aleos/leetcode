@@ -18,13 +18,11 @@
 /// **Topics:** Math, String
 ///
 /// - Precondition:
-///   - `1 <= columnNumber <= 2^31 - 1`
+///   - `1 <= columnNumber <= 2³¹ - 1`
 ///
 /// - SeeAlso: [168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
 public enum P0168 {
     
-    /// - Parameter columnNumber: An integer.
-    /// - Returns: Corresponding column title as it appears in an Excel sheet.
     /// - Complexity:
     ///   **Time**: O(log₂₆(*n*)), where *n* is the column number,\
     ///   **Space**: O(1).

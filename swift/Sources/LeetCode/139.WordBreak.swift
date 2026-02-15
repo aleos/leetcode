@@ -13,18 +13,14 @@
 ///   - `1 <= wordDict.length <= 1000`
 ///   - `1 <= wordDict[i].length <= 20`
 ///   - `s` and `wordDict[i]` consist of only lowercase English letters.
-///   - All the strings of `wordDict` are unique.
+///   - All the strings of `wordDict` are **unique**.
 ///
 /// - SeeAlso: [139. Word Break](https://leetcode.com/problems/word-break/)
 public enum P0139 {
     
-    /// - Parameters:
-    ///   - s: A string.
-    ///   - wordDict: A dictionary of strings.
-    /// - Returns: `true` if `s` can be segmented into a space-separated sequence of one or more dictionary words.
     /// - Complexity:
     ///   **Time**: O(*n*² × *m*), where *n* is the length of string s and *m* is the average word length,\
-    ///   **Space**: O(*n* + *w*), where *n* is the length of string s and *w* is the size of the word dictionary.
+    ///   **Space**: O(*n*), where *n* is the length of string `s`.
     public static func wordBreak(_ s: String, _ wordDict: [String]) -> Bool {
         guard !s.isEmpty else { return true }
         

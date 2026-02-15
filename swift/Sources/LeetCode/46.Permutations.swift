@@ -1,6 +1,6 @@
 /// Permutations
 ///
-/// Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+/// Given an array `nums` of distinct integers, return all the possible permutations. You can return the answer in **any order**.
 ///
 /// **Difficulty:** Medium
 ///
@@ -9,14 +9,11 @@
 /// - Precondition:
 ///   - `1 <= nums.length <= 6`
 ///   - `-10 <= nums[i] <= 10`
-///   - All the integers of `nums` are unique
+///   - All the integers of `nums` are **unique**.
 ///
 /// - SeeAlso: [46. Permutations](https://leetcode.com/problems/permutations/)
 public enum P0046 {
     
-    /// - Parameters:
-    ///   - nums: Distinct integers.
-    /// - Returns: All the possible permutations.
     /// - Complexity:
     ///   **Time**: O(*n!*), where *n* is the number of integers,\
     ///   **Space**: O(*n*), where *n* is the number of integers.
@@ -32,4 +29,3 @@ public enum P0046 {
         return permutations
     }
 }
-

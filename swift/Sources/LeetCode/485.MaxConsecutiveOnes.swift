@@ -1,20 +1,18 @@
 /// Max Consecutive Ones
 ///
-/// Given a binary array `nums`, return the maximum number of consecutive `1`'s in the array.
+/// Given a binary array `nums`, return *the maximum number of consecutive `1`'s in the array*.
 ///
 /// **Difficulty:** Easy
 ///
 /// **Topics:** Mid Level, Array
 ///
 /// - Precondition:
-///   - `1 <= nums.length <= 105`
+///   - `1 <= nums.length <= 10⁵`
 ///   - `nums[i]` is either `0` or `1`.
 ///
 /// - SeeAlso: [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
 public enum P0485 {
     
-    /// - Parameter nums: A binary array.
-    /// - Returns: The maximum number of consecutive `1`'s in the array.
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the length of the array,\
     ///   **Space**: O(1).

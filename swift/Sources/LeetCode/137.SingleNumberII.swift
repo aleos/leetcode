@@ -1,6 +1,6 @@
 /// Single Number II
 ///
-/// Given an integer array `nums` where every element appears three times except for one, which appears **exactly once**. *Find the single element and return it.*
+/// Given an integer array `nums` where every element appears **three times** except for one, which appears **exactly once**. *Find the single element and return it.*
 ///
 /// You must implement a solution with a linear runtime complexity and use only constant extra space.
 ///
@@ -9,15 +9,13 @@
 /// **Topics:** Array, Bit Manipulation
 ///
 /// - Precondition:
-///   - `1 <= nums.length <= 3 * 104`
-///   - `-231 <= nums[i] <= 231 - 1`
-///   - Each element in `nums` appears exactly three times except for one element which appears once.
+///   - `1 <= nums.length <= 3 * 10⁴`
+///   - `-2³¹ <= nums[i] <= 2³¹ - 1`
+///   - Each element in `nums` appears exactly **three times** except for one element which appears **once**.
 ///
 /// - SeeAlso: [137. Single Number II](https://leetcode.com/problems/single-number-ii/)
 public enum P0137 {
     
-    /// - Parameter nums: An integer array where every element appears three times except for one, which appears **exactly once**.
-    /// - Returns: The single element
     /// - Complexity:
     ///   **Time**: O(*n*), where *n* is the length of the input array,\
     ///   **Space**: O(1).
@@ -32,4 +30,3 @@ public enum P0137 {
         return seenOnce
     }
 }
-

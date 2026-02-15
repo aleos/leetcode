@@ -1,6 +1,6 @@
 /// Combinations
 ///
-/// Given two integers n and k, return all possible combinations of k numbers chosen from the range [1, n].
+/// Given two integers `n` and `k`, return *all possible combinations of `k` numbers chosen from the range `[1, n]`*.
 ///
 /// You may return the answer in any order.
 ///
@@ -15,10 +15,6 @@
 /// - SeeAlso: [77. Combinations](https://leetcode.com/problems/combinations/)
 public enum P0077 {
     
-    /// - Parameters:
-    ///   - n: A range [1, n].
-    ///   - k: Number of numbers.
-    /// - Returns: All possible combinations of `k` numbers chosen from the range `[1, n]`. You may return the answer in any order.
     /// - Complexity:
     ///   **Time**: O(C(*n*, *k*) × *k*), where C(*n*, *k*) is the binomial coefficient,\
     ///   **Space**: O(*k*), where *k* is the recursion depth.
@@ -37,4 +33,3 @@ public enum P0077 {
         return combine(from: 1, to: n, count: k)
     }
 }
-
