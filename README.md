@@ -37,6 +37,7 @@ Implementation files contain the problem link, description, and complexity analy
 2. **Test** — fill in LeetCode's examples and constraints
 3. **Solve** — implement until all tests pass
 4. **Document** — add time and space complexity to the DocString
+5. **Update docs** — run `swift generate-docc-topics.swift` to update the documentation catalog
 
 To install Xcode snippets, copy the `.codesnippet` files from `swift/_templates/` to `~/Library/Developer/Xcode/UserData/CodeSnippets`.
 

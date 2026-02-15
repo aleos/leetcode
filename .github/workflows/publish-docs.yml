@@ -19,6 +19,9 @@ jobs:
           echo "DOCC_HTML_DIR=$(pwd)/.render/dist" >> $GITHUB_ENV
           echo "Renderer cloned to $(pwd)/.render/dist"
 
+      - name: Update documentation catalog
+        run: swift generate-docc-topics.swift
+
       - name: Generate DocC
         run: |
           swift package \

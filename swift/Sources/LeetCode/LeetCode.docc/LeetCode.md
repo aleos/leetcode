@@ -30,9 +30,12 @@ Documentation is split to provide information where it is most relevant:
 - ``P0168``
 - ``P0459``
 - ``P0485``
+- ``P0645``
 - ``P0977``
 - ``P1089``
 - ``P1295``
+- ``P1470``
+- ``P1929``
 
 ### Medium Problems
 - ``P0017``

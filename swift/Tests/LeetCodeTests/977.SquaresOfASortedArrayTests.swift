@@ -11,7 +11,6 @@ struct P0977Tests {
     /// - Output: `[0,1,9,16,100]`
     /// - Explanation: After squaring, the array becomes [16,1,0,9,100].
     ///   After sorting, it becomes [0,1,9,16,100].
-    ///
     @Test("Mixed negative and positive")
     func example1() {
         #expect(P0977.sortedSquares([-4,-1,0,3,10]) == [0,1,9,16,100])
