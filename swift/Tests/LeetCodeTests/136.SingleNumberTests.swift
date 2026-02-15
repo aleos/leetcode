@@ -9,7 +9,7 @@ struct P0136Tests {
     /// Example 1:
     /// - Input: `nums = [2,2,1]`
     /// - Output: `1`
-    @Test("Find single number among pairs")
+    @Test("Single among pairs")
     func example1() {
         #expect(P0136.singleNumber([2,2,1]) == 1)
     }
@@ -25,7 +25,7 @@ struct P0136Tests {
     /// Example 3:
     /// - Input: `nums = [1]`
     /// - Output: `1`
-    @Test("Array with single element")
+    @Test("Single element")
     func example3() {
         #expect(P0136.singleNumber([1]) == 1)
     }

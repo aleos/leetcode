@@ -11,7 +11,7 @@ struct P0077Tests {
     /// - Output: `[[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]`
     /// - Explanation: There are 4 choose 2 = 6 total combinations.
     ///   Note that combinations are unordered, i.e., [1,2] and [2,1] are considered to be the same combination.
-    @Test("4 choose 2 produces 6 combinations")
+    @Test("C(4,2) = 6")
     func example1() {
         #expect(P0077.combine(4, 2) == [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]])
     }
@@ -20,7 +20,7 @@ struct P0077Tests {
     /// - Input: `n = 1, k = 1`
     /// - Output: `[[1]]`
     /// - Explanation: There is 1 choose 1 = 1 total combination.
-    @Test("1 choose 1 produces single combination")
+    @Test("C(1,1) = 1")
     func example2() {
         #expect(P0077.combine(1, 1) == [[1]])
     }

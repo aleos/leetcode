@@ -10,7 +10,7 @@ struct P1089Tests {
     /// - Input: `arr = [1,0,2,3,0,4,5,0]`
     /// - Output: `[1,0,0,2,3,0,0,4]`
     /// - Explanation: After calling your function, the input array is modified to: /// [1,0,0,2,3,0,0,4]
-    @Test("Duplicate zeros in array with multiple zeros")
+    @Test("Duplicate zeros in place")
     func example1() {
         var arr = [1,0,2,3,0,4,5,0]
         P1089.duplicateZeros(&arr)
@@ -21,7 +21,7 @@ struct P1089Tests {
     /// - Input: `arr = [1,2,3]`
     /// - Output: `[1,2,3]`
     /// - Explanation: After calling your function, the input array is modified to: [1,2,3]
-    @Test("Array with no zeros remains unchanged")
+    @Test("No zeros, unchanged")
     func example2() {
         var arr = [1,2,3]
         P1089.duplicateZeros(&arr)

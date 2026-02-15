@@ -10,7 +10,7 @@ struct P0459Tests {
     /// - Input: `s = "abab"`
     /// - Output: `true`
     /// - Explanation: It is the substring "ab" twice.
-    @Test("String is repeated substring 'ab'")
+    @Test("Repeated 'ab'")
     func example1() {
         #expect(P0459.repeatedSubstringPattern("abab") == true)
     }
@@ -18,7 +18,7 @@ struct P0459Tests {
     /// Example 2:
     /// - Input: `s = "aba"`
     /// - Output: `false`
-    @Test("String is not a repeated pattern")
+    @Test("Not repeated")
     func example2() {
         #expect(P0459.repeatedSubstringPattern("aba") == false)
     }
@@ -27,7 +27,7 @@ struct P0459Tests {
     /// - Input: `s = "abcabcabcabc"`
     /// - Output: `true`
     /// - Explanation: It is the substring "abc" four times or the substring "abcabc" twice.
-    @Test("String is repeated substring 'abc'")
+    @Test("Repeated 'abc'")
     func example3() {
         #expect(P0459.repeatedSubstringPattern("abcabcabcabc") == true)
     }

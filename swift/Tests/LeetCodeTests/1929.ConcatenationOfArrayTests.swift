@@ -12,7 +12,7 @@ struct P1929Tests {
     /// - Explanation: The array ans is formed as follows:
     ///   - ans = [nums[0],nums[1],nums[2],nums[0],nums[1],nums[2]]
     ///   - ans = [1,2,1,1,2,1]
-    @Test("Example 1: nums = [1,2,1]")
+    @Test("nums = [1,2,1]")
     func example1() {
         #expect(P1929.getConcatenation([1, 2, 1]) == [1, 2, 1, 1, 2, 1])
     }
@@ -21,7 +21,7 @@ struct P1929Tests {
     /// - Input: `nums = [1,3,2,1]`
     /// - Output: `[1,3,2,1,1,3,2,1]`
     /// - Explanation: Concatenate the array with itself.
-    @Test("Example 2: nums = [1,3,2,1]")
+    @Test("nums = [1,3,2,1]")
     func example2() {
         #expect(P1929.getConcatenation([1, 3, 2, 1]) == [1, 3, 2, 1, 1, 3, 2, 1])
     }

@@ -9,7 +9,7 @@ struct P0767Tests {
     /// Example 1:
     /// - Input: `s = "aab"`
     /// - Output: `"aba"`
-    @Test("Reorganize string with possible solution")
+    @Test("Possible reorganization")
     func example1() {
         #expect(P0767.reorganizeString("aab") == "aba")
     }
@@ -17,7 +17,7 @@ struct P0767Tests {
     /// Example 2:
     /// - Input: `s = "aaab"`
     /// - Output: `""`
-    @Test("Impossible to reorganize returns empty string")
+    @Test("Impossible, returns empty")
     func example2() {
         #expect(P0767.reorganizeString("aaab") == "")
     }

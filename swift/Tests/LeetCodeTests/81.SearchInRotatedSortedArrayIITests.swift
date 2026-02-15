@@ -9,7 +9,7 @@ struct P0081Tests {
     /// Example 1:
     /// - Input: `nums = [2,5,6,0,0,1,2], target = 0`
     /// - Output: `true`
-    @Test("Target found in rotated array with duplicates")
+    @Test("Target found with duplicates")
     func example1() {
         #expect(P0081.search([2,5,6,0,0,1,2], 0) == true)
     }
@@ -17,7 +17,7 @@ struct P0081Tests {
     /// Example 2:
     /// - Input: `nums = [2,5,6,0,0,1,2], target = 3`
     /// - Output: `false`
-    @Test("Target not found in rotated array")
+    @Test("Target not found")
     func example2() {
         #expect(P0081.search([2,5,6,0,0,1,2], 3) == false)
     }
@@ -34,12 +34,12 @@ struct P0081Tests {
     }
 
     /// Duplicate bounds with target equal triggers early return in duplicate-trim loop
-    @Test("Duplicate bounds early return true")
+    @Test("All elements equal target")
     func duplicateBoundsEarlyReturn() {
         #expect(P0081.search([2,2,2], 2) == true)
     }
     /// Force the right-sorted branch to move left boundary (l = m + 1)
-    @Test("Right-sorted branch moves left boundary")
+    @Test("Target in right-sorted half with duplicates")
     func rightSortedBranchMovesLeftBoundary() {
         // Target is in the right sorted part
         #expect(P0081.search([3,4,5,6,0,1,2,2,2], 1) == true)

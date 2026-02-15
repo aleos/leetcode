@@ -9,7 +9,7 @@ struct P0033Tests {
     /// Example 1:
     /// - Input: `nums = [4,5,6,7,0,1,2], target = 0`
     /// - Output: `4`
-    @Test("Find target 0 in rotated array")
+    @Test("Target found")
     func example1() {
         #expect(P0033.search([4,5,6,7,0,1,2], 0) == 4)
     }
@@ -17,7 +17,7 @@ struct P0033Tests {
     /// Example 2:
     /// - Input: `nums = [4,5,6,7,0,1,2], target = 3`
     /// - Output: `-1`
-    @Test("Target not found returns -1")
+    @Test("Target not found")
     func example2() {
         #expect(P0033.search([4,5,6,7,0,1,2], 3) == -1)
     }
@@ -25,7 +25,7 @@ struct P0033Tests {
     /// Example 3:
     /// - Input: `nums = [1], target = 0`
     /// - Output: `-1`
-    @Test("Single element array, target not found")
+    @Test("Single element, not found")
     func example3() {
         #expect(P0033.search([1], 0) == -1)
     }
@@ -37,7 +37,7 @@ struct P0033Tests {
         #expect(P0033.search([5,1,2,3,4], 1) == 1)
     }
     
-    @Test("Right-sorted branch: move left boundary")
+    @Test("Target in right-sorted half")
     func rightSortedBranchMovesLeft() {
         // Target is in the right sorted part
         #expect(P0033.search([6,7,0,1,2,3,4,5], 3) == 5)

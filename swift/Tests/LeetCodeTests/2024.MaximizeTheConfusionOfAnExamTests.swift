@@ -11,7 +11,7 @@ struct P2024Tests {
     /// - Output: `4`
     /// - Explanation: We can replace both the 'F's with 'T's to make answerKey = "TTTT".
     ///   There are four consecutive 'T's.
-    @Test("Replace 2 characters to maximize consecutive answers")
+    @Test("Replace 2 to maximize")
     func example1() {
         #expect(P2024.maxConsecutiveAnswers("TTFF", 2) == 4)
     }
@@ -22,7 +22,7 @@ struct P2024Tests {
     /// - Explanation: We can replace the first 'T' with an 'F' to make answerKey = "FFFT".
     ///   Alternatively, we can replace the second 'T' with an 'F' to make answerKey = "TFFF".
     ///   In both cases, there are three consecutive 'F's.
-    @Test("Replace 1 character optimally")
+    @Test("Replace 1 optimally")
     func example2() {
         #expect(P2024.maxConsecutiveAnswers("TFFT", 1) == 3)
     }
@@ -33,7 +33,7 @@ struct P2024Tests {
     /// - Explanation: We can replace the first 'F' to make answerKey = "TTTTTFTT"
     ///   Alternatively, we can replace the second 'F' to make answerKey = "TTFTTTTT".
     ///   In both cases, there are five consecutive 'T's.
-    @Test("Longer answer key with single replacement")
+    @Test("Longer key, 1 replacement")
     func example3() {
         #expect(P2024.maxConsecutiveAnswers("TTFTTFTT", 1) == 5)
     }

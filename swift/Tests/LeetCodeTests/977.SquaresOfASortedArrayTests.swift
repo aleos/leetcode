@@ -12,7 +12,7 @@ struct P0977Tests {
     /// - Explanation: After squaring, the array becomes [16,1,0,9,100].
     ///   After sorting, it becomes [0,1,9,16,100].
     ///
-    @Test("Array with negative and positive numbers")
+    @Test("Mixed negative and positive")
     func example1() {
         #expect(P0977.sortedSquares([-4,-1,0,3,10]) == [0,1,9,16,100])
     }
@@ -20,7 +20,7 @@ struct P0977Tests {
     /// Example 2:
     /// - Input: `nums = [-7,-3,2,3,11]`
     /// - Output: `[4,9,9,49,121]`
-    @Test("Array produces duplicate squares")
+    @Test("Duplicate squares")
     func example2() {
         #expect(P0977.sortedSquares([-7,-3,2,3,11]) == [4,9,9,49,121])
     }

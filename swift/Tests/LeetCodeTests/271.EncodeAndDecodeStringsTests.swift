@@ -18,7 +18,7 @@ struct P0271Tests {
     ///   Machine 2:
     ///   Codec decoder = new Codec();
     ///   String[] strs = decoder.decode(msg);
-    @Test("Encode and decode multiple strings")
+    @Test("Multiple strings")
     func example1() {
         #expect(P0271.decode(P0271.encode(["Hello","World"])) == ["Hello","World"])
     }
@@ -26,7 +26,7 @@ struct P0271Tests {
     /// Example 2:
     /// - Input: `dummy_input = [""]`
     /// - Output: `[""]`
-    @Test("Encode and decode empty string")
+    @Test("Empty string")
     func example2() {
         #expect(P0271.decode(P0271.encode([""])) == [""])
     }

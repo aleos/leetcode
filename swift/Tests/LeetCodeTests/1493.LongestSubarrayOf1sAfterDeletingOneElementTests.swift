@@ -19,7 +19,7 @@ struct P1493Tests {
     /// - Input: `nums = [0,1,1,1,0,1,1,0,1]`
     /// - Output: `5`
     /// - Explanation: After deleting the number in position 4, [0,1,1,1,1,1,0,1] longest subarray with value of 1's is [1,1,1,1,1].
-    @Test("Multiple 0s, delete optimal one")
+    @Test("Delete optimal zero")
     func example2() {
         #expect(P1493.longestSubarray([0,1,1,1,0,1,1,0,1]) == 5)
     }

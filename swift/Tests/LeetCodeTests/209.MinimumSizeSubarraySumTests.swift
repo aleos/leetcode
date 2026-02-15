@@ -10,7 +10,7 @@ struct P0209Tests {
     /// - Input: `target = 7, nums = [2,3,1,2,4,3]`
     /// - Output: `2`
     /// - Explanation: The subarray [4,3] has the minimal length under the problem constraint.
-    @Test("Find minimal subarray with sum >= target")
+    @Test("Minimal subarray >= target")
     func example1() {
         #expect(P0209.minSubArrayLen(7, [2,3,1,2,4,3]) == 2)
     }
@@ -26,7 +26,7 @@ struct P0209Tests {
     /// Example 3:
     /// - Input: `target = 11, nums = [1,1,1,1,1,1,1,1]`
     /// - Output: `0`
-    @Test("No subarray can meet target")
+    @Test("No subarray meets target")
     func example3() {
         #expect(P0209.minSubArrayLen(11, [1,1,1,1,1,1,1,1]) == 0)
     }

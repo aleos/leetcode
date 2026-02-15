@@ -9,7 +9,7 @@ struct P0017Tests {
     /// Example 1:
     /// - Input: `digits = "23"`
     /// - Output: `["ad","ae","af","bd","be","bf","cd","ce","cf"]`
-    @Test("Digits '23' produces 9 combinations")
+    @Test("Digits '23'")
     func example1() {
         #expect(P0017.letterCombinations("23") == ["ad","ae","af","bd","be","bf","cd","ce","cf"])
     }
@@ -17,7 +17,7 @@ struct P0017Tests {
     /// Example 2:
     /// - Input: `digits = ""`
     /// - Output: `[]`
-    @Test("Empty input produces empty output")
+    @Test("Empty input")
     func example2() {
         #expect(P0017.letterCombinations("") == [])
     }
@@ -25,7 +25,7 @@ struct P0017Tests {
     /// Example 3:
     /// - Input: `digits = "2"`
     /// - Output: `["a","b","c"]`
-    @Test("Single digit '2' produces 3 combinations")
+    @Test("Single digit '2'")
     func example3() {
         #expect(P0017.letterCombinations("2") == ["a","b","c"])
     }
@@ -36,7 +36,7 @@ struct P0017Tests {
         #expect(P0017.letterCombinations("1") == [])
     }
     /// Valid first digit followed by unmapped digit to exercise loop fallback (?? [])
-    @Test("Digits '21' exercise loop fallback and return empty array")
+    @Test("Unmapped digit after valid digit")
     func validThenInvalidDigit21() {
         // Seeds from '2' => ["a","b","c"], then '1' has no mapping => combinations collapse to []
         #expect(P0017.letterCombinations("21") == [])

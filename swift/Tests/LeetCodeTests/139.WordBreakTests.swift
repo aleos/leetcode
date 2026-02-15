@@ -10,7 +10,7 @@ struct P0139Tests {
     /// - Input: `s = "leetcode", wordDict = ["leet","code"]`
     /// - Output: `true`
     /// - Explanation: Return true because "leetcode" can be segmented as "leet code".
-    @Test("String can be segmented with dictionary words")
+    @Test("Segmentable string")
     func example1() {
         #expect(P0139.wordBreak("leetcode", ["leet","code"]) == true)
     }
@@ -20,7 +20,7 @@ struct P0139Tests {
     /// - Output: `true`
     /// - Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
     ///   Note that you are allowed to reuse a dictionary word.
-    @Test("Dictionary words can be reused")
+    @Test("Reused words")
     func example2() {
         #expect(P0139.wordBreak("applepenapple", ["apple","pen"]) == true)
     }
@@ -28,7 +28,7 @@ struct P0139Tests {
     /// Example 3:
     /// - Input: `s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]`
     /// - Output: `false`
-    @Test("String cannot be segmented")
+    @Test("Not segmentable")
     func example3() {
         #expect(P0139.wordBreak("catsandog", ["cats","dog","sand","and","cat"]) == false)
     }

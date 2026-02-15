@@ -22,7 +22,7 @@ struct P1723Tests {
     ///   Worker 1: 1, 2, 8 (working time = 1 + 2 + 8 = 11)
     ///   Worker 2: 4, 7 (working time = 4 + 7 = 11)
     ///   The maximum working time is 11.
-    @Test("Distribute jobs optimally between 2 workers")
+    @Test("Optimal split between 2 workers")
     func example2() {
         #expect(P1723.minimumTimeRequired([1,2,4,7,8], 2) == 11)
     }

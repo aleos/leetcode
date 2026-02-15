@@ -14,7 +14,7 @@ struct P2305Tests {
     ///   - The 2nd child receives [10,20] which has a total of 10 + 20 = 30 cookies.
     ///   The unfairness of the distribution is max(31,30) = 31.
     ///   It can be shown that there is no distribution with an unfairness less than 31.
-    @Test("Distribute cookies between 2 children")
+    @Test("2 children")
     func example1() {
         #expect(P2305.distributeCookies([8,15,10,20,8], 2) == 31)
     }
@@ -28,7 +28,7 @@ struct P2305Tests {
     ///   - The 3rd child receives [4,1,2] which has a total of 4 + 1 + 2 = 7 cookies.
     ///   The unfairness of the distribution is max(7,7,7) = 7.
     ///   It can be shown that there is no distribution with an unfairness less than 7.
-    @Test("Distribute cookies between 3 children")
+    @Test("3 children")
     func example2() {
         #expect(P2305.distributeCookies([6,1,3,2,2,4,1,2], 3) == 7)
     }

@@ -26,7 +26,7 @@ struct P0239Tests {
     /// Example 2:
     /// - Input: `nums = [1], k = 1`
     /// - Output: `[1]`
-    @Test("Single element window")
+    @Test("Window of size 1")
     func example2() {
         #expect(P0239.maxSlidingWindow([1], 1) == [1])
     }

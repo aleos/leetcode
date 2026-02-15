@@ -16,7 +16,7 @@ struct P1295Tests {
     ///   6 contains 1 digit (odd number of digits).
     ///   7896 contains 4 digits (even number of digits).
     ///   Therefore only 12 and 7896 contain an even number of digits.
-    @Test("Array with 2 numbers having even digits")
+    @Test("Two even-digit numbers")
     func example1() {
         #expect(P1295.findNumbers([12,345,2,6,7896]) == 2)
     }
@@ -26,7 +26,7 @@ struct P1295Tests {
     /// - Output: `1`
     /// - Explanation:
     ///   Only 1771 contains an even number of digits.
-    @Test("Array with 1 number having even digits")
+    @Test("One even-digit number")
     func example2() {
         #expect(P1295.findNumbers([555,901,482,1771]) == 1)
     }
