@@ -19,8 +19,10 @@ public enum P0767 {
     ///   **Time**: O(*n*), where *n* is the length of the string,\
     ///   **Space**: O(1).
     public static func reorganizeString(_ s: String) -> String {
+        precondition(!s.isEmpty, "String must not be empty")
+        
         let length = s.count
-        let frequences = Array(s.reduce(into: [:]) { f, c in f[c, default: 0] += 1 })
+        let frequences = s.reduce(into: [:]) { f, char in f[char, default: 0] += 1 }
         let maxFreq = frequences.max(by: { $0.value < $1.value })!
         guard maxFreq.value <= (length + 1) / 2 else { return "" }
         

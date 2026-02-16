@@ -20,6 +20,8 @@ public enum P0239 {
     ///   **Time**: O(*n*), where *n* is the length of the array,\
     ///   **Space**: O(*k*), where *k* is the window size.
     public static func maxSlidingWindow(_ nums: [Int], _ k: Int) -> [Int] {
+        precondition(k >= 1, "Window size must be at least 1")
+        
         var windowMaxIndexes: [Int] = []
         var maxes: [Int] = []
         
@@ -34,6 +36,7 @@ public enum P0239 {
             windowMaxIndexes.append(n)
         }
         
+        // k >= 1 guarantees the loop ran at least once, so the array is non-empty
         maxes.append(nums[windowMaxIndexes.first!])
         
         for n in k..<nums.count {

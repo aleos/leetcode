@@ -21,14 +21,17 @@ public enum P0645 {
     ///   **Time**: O(*n*), where *n* is the length of the array,\
     ///   **Space**: O(*n*).
     public static func findErrorNums(_ nums: [Int]) -> [Int] {
-        var set = Set<Int>(1...nums.count)
-        var duplicate = 0
+        var unseen = Set<Int>(1...nums.count)
+        var duplicate: Int?
         for num in nums {
-            guard let _ = set.remove(num) else {
+            guard let _ = unseen.remove(num) else {
                 duplicate = num
                 continue
             }
         }
-        return [duplicate, set.first ?? 0]
+        guard let duplicate, unseen.count == 1, let missing = unseen.first else {
+            preconditionFailure("Expected exactly one duplicate and one missing number")
+        }
+        return [duplicate, missing]
     }
 }

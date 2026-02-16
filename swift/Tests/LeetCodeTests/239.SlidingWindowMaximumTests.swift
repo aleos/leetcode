@@ -30,5 +30,12 @@ struct P0239Tests {
     func example2() {
         #expect(P0239.maxSlidingWindow([1], 1) == [1])
     }
+
+    @Test("Precondition failure when window size is zero")
+    func emptyWindow() async {
+        await #expect(processExitsWith: .failure) {
+            _ = P0239.maxSlidingWindow([1], 0)
+        }
+    }
 }
 

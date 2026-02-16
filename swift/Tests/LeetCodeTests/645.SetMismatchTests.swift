@@ -29,9 +29,15 @@ struct P0645Tests {
         #expect(P0645.findErrorNums([4,1,2,2,5,6,7,8,9,10,3]) == [2, 11])
     }
 
-    /// Edge case: duplicate at end, missing at start
     @Test("Duplicate at end, missing at start: [2,2]")
     func duplicateAtEndMissingAtStart() {
         #expect(P0645.findErrorNums([2, 2]) == [2, 1])
+    }
+
+    @Test("Precondition failure when no duplicate exists")
+    func noDuplicate() async {
+        await #expect(processExitsWith: .failure) {
+            _ = P0645.findErrorNums([1, 2])
+        }
     }
 }

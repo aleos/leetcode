@@ -21,5 +21,12 @@ struct P0767Tests {
     func example2() {
         #expect(P0767.reorganizeString("aaab") == "")
     }
+
+    @Test("Precondition failure when string is empty")
+    func emptyString() async {
+        await #expect(processExitsWith: .failure) {
+            _ = P0767.reorganizeString("")
+        }
+    }
 }
 
