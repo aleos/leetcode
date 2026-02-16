@@ -21,7 +21,7 @@ jobs:
         uses: chetan/git-restore-mtime-action@v2
 
       - name: Cache SPM
-        uses: actions/cache@5
+        uses: actions/cache@v5
         with:
           path: swift/.build
           key: spm-${{ runner.os }}-${{ hashFiles('swift/Package.resolved') }}-${{ github.sha }}
