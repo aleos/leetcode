@@ -26,6 +26,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Cache SPM dependencies
+        uses: actions/cache@v4
+        with:
+          path: swift/.build/SourcePackages
+          key: spm-${{ runner.os }}-${{ hashFiles('swift/Package.resolved') }}
+          restore-keys: spm-${{ runner.os }}-
+
       - name: Run tests
         run: |
           set -o pipefail && xcodebuild test \
