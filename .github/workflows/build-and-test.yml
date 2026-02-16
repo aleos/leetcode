@@ -25,23 +25,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Cache SPM dependencies
+      - name: Restore file mtimes
+        uses: chetan/git-restore-mtime-action@v2
+
+      - name: Cache SPM
         uses: actions/cache@v4
         with:
-          path: swift/.spm-cache
-          key: spm-${{ runner.os }}-${{ hashFiles('swift/Package.resolved') }}
-          restore-keys: spm-${{ runner.os }}-
+          path: |
+            swift/.build/Build
+            swift/.build/SourcePackages
+          key: xcode-${{ runner.os }}-${{ hashFiles('swift/Package.resolved') }}-${{ github.sha }}
+          restore-keys: |
+            xcode-${{ runner.os }}-${{ hashFiles('swift/Package.resolved') }}-
+            xcode-${{ runner.os }}-
 
       - name: Run tests
         run: |
           set -o pipefail && xcodebuild test \
             -scheme LeetCode \
             -testPlan LeetCode \
-            -destination 'platform=macOS' \
+            -destination 'platform=macOS,arch=arm64' \
             -enableCodeCoverage YES \
             -derivedDataPath .build/ \
-            -clonedSourcePackagesDirPath .spm-cache | xcbeautify
+            IgnoreFileSystemDeviceInodeChanges=YES | xcbeautify
 
       - name: Export coverage
         run: |

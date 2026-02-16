@@ -14,15 +14,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Cache SPM dependencies
+      - name: Restore file mtimes
+        uses: chetan/git-restore-mtime-action@v2
+
+      - name: Cache SPM
         uses: actions/cache@v4
         with:
-          path: |
-            swift/.build/checkouts
-            swift/.build/repositories
-          key: spm-${{ runner.os }}-${{ hashFiles('swift/Package.resolved') }}
-          restore-keys: spm-${{ runner.os }}-
+          path: swift/.build
+          key: spm-${{ runner.os }}-${{ hashFiles('swift/Package.resolved') }}-${{ github.sha }}
+          restore-keys: |
+            spm-${{ runner.os }}-${{ hashFiles('swift/Package.resolved') }}-
+            spm-${{ runner.os }}-
 
       - name: Setup web renderer
         run: |
