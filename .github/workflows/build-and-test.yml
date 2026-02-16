@@ -29,7 +29,7 @@ jobs:
       - name: Cache SPM dependencies
         uses: actions/cache@v4
         with:
-          path: swift/.build/SourcePackages
+          path: swift/.spm-cache
           key: spm-${{ runner.os }}-${{ hashFiles('swift/Package.resolved') }}
           restore-keys: spm-${{ runner.os }}-
 
@@ -40,7 +40,8 @@ jobs:
             -testPlan LeetCode \
             -destination 'platform=macOS' \
             -enableCodeCoverage YES \
-            -derivedDataPath .build/ | xcbeautify
+            -derivedDataPath .build/ \
+            -clonedSourcePackagesDirPath .spm-cache | xcbeautify
 
       - name: Export coverage
         run: |
