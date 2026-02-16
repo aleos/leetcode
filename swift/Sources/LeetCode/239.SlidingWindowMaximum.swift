@@ -1,3 +1,5 @@
+import DequeModule
+
 /// Sliding Window Maximum
 ///
 /// You are given an array of integers `nums`, there is a sliding window of size `k` which is moving from the very left of the array to the very right. You can only see the `k` numbers in the window. Each time the sliding window moves right by one position.
@@ -22,7 +24,7 @@ public enum P0239 {
     public static func maxSlidingWindow(_ nums: [Int], _ k: Int) -> [Int] {
         precondition(k >= 1, "Window size must be at least 1")
         
-        var windowMaxIndexes: [Int] = []
+        var windowMaxIndexes = Deque<Int>()
         var maxes: [Int] = []
         
         // Until whole window
@@ -36,7 +38,7 @@ public enum P0239 {
             windowMaxIndexes.append(n)
         }
         
-        // k >= 1 guarantees the loop ran at least once, so the array is non-empty
+        // k >= 1 guarantees the loop ran at least once, so the deque is non-empty
         maxes.append(nums[windowMaxIndexes.first!])
         
         for n in k..<nums.count {
