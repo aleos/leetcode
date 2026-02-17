@@ -10,7 +10,7 @@ defaults:
 
 jobs:
   build:
-    name: Build
+    name: Generate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

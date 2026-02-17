@@ -81,7 +81,7 @@ jobs:
           fi
 
   sync-badge:
-    name: Sync badge
+    name: Sync Badge
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     env:
