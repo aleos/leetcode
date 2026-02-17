@@ -46,7 +46,7 @@ jobs:
           set -o pipefail && xcodebuild test \
             -scheme LeetCode \
             -testPlan LeetCode \
-            -destination 'platform=macOS,arch=arm64,name=My Mac' \
+            -destination 'platform=macOS' \
             -enableCodeCoverage YES \
             -derivedDataPath .build/ \
             IgnoreFileSystemDeviceInodeChanges=YES | xcbeautify
