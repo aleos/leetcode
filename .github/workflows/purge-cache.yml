@@ -2,6 +2,8 @@ name: Purge CI Cache
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 1'  # Every Monday at midnight UTC
 
 permissions:
   actions: write
