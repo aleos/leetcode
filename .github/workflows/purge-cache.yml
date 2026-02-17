@@ -3,6 +3,9 @@ name: Purge CI Cache
 on:
   workflow_dispatch:
 
+permissions:
+  actions: write
+
 jobs:
   purge:
     name: Purge
@@ -13,6 +16,5 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "Purging all build caches..."
-          gh actions-cache delete --all xcode- -R ${{ github.repository }} --confirm
-          gh actions-cache delete --all spm- -R ${{ github.repository }} --confirm
+          gh cache delete --all -R ${{ github.repository }}
           echo "Done. Next CI run will be a full build."
