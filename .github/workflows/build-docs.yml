@@ -1,4 +1,5 @@
-name: Publish Docs
+name: Build Docs
+
 on:
   workflow_dispatch:
   workflow_call:
@@ -54,18 +55,3 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: swift/docs
-
-  publish:
-    name: Publish
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}documentation/leetcode/
-    runs-on: ubuntu-latest
-    steps:
-      - name: Publish
-        id: deployment
-        uses: actions/deploy-pages@v4

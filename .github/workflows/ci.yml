@@ -17,6 +17,10 @@ jobs:
     name: Test
     uses: ./.github/workflows/build-and-test.yml
 
+  build-docs:
+    name: Build Docs
+    uses: ./.github/workflows/build-docs.yml
+
   coverage:
     name: Coverage
     needs: test
@@ -27,7 +31,7 @@ jobs:
 
   deploy-docs:
     name: Deploy Docs
-    needs: test
+    needs: [test, build-docs]
     if: github.ref == 'refs/heads/main'
-    uses: ./.github/workflows/publish-docs.yml
+    uses: ./.github/workflows/deploy-docs.yml
     secrets: inherit

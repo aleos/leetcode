@@ -1,0 +1,19 @@
+name: Deploy Docs
+
+on:
+  workflow_call:
+
+jobs:
+  deploy:
+    name: Deploy
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}documentation/leetcode/
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
