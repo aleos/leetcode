@@ -34,17 +34,27 @@ jobs:
       - name: Cache SPM
         uses: actions/cache@v5
         with:
-          path: swift/.build/Build
+          path: |
+            swift/.build/Build
+            swift/.build/SourcePackages
           key: xcode-${{ runner.os }}-${{ hashFiles('swift/Package.resolved') }}-${{ github.sha }}
           restore-keys: |
             xcode-${{ runner.os }}-${{ hashFiles('swift/Package.resolved') }}-
+
+      - name: Resolve destination
+        id: dest
+        run: |
+          DEVICE_LINE=$(xcrun xctrace list devices 2>&1 | sed -n '/== Devices ==/,/^$/p' | sed -n '2p')
+          DEVICE_ID=$(echo "$DEVICE_LINE" | grep -oE '[A-F0-9-]{36}')
+          echo "id=$DEVICE_ID" >> $GITHUB_OUTPUT
+          echo "Resolved destination: $DEVICE_LINE"
 
       - name: Run tests
         run: |
           set -o pipefail && xcodebuild test \
             -scheme LeetCode \
             -testPlan LeetCode \
-            -destination 'platform=macOS,arch=arm64' \
+            -destination 'id=${{ steps.dest.outputs.id }}' \
             -enableCodeCoverage YES \
             -derivedDataPath .build/ \
             IgnoreFileSystemDeviceInodeChanges=YES | xcbeautify
