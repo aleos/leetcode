@@ -41,19 +41,12 @@ jobs:
           restore-keys: |
             xcode-${{ runner.os }}-${{ hashFiles('swift/Package.resolved') }}-
 
-      - name: Resolve destination
-        id: dest
-        run: |
-          DEVICE_ID=$(system_profiler SPHardwareDataType | awk '/Hardware UUID/{print $3}')
-          echo "id=$DEVICE_ID" >> $GITHUB_OUTPUT
-          echo "Resolved destination: $DEVICE_ID"
-
       - name: Run tests
         run: |
           set -o pipefail && xcodebuild test \
             -scheme LeetCode \
             -testPlan LeetCode \
-            -destination 'id=${{ steps.dest.outputs.id }}' \
+            -destination 'platform=macOS,arch=arm64,name=My Mac' \
             -enableCodeCoverage YES \
             -derivedDataPath .build/ \
             IgnoreFileSystemDeviceInodeChanges=YES | xcbeautify
