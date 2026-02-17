@@ -44,10 +44,9 @@ jobs:
       - name: Resolve destination
         id: dest
         run: |
-          DEVICE_LINE=$(xcrun xctrace list devices 2>&1 | sed -n '/== Devices ==/,/^$/p' | sed -n '2p')
-          DEVICE_ID=$(echo "$DEVICE_LINE" | grep -oE '[A-F0-9-]{36}')
+          DEVICE_ID=$(system_profiler SPHardwareDataType | awk '/Hardware UUID/{print $3}')
           echo "id=$DEVICE_ID" >> $GITHUB_OUTPUT
-          echo "Resolved destination: $DEVICE_LINE"
+          echo "Resolved destination: $DEVICE_ID"
 
       - name: Run tests
         run: |
