@@ -34,6 +34,7 @@ Documentation is split to provide information where it is most relevant:
 - ``P0977``
 - ``P1089``
 - ``P1295``
+- ``P1365``
 - ``P1470``
 - ``P1929``
 
@@ -44,6 +45,7 @@ Documentation is split to provide information where it is most relevant:
 - ``P0074``
 - ``P0077``
 - ``P0081``
+- ``P0128``
 - ``P0137``
 - ``P0139``
 - ``P0209``
